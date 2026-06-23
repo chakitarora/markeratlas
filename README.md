@@ -352,16 +352,6 @@ MarkerAtlas is a research reference tool. Marker associations are curated from p
 
 ---
 
-## Deploy your own instance
-
-1. Fork or download this repository
-2. Go to **Settings → Pages → Branch: main → Save**
-3. Live at `https://yourusername.github.io/markeratlas`
-
-Runs entirely from `index.html` — no build step, no server, no dependencies.
-
----
-
 ## License
 
 MIT — free to use, modify, and redistribute with attribution.
