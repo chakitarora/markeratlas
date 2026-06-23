@@ -474,19 +474,6 @@ MarkerAtlas is a research reference tool. Marker gene associations are curated f
 
 When using marker information in published work, cite the primary databases (CellMarker 2.0, PanglaoDB) and the listed PMIDs.
 
----
-
-## Deploy
-
-```bash
-# GitHub Pages
-# Fork or upload this repo, go to Settings → Pages → Branch: main → Save
-# Live at https://yourusername.github.io/markeratlas
-```
-
-Runs entirely from `index.html` + `marker_db.json`. No build step. No server-side logic.
-
----
 
 ## License
 
