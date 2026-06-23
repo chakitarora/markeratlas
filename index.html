@@ -38,8 +38,8 @@ body{font-family:var(--sans);background:var(--canvas);color:var(--ink);min-heigh
 .srch:focus{border-color:var(--blue)}
 .srch::placeholder{color:var(--dim);font-style:italic}
 .srch-icon{position:absolute;left:9px;top:50%;transform:translateY(-50%);color:var(--dim);font-size:0.78rem;pointer-events:none}
-.mode-row{display:flex;gap:3px;margin-top:8px}
-.mbtn{flex:1;font-family:var(--mono);font-size:0.66rem;font-weight:500;padding:6px 3px;text-align:center;border:1px solid var(--faint);background:var(--canvas);color:var(--muted);cursor:pointer;transition:all 0.12s}
+.mode-row{display:flex;gap:3px;margin-top:8px;flex-wrap:wrap}
+.mbtn{flex:1;font-family:var(--mono);font-size:0.63rem;font-weight:500;padding:6px 3px;text-align:center;border:1px solid var(--faint);background:var(--canvas);color:var(--muted);cursor:pointer;transition:all 0.12s;min-width:52px}
 .mbtn.on{background:var(--blue);color:var(--canvas);border-color:var(--blue)}
 .mbtn:hover:not(.on){border-color:var(--faint2);color:var(--ink3)}
 .catbtn{display:flex;align-items:center;gap:7px;padding:5px 8px;border:1px solid transparent;background:transparent;cursor:pointer;transition:all 0.12s;font-family:var(--sans);font-size:0.74rem;color:var(--muted);text-align:left;width:100%}
@@ -105,21 +105,75 @@ body{font-family:var(--sans);background:var(--canvas);color:var(--ink);min-heigh
 .rs{border-color:var(--faint2);color:var(--muted)}
 .growtissues{display:flex;flex-wrap:wrap;gap:3px;flex:1}
 .gtchip{font-family:var(--mono);font-size:0.58rem;padding:1px 5px;background:var(--ochre-pale);border:1px solid rgba(200,146,42,0.2);color:var(--ochre2)}
-.clinput{width:100%;height:110px;font-family:var(--mono);font-size:0.76rem;line-height:1.8;background:var(--canvas2);border:1px solid var(--faint);padding:9px 11px;color:var(--ink);outline:none;resize:vertical;transition:border-color 0.15s;margin-bottom:8px}
+.clinput{width:100%;height:100px;font-family:var(--mono);font-size:0.76rem;line-height:1.8;background:var(--canvas2);border:1px solid var(--faint);padding:9px 11px;color:var(--ink);outline:none;resize:vertical;transition:border-color 0.15s;margin-bottom:8px}
 .clinput:focus{border-color:var(--blue)}
 .clinput::placeholder{color:var(--dim);font-style:italic}
 .clbtn{width:100%;padding:10px;font-family:var(--mono);font-size:0.78rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;background:var(--blue);color:var(--canvas);border:none;cursor:pointer;transition:background 0.15s}
 .clbtn:hover{background:var(--blue2)}
 .clcard{background:var(--canvas);border:1px solid var(--faint);margin-bottom:6px}
-.clcard-h{display:flex;align-items:center;gap:9px;padding:9px 12px;background:var(--canvas2);border-bottom:1px solid var(--faint)}
+.clcard-h{display:flex;align-items:center;gap:9px;padding:9px 12px;background:var(--canvas2);border-bottom:1px solid var(--faint);flex-wrap:wrap}
 .clrank{font-family:var(--mono);font-size:0.7rem;color:var(--canvas);padding:2px 7px;min-width:26px;text-align:center}
-.clname{font-family:var(--sans);font-size:0.86rem;font-weight:600;flex:1;cursor:pointer}
-.clname:hover{color:var(--blue)}
-.clscore{font-family:var(--mono);font-size:0.62rem;color:var(--muted)}
-.clbar-wrap{padding:0 12px 8px}
+.clname{font-family:var(--sans);font-size:0.86rem;font-weight:600;cursor:pointer}
+.clname:hover{text-decoration:underline}
+.clscore{font-family:var(--mono);font-size:0.62rem;color:var(--muted);margin-left:auto}
+.clbar-wrap{padding:0 12px 6px}
 .clbar{height:3px;transition:width 0.3s}
-.clgenes{padding:0 12px 9px;display:flex;flex-wrap:wrap;gap:3px}
+.clgenes{padding:0 12px 6px;display:flex;flex-wrap:wrap;gap:3px}
 .clm{font-family:var(--mono);font-size:0.63rem;padding:2px 6px;border:1px solid var(--blue);color:var(--blue);background:var(--blue-pale)}
+.neg-suggest{padding:4px 12px 8px;font-family:var(--mono);font-size:0.66rem;color:var(--terra);background:var(--terra-pale);border-top:1px solid rgba(176,74,42,0.15)}
+.neg-suggest strong{font-weight:600}
+.tissue-prior{font-family:var(--mono);font-size:0.6rem;padding:2px 7px;border:1px solid;margin-left:4px}
+.tp-ok{border-color:var(--green);color:var(--green)}
+.tp-low{border-color:var(--terra);color:var(--terra)}
+.tissue-sel-row{display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap}
+.tissue-sel-row label{font-family:var(--mono);font-size:0.68rem;color:var(--muted)}
+.tissue-sel-row select{font-family:var(--mono);font-size:0.72rem;background:var(--canvas2);border:1px solid var(--faint);padding:5px 8px;color:var(--ink);outline:none;cursor:pointer;flex:1}
+.tissue-sel-row select:focus{border-color:var(--blue)}
+.expbtn{font-family:var(--mono);font-size:0.68rem;padding:5px 12px;border:1px solid var(--faint2);background:var(--canvas2);color:var(--muted);cursor:pointer;transition:all 0.12s}
+.expbtn:hover{border-color:var(--blue);color:var(--blue)}
+/* PANEL BUILDER */
+.panel-ct-row{display:flex;align-items:center;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+.panel-ct-row label{font-family:var(--mono);font-size:0.68rem;color:var(--muted)}
+.panel-ct-row select{font-family:var(--mono);font-size:0.78rem;background:var(--canvas2);border:1px solid var(--faint);padding:7px 10px;color:var(--ink);outline:none;cursor:pointer;flex:1}
+.panel-ct-row select:focus{border-color:var(--blue)}
+.panel-ct-row button{font-family:var(--mono);font-size:0.72rem;font-weight:600;padding:7px 16px;background:var(--blue);color:var(--canvas);border:none;cursor:pointer}
+.panel-card{background:var(--canvas);border:1px solid var(--faint)}
+.panel-head{padding:12px 14px;border-bottom:1px solid var(--faint);display:flex;align-items:center;gap:10px;background:var(--canvas2)}
+.panel-ct{font-family:var(--sans);font-size:1rem;font-weight:600;flex:1}
+.cl-link{font-family:var(--mono);font-size:0.66rem;color:var(--blue);text-decoration:none;border:1px solid var(--faint2);padding:2px 7px}
+.cl-link:hover{text-decoration:underline}
+.panel-section{padding:12px 14px;border-bottom:1px solid var(--faint)}
+.panel-section:last-child{border-bottom:none}
+.panel-sec-title{font-family:var(--mono);font-size:0.62rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-bottom:8px}
+.panel-genes{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:6px}
+.panel-gene{font-family:var(--mono);font-size:0.72rem;padding:4px 10px;border:1px solid;cursor:pointer;transition:all 0.12s;display:flex;align-items:center;gap:5px}
+.pg-unique{border-color:var(--blue);color:var(--blue);background:var(--blue-pale)}
+.pg-unique:hover{background:var(--blue);color:var(--canvas)}
+.pg-semi{border-color:var(--ochre);color:var(--ochre);background:var(--ochre-pale)}
+.pg-neg{border-color:var(--terra);color:var(--terra);background:var(--terra-pale);cursor:default}
+.pg-badge{font-size:0.55rem;padding:1px 4px;border-radius:2px;background:currentColor;color:var(--canvas);opacity:0.7;font-family:var(--mono)}
+.panel-hint{font-family:var(--mono);font-size:0.64rem;color:var(--dim);font-style:italic}
+.disambig-row{display:flex;align-items:center;gap:10px;padding:6px 0;border-bottom:1px solid var(--faint);flex-wrap:wrap}
+.disambig-row:last-child{border-bottom:none}
+.disambig-vs{font-size:0.78rem;min-width:200px}
+.disambig-shared{font-family:var(--mono);font-size:0.66rem;color:var(--muted);flex:1}
+.disambig-pos{font-family:var(--mono);font-size:0.66rem;color:var(--green);background:rgba(58,107,58,0.08);padding:2px 7px;border:1px solid rgba(58,107,58,0.2)}
+.disambig-neg{font-family:var(--mono);font-size:0.66rem;color:var(--terra);background:var(--terra-pale);padding:2px 7px;border:1px solid rgba(176,74,42,0.2)}
+/* CONFUSION */
+.conf-table{background:var(--canvas);border:1px solid var(--faint)}
+.conf-head{display:grid;grid-template-columns:1fr 1fr 2fr 80px;gap:0;padding:8px 12px;background:var(--canvas2);border-bottom:1px solid var(--faint);font-family:var(--mono);font-size:0.62rem;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted)}
+.conf-row{display:grid;grid-template-columns:1fr 1fr 2fr 80px;gap:0;padding:8px 12px;border-bottom:1px solid var(--faint);align-items:center}
+.conf-row:last-child{border-bottom:none}
+.conf-row:hover{background:var(--canvas2)}
+.conf-ct1,.conf-ct2{font-family:var(--sans);font-size:0.78rem;font-weight:500;cursor:pointer}
+.conf-ct1:hover,.conf-ct2:hover{text-decoration:underline}
+.conf-shared{display:flex;flex-wrap:wrap;gap:3px}
+.conf-gene{font-family:var(--mono);font-size:0.62rem;padding:1px 5px;border:1px solid var(--faint2);color:var(--muted);cursor:pointer;transition:all 0.12s}
+.conf-gene:hover{border-color:var(--blue);color:var(--blue)}
+.conf-bar-wrap{display:flex;align-items:center;gap:5px}
+.conf-bar{height:5px;background:var(--blue);opacity:0.6;min-width:4px}
+.conf-nval{font-family:var(--mono);font-size:0.66rem;color:var(--muted)}
+/* DETAIL */
 .detail{position:fixed;top:56px;right:0;width:420px;height:calc(100vh - 56px);background:var(--canvas);border-left:2px solid var(--blue);overflow-y:auto;z-index:200;transform:translateX(100%);transition:transform 0.22s;box-shadow:-4px 0 18px rgba(26,26,46,0.1)}
 .detail.open{transform:translateX(0)}
 .detail-h{background:var(--ink);color:var(--canvas);padding:14px 16px;border-bottom:2px solid var(--blue);display:flex;align-items:flex-start;gap:10px}
@@ -202,6 +256,8 @@ body{font-family:var(--sans);background:var(--canvas);color:var(--ink);min-heigh
         <button class="mbtn on" data-m="browse" onclick="setMode('browse',this)">Browse</button>
         <button class="mbtn" data-m="gene" onclick="setMode('gene',this)">Gene</button>
         <button class="mbtn" data-m="cluster" onclick="setMode('cluster',this)">Cluster</button>
+        <button class="mbtn" data-m="panel" onclick="setMode('panel',this)">Panel</button>
+        <button class="mbtn" data-m="confuse" onclick="setMode('confuse',this)">Overlap</button>
       </div>
     </div>
     <div class="sb" id="catblock">
@@ -222,46 +278,53 @@ body{font-family:var(--sans);background:var(--canvas);color:var(--ink);min-heigh
     <div id="loading-view" class="loading-state">
       <div class="loading-spinner" id="loading-msg">Loading marker database&hellip;</div>
     </div>
+
+    <!-- BROWSE -->
     <div id="browse-view" style="display:none">
-      <div class="sech">
-        <div class="secht" id="btitle">All cell types</div>
-        <div class="sechs">Click a card to view details &middot; click any gene tag to look it up</div>
-        <div class="sechc" id="bcount"></div>
-      </div>
-      <div class="legend">
-        <span>Marker types:</span>
-        <span class="leg"><span class="legdot legc"></span>Canonical</span>
-        <span class="leg"><span class="legdot legs"></span>Supporting</span>
-        <span class="leg"><span class="legdot legn"></span>Negative</span>
-      </div>
+      <div class="sech"><div class="secht" id="btitle">All cell types</div><div class="sechs">Click a card to view details &middot; click any gene tag to look it up</div><div class="sechc" id="bcount"></div></div>
+      <div class="legend"><span>Marker types:</span><span class="leg"><span class="legdot legc"></span>Canonical</span><span class="leg"><span class="legdot legs"></span>Supporting</span><span class="leg"><span class="legdot legn"></span>Negative</span></div>
       <div class="ctgrid" id="ctgrid"></div>
     </div>
+
+    <!-- GENE -->
     <div id="gene-view" style="display:none">
-      <div class="sech">
-        <div class="secht" id="gtitle">Gene lookup</div>
-        <div class="sechs">Which cell types does this gene mark?</div>
-      </div>
-      <div class="exrow">
-        <div class="exlabel">Example genes</div>
-        <div class="exchips" id="gene-examples"></div>
-      </div>
+      <div class="sech"><div class="secht" id="gtitle">Gene lookup</div><div class="sechs">Which cell types does this gene mark?</div></div>
+      <div class="exrow"><div class="exlabel">Example genes</div><div class="exchips" id="gene-examples"></div></div>
       <div id="gresults"></div>
     </div>
+
+    <!-- CLUSTER -->
     <div id="cluster-view" style="display:none">
-      <div class="sech">
-        <div class="secht">Cluster annotation</div>
-        <div class="sechs">Paste top DE genes &mdash; get ranked candidate cell type annotations</div>
-      </div>
-      <div class="exrow">
-        <div class="exlabel">Load example cluster</div>
-        <div class="exchips" id="cluster-examples"></div>
+      <div class="sech"><div class="secht">Cluster annotation</div><div class="sechs">Paste top DE genes &mdash; get ranked candidates with negative marker checks</div></div>
+      <div class="exrow"><div class="exlabel">Load example cluster</div><div class="exchips" id="cluster-examples"></div></div>
+      <div class="tissue-sel-row">
+        <label>Tissue context:</label>
+        <select id="cluster-tissue-sel"></select>
       </div>
       <textarea class="clinput" id="clinput" placeholder="CD3E&#10;CD8A&#10;GZMB&#10;PRF1&#10;NKG7&#10;&#10;One gene per line or comma-separated.&#10;Paste from Seurat FindMarkers() or Scanpy rank_genes_groups()."></textarea>
       <button class="clbtn" onclick="annotate()">&#9658; Annotate cluster</button>
       <div id="cresults" style="margin-top:14px"></div>
     </div>
+
+    <!-- PANEL BUILDER -->
+    <div id="panel-view" style="display:none">
+      <div class="sech"><div class="secht">Minimal marker panel</div><div class="sechs">Get the smallest set of genes that uniquely identifies a cell type, plus disambiguation from similar types</div></div>
+      <div class="panel-ct-row">
+        <label>Cell type:</label>
+        <select id="panel-ct-sel"></select>
+        <button onclick="buildPanel()">Build panel</button>
+      </div>
+      <div id="panel-result"></div>
+    </div>
+
+    <!-- OVERLAP / CONFUSION -->
+    <div id="confuse-view" style="display:none">
+      <div id="confuse-result"></div>
+    </div>
+
   </main>
 </div>
+
 <div class="detail" id="detail">
   <div class="detail-h">
     <div>
@@ -271,6 +334,7 @@ body{font-family:var(--sans);background:var(--canvas);color:var(--ink);min-heigh
     <button class="detail-x" onclick="closeDetail()">&#x2715;</button>
   </div>
   <div class="dbody">
+    <div class="dsec"><div class="dsect">Minimal panel</div><div class="dmtags" id="dminimal"></div></div>
     <div class="dsec"><div class="dsect">Canonical markers</div><div class="dmtags" id="dcan"></div></div>
     <div class="dsec"><div class="dsect">Supporting markers</div><div class="dmtags" id="dsup"></div></div>
     <div class="dsec"><div class="dsect">Negative markers</div><div class="dmtags" id="dneg"></div></div>
@@ -280,6 +344,7 @@ body{font-family:var(--sans);background:var(--canvas);color:var(--ink);min-heigh
     <div class="dsec"><div class="dsect">Data sources</div><div id="dsrcs" style="display:flex;gap:5px;flex-wrap:wrap"></div></div>
   </div>
 </div>
+
 <footer class="footer">
   <div class="fdisclaim">MarkerAtlas is a research reference tool. Marker gene associations are curated from published databases and literature but may not reflect all biological contexts, species variants, or disease states. Cell type classifications are based on consensus annotations and may differ from study-specific definitions. Users should verify marker suitability for their specific tissue, species, and experimental conditions before applying annotations in published work. Not intended for clinical or diagnostic use.</div>
   <div class="fsources">
@@ -296,6 +361,7 @@ var DB = null;
 var mode = 'browse';
 var selCat = 'all';
 var selTissue = 'all';
+var selTissueCluster = 'all';
 var q = '';
 
 var CAT_COLORS = {
@@ -323,7 +389,7 @@ function cc(cat){ return CAT_COLORS[cat] || '#606060'; }
 function esc(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;'); }
 
 function init(){
-  // Build gene example chips
+  // Gene example chips
   var ge = document.getElementById('gene-examples');
   GENE_EX.forEach(function(pair){
     var b = document.createElement('button');
@@ -332,7 +398,7 @@ function init(){
     b.onclick = (function(g){ return function(){ gex(g); }; })(pair[0]);
     ge.appendChild(b);
   });
-  // Build cluster example chips
+  // Cluster example chips
   var ce = document.getElementById('cluster-examples');
   [['cd8t','CD8+ T cell'],['mac','Macrophage'],['astro','Astrocyte'],
    ['at2','Lung AT2'],['fibro','Fibroblast'],['mixed','Ambiguous']].forEach(function(pair){
@@ -344,10 +410,7 @@ function init(){
   });
   // Fetch database
   fetch('marker_db.json')
-    .then(function(r){
-      if(!r.ok) throw new Error('HTTP ' + r.status);
-      return r.json();
-    })
+    .then(function(r){ if(!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
     .then(function(data){
       DB = data;
       var nCT = Object.keys(DB.celltypes).length;
@@ -355,6 +418,7 @@ function init(){
       document.getElementById('hdr-stats').textContent = nCT + ' cell types \u00b7 ' + nG + ' marker genes';
       document.getElementById('loading-view').style.display = 'none';
       buildFilters();
+      buildTissueClusterSelector();
       renderBrowse();
       document.getElementById('browse-view').style.display = 'block';
     })
@@ -366,43 +430,63 @@ function init(){
 
 function buildFilters(){
   var cats = {};
-  Object.values(DB.celltypes).forEach(function(ct){
-    cats[ct.category] = (cats[ct.category]||0)+1;
-  });
+  Object.values(DB.celltypes).forEach(function(ct){ cats[ct.category] = (cats[ct.category]||0)+1; });
   var cl = document.getElementById('catlist');
   cl.innerHTML = '';
   var allBtn = document.createElement('button');
-  allBtn.className = 'catbtn on';
-  allBtn.dataset.c = 'all';
+  allBtn.className = 'catbtn on'; allBtn.dataset.c = 'all';
   allBtn.innerHTML = '<span class="cdot" style="background:var(--ink2)"></span>All<span class="ccount">' + Object.keys(DB.celltypes).length + '</span>';
   allBtn.onclick = function(){ fcat('all'); };
   cl.appendChild(allBtn);
   Object.entries(cats).sort(function(a,b){return b[1]-a[1];}).forEach(function(entry){
     var c = entry[0], n = entry[1];
-    var b = document.createElement('button');
-    b.className = 'catbtn';
-    b.dataset.c = c;
-    b.innerHTML = '<span class="cdot" style="background:' + cc(c) + '"></span>' + esc(c) + '<span class="ccount">' + n + '</span>';
+    var b = document.createElement('button'); b.className = 'catbtn'; b.dataset.c = c;
+    b.innerHTML = '<span class="cdot" style="background:'+cc(c)+'"></span>'+esc(c)+'<span class="ccount">'+n+'</span>';
     b.onclick = (function(cat){ return function(){ fcat(cat); }; })(c);
     cl.appendChild(b);
   });
   var tissues = new Set();
-  Object.values(DB.celltypes).forEach(function(ct){
-    Object.keys(ct.tissue_context).forEach(function(t){ tissues.add(t); });
-  });
+  Object.values(DB.celltypes).forEach(function(ct){ Object.keys(ct.tissue_context).forEach(function(t){ tissues.add(t); }); });
   var tl = document.getElementById('tissuelist');
   tl.innerHTML = '';
-  var allT = document.createElement('button');
-  allT.className = 'tchip on';
-  allT.textContent = 'All';
-  allT.onclick = function(){ ftissue('all'); };
-  tl.appendChild(allT);
+  var allT = document.createElement('button'); allT.className = 'tchip on'; allT.textContent = 'All';
+  allT.onclick = function(){ ftissue('all'); }; tl.appendChild(allT);
   Array.from(tissues).sort().forEach(function(t){
-    var b = document.createElement('button');
-    b.className = 'tchip';
-    b.textContent = t;
+    var b = document.createElement('button'); b.className = 'tchip'; b.textContent = t;
     b.onclick = (function(tissue){ return function(){ ftissue(tissue); }; })(t);
     tl.appendChild(b);
+  });
+}
+
+function buildTissueClusterSelector(){
+  var tissues = new Set(['all']);
+  Object.values(DB.celltypes).forEach(function(ct){ Object.keys(ct.tissue_context).forEach(function(t){ tissues.add(t); }); });
+  var sel = document.getElementById('cluster-tissue-sel');
+  if(!sel) return;
+  sel.innerHTML = '<option value="all">All tissues (no prior)</option>';
+  Array.from(tissues).filter(function(t){ return t !== 'all'; }).sort().forEach(function(t){
+    var o = document.createElement('option'); o.value = t; o.textContent = t;
+    sel.appendChild(o);
+  });
+  // Also populate panel cell type selector
+  var psel = document.getElementById('panel-ct-sel');
+  if(!psel) return;
+  psel.innerHTML = '<option value="">Select a cell type…</option>';
+  // Group by category
+  var cats = {};
+  Object.entries(DB.celltypes).forEach(function(entry){
+    var n = entry[0], ct = entry[1];
+    if(!cats[ct.category]) cats[ct.category] = [];
+    cats[ct.category].push(n);
+  });
+  Object.entries(cats).sort().forEach(function(entry){
+    var cat = entry[0], names = entry[1];
+    var og = document.createElement('optgroup'); og.label = cat;
+    names.sort().forEach(function(n){
+      var o = document.createElement('option'); o.value = n; o.textContent = n;
+      og.appendChild(o);
+    });
+    psel.appendChild(og);
   });
 }
 
@@ -413,9 +497,7 @@ function fcat(c){
 }
 function ftissue(t){
   selTissue = t;
-  document.querySelectorAll('.tchip').forEach(function(b){
-    b.classList.toggle('on', b.textContent===t || (t==='all' && b.textContent==='All'));
-  });
+  document.querySelectorAll('.tchip').forEach(function(b){ b.classList.toggle('on', b.textContent===t||(t==='all'&&b.textContent==='All')); });
   renderBrowse();
 }
 function onSearch(){
@@ -429,14 +511,19 @@ function setMode(m, btn){
   document.getElementById('browse-view').style.display  = m==='browse'  ? 'block' : 'none';
   document.getElementById('gene-view').style.display    = m==='gene'    ? 'block' : 'none';
   document.getElementById('cluster-view').style.display = m==='cluster' ? 'block' : 'none';
+  document.getElementById('panel-view').style.display   = m==='panel'   ? 'block' : 'none';
+  document.getElementById('confuse-view').style.display = m==='confuse' ? 'block' : 'none';
   document.getElementById('catblock').style.display    = m==='browse' ? 'block' : 'none';
   document.getElementById('tissueblock').style.display = m==='browse' ? 'block' : 'none';
-  var ph = {'browse':'Filter cell types\u2026','gene':'Gene symbol (e.g. CD3E)\u2026','cluster':'Use the panel \u2192'};
+  var ph = {'browse':'Filter cell types\u2026','gene':'Gene symbol (e.g. CD3E)\u2026','cluster':'Use the panel \u2192','panel':'Use the panel \u2192','confuse':'Use the panel \u2192'};
   document.getElementById('srch').placeholder = ph[m] || '';
   closeDetail();
   if(m==='browse') renderBrowse();
   if(m==='gene' && q) renderGene(q);
+  if(m==='confuse') renderConfusion();
 }
+
+function esc(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;'); }
 
 function renderBrowse(){
   if(!DB) return;
@@ -460,30 +547,17 @@ function renderBrowse(){
     var name = entry[0], ct = entry[1];
     var col = cc(ct.category);
     var top = Object.entries(ct.tissue_context).sort(function(a,b){return b[1]-a[1];}).slice(0,3);
-    var ctags = ct.canonical_markers.slice(0,5).map(function(g){
-      return '<span class="mt mtc" data-gene="' + esc(g) + '">' + esc(g) + '</span>';
-    }).join('');
-    var stags = ct.supporting_markers.slice(0,3).map(function(g){
-      return '<span class="mt mts" data-gene="' + esc(g) + '">' + esc(g) + '</span>';
-    }).join('');
-    var ntags = ct.negative_markers.slice(0,2).map(function(g){
-      return '<span class="mt mtn">' + esc(g) + '</span>';
-    }).join('');
-    var tps = top.map(function(e){
-      return '<span class="tpill">' + esc(e[0]) + ' ' + Math.round(e[1]*100) + '%</span>';
-    }).join('');
-    html += '<div class="ctcard" data-ct="' + esc(name) + '">'
-      + '<div class="ctcard-h">'
-      + '<div class="ctbar" style="background:' + col + '"></div>'
-      + '<div class="ctname">' + esc(name) + '</div>'
-      + '<span class="ctcat" style="background:' + col + '">' + esc(ct.category) + '</span>'
-      + '<span class="specbadge spec' + (ct.specificity==='high'?'h':'m') + '">' + ct.specificity + '</span>'
-      + '</div>'
-      + '<div class="ctcard-b"><div class="mtags">' + ctags + stags + ntags + '</div><div class="tpills">' + tps + '</div></div>'
-      + '</div>';
+    var ctags = ct.canonical_markers.slice(0,5).map(function(g){ return '<span class="mt mtc" data-gene="'+esc(g)+'">'+esc(g)+'</span>'; }).join('');
+    var stags = ct.supporting_markers.slice(0,3).map(function(g){ return '<span class="mt mts" data-gene="'+esc(g)+'">'+esc(g)+'</span>'; }).join('');
+    var ntags = ct.negative_markers.slice(0,2).map(function(g){ return '<span class="mt mtn">'+esc(g)+'</span>'; }).join('');
+    var tps = top.map(function(e){ return '<span class="tpill">'+esc(e[0])+' '+Math.round(e[1]*100)+'%</span>'; }).join('');
+    html += '<div class="ctcard" data-ct="'+esc(name)+'">'
+      +'<div class="ctcard-h"><div class="ctbar" style="background:'+col+'"></div><div class="ctname">'+esc(name)+'</div>'
+      +'<span class="ctcat" style="background:'+col+'">'+esc(ct.category)+'</span>'
+      +'<span class="specbadge spec'+(ct.specificity==='high'?'h':'m')+'">'+ct.specificity+'</span></div>'
+      +'<div class="ctcard-b"><div class="mtags">'+ctags+stags+ntags+'</div><div class="tpills">'+tps+'</div></div></div>';
   });
   grid.innerHTML = html;
-  // Attach click handlers after render
   grid.querySelectorAll('.ctcard').forEach(function(card){
     card.addEventListener('click', function(e){
       if(e.target.dataset.gene){ e.stopPropagation(); geneClick(e.target.dataset.gene); return; }
@@ -502,67 +576,67 @@ function clex(k){ document.getElementById('clinput').value=CL_EX[k]||''; annotat
 function renderGene(qg){
   var res = document.getElementById('gresults');
   document.getElementById('gtitle').textContent = qg ? '"'+qg.toUpperCase()+'"' : 'Gene lookup';
-  if(!qg){
-    res.innerHTML = '<div class="empty"><div class="empty-g">&#x2315;</div><div class="empty-t">Enter a gene symbol</div><div class="empty-b">Type above or click an example.<br/>e.g. CD3E &middot; MBP &middot; SFTPC &middot; FOXP3 &middot; ACTA2</div></div>';
-    return;
-  }
+  if(!qg){ res.innerHTML='<div class="empty"><div class="empty-g">&#x2315;</div><div class="empty-t">Enter a gene symbol</div><div class="empty-b">Type above or click an example.</div></div>'; return; }
   var up = qg.toUpperCase();
   var hits = DB.gene_index[up];
   if(hits && hits.length){ res.innerHTML = buildGeneCard(up, hits); attachGeneCardHandlers(res); return; }
   var partial = Object.entries(DB.gene_index).filter(function(e){ return e[0].indexOf(up)>=0; }).slice(0,5);
   if(partial.length){
-    res.innerHTML = '<div class="nores" style="padding:0 0 10px;text-align:left">Exact match not found. Partial matches:</div>' + partial.map(function(e){ return buildGeneCard(e[0],e[1]); }).join('');
-    attachGeneCardHandlers(res);
-    return;
+    res.innerHTML = '<div class="nores" style="padding:0 0 10px;text-align:left">Exact match not found. Partial matches:</div>'+partial.map(function(e){ return buildGeneCard(e[0],e[1]); }).join('');
+    attachGeneCardHandlers(res); return;
   }
-  res.innerHTML = '<div class="nores">&ldquo;' + esc(up) + '&rdquo; not found. Check it is a current HGNC-approved symbol.</div>';
+  res.innerHTML = '<div class="nores">&ldquo;'+esc(up)+'&rdquo; not found. Check it is a current HGNC-approved symbol.</div>';
 }
-
 function buildGeneCard(gene, hits){
   var rows = '';
   hits.slice().sort(function(a,b){return b.confidence-a.confidence;}).forEach(function(h){
     var col = cc(h.category);
-    var ts = Object.entries(h.tissue_context).sort(function(a,b){return b[1]-a[1];}).slice(0,3).map(function(e){
-      return '<span class="gtchip">' + esc(e[0]) + '</span>';
-    }).join('');
-    rows += '<div class="grow">'
-      + '<div class="growbar" style="background:' + col + '"></div>'
-      + '<div class="growname" data-ct="' + esc(h.celltype) + '">' + esc(h.celltype) + '</div>'
-      + '<span class="grole ' + (h.role==='canonical'?'rc':'rs') + '">' + h.role + '</span>'
-      + '<div class="growtissues">' + ts + '</div>'
-      + '</div>';
+    var ts = Object.entries(h.tissue_context).sort(function(a,b){return b[1]-a[1];}).slice(0,3).map(function(e){ return '<span class="gtchip">'+esc(e[0])+'</span>'; }).join('');
+    rows += '<div class="grow"><div class="growbar" style="background:'+col+'"></div>'
+      +'<div class="growname" data-ct="'+esc(h.celltype)+'">'+esc(h.celltype)+'</div>'
+      +'<span class="grole '+(h.role==='canonical'?'rc':'rs')+'">'+h.role+'</span>'
+      +'<div class="growtissues">'+ts+'</div></div>';
   });
-  return '<div class="gcard">'
-    + '<div class="gcard-h"><div class="gsym">' + esc(gene) + '</div><div class="gdesc">' + hits.length + ' cell type association' + (hits.length!==1?'s':'') + '</div></div>'
-    + '<div class="gcard-b">' + rows + '</div></div>';
+  return '<div class="gcard"><div class="gcard-h"><div class="gsym">'+esc(gene)+'</div><div class="gdesc">'+hits.length+' cell type association'+(hits.length!==1?'s':'')+'</div></div><div class="gcard-b">'+rows+'</div></div>';
 }
-
 function attachGeneCardHandlers(container){
   container.querySelectorAll('.growname[data-ct]').forEach(function(el){
     el.addEventListener('click', function(){ showDetail(el.dataset.ct); });
   });
 }
 
+// ── CLUSTER ANNOTATION (tissue-aware) ──
 function annotate(){
   var txt = document.getElementById('clinput').value.trim();
   if(!txt){ alert('Paste gene symbols first.'); return; }
+  selTissueCluster = document.getElementById('cluster-tissue-sel').value;
   var genes = txt.split(/[\s,;\n]+/).map(function(g){ return g.trim().toUpperCase(); }).filter(Boolean);
   var scores = {};
   genes.forEach(function(g){
     var hs = DB.gene_index[g];
     if(!hs) return;
     hs.forEach(function(h){
-      if(!scores[h.celltype]) scores[h.celltype]={score:0,matched:[],cat:h.category};
-      scores[h.celltype].score += (h.role==='canonical'?2:1);
+      if(!scores[h.celltype]) scores[h.celltype]={score:0,matched:[],cat:h.category,raw:0};
+      var w = h.role==='canonical'?2:1;
+      scores[h.celltype].raw += w;
       scores[h.celltype].matched.push(g);
     });
   });
+  // Apply tissue prior if selected
+  Object.entries(scores).forEach(function(entry){
+    var ct = entry[0], d = entry[1];
+    var ctData = DB.celltypes[ct];
+    var prior = 1.0;
+    if(selTissueCluster !== 'all' && ctData && ctData.tissue_context[selTissueCluster]){
+      prior = ctData.tissue_context[selTissueCluster];
+    } else if(selTissueCluster !== 'all'){
+      prior = 0.1; // penalise cell types not known in this tissue
+    }
+    d.score = d.raw * prior;
+  });
   var ranked = Object.entries(scores).sort(function(a,b){return b[1].score-a[1].score;}).slice(0,8);
   var res = document.getElementById('cresults');
-  if(!ranked.length){
-    res.innerHTML = '<div class="nores">No marker genes recognised. Check symbols are current HGNC-approved human gene names.</div>';
-    return;
-  }
+  if(!ranked.length){ res.innerHTML='<div class="nores">No marker genes recognised. Check symbols are current HGNC-approved human gene names.</div>'; return; }
   var mx = ranked[0][1].score || 1;
   var unmatched = genes.filter(function(g){ return !DB.gene_index[g]; });
   var html = '';
@@ -571,67 +645,264 @@ function annotate(){
     var col = cc(d.cat);
     var pct = Math.round(d.score/mx*100);
     var ctData = DB.celltypes[ct];
-    var total = ctData ? (ctData.canonical_markers.length + ctData.supporting_markers.length) : '?';
-    var matched = d.matched.map(function(g){ return '<span class="clm">' + esc(g) + '</span>'; }).join('');
-    html += '<div class="clcard" data-ct="' + esc(ct) + '">'
-      + '<div class="clcard-h">'
-      + '<span class="clrank" style="background:' + (i===0?col:'var(--muted)') + '">' + (i+1) + '</span>'
-      + '<span class="clname" style="color:' + (i===0?col:'var(--ink)') + '" data-ct="' + esc(ct) + '">' + esc(ct) + '</span>'
-      + '<span class="clscore">' + d.matched.length + '/' + total + ' markers &middot; score ' + d.score + '</span>'
-      + '</div>'
-      + '<div class="clbar-wrap"><div class="clbar" style="width:' + pct + '%;background:' + col + '"></div></div>'
-      + '<div class="clgenes">' + matched + '</div>'
-      + '</div>';
+    var total = ctData ? (ctData.canonical_markers.length+ctData.supporting_markers.length) : '?';
+    var matchedTags = d.matched.map(function(g){ return '<span class="clm">'+esc(g)+'</span>'; }).join('');
+    // Negative marker suggestions
+    var negSuggestions = '';
+    if(ctData && ctData.negative_markers.length){
+      var toCheck = ctData.negative_markers.filter(function(g){ return genes.indexOf(g)<0; }).slice(0,4);
+      if(toCheck.length){
+        negSuggestions = '<div class="neg-suggest">&#8594; Rule out: verify <strong>'+toCheck.map(esc).join(', ')+'</strong> are absent</div>';
+      }
+    }
+    // Tissue prior indicator
+    var tissueNote = '';
+    if(selTissueCluster !== 'all' && ctData){
+      var prior = ctData.tissue_context[selTissueCluster];
+      if(prior){ tissueNote = '<span class="tissue-prior tp-ok">'+selTissueCluster+' '+Math.round(prior*100)+'%</span>'; }
+      else { tissueNote = '<span class="tissue-prior tp-low">not typical in '+esc(selTissueCluster)+'</span>'; }
+    }
+    html += '<div class="clcard" data-ct="'+esc(ct)+'">'
+      +'<div class="clcard-h"><span class="clrank" style="background:'+(i===0?col:'var(--muted)')+'">'+( i+1)+'</span>'
+      +'<span class="clname" style="color:'+(i===0?col:'var(--ink)')+'" data-ct="'+esc(ct)+'">'+esc(ct)+'</span>'
+      +(tissueNote?tissueNote:'')
+      +'<span class="clscore">'+d.matched.length+'/'+total+' &middot; score '+d.score.toFixed(1)+'</span></div>'
+      +'<div class="clbar-wrap"><div class="clbar" style="width:'+pct+'%;background:'+col+'"></div></div>'
+      +'<div class="clgenes">'+matchedTags+'</div>'
+      +negSuggestions
+      +'</div>';
   });
-  if(unmatched.length) html += '<div style="font-family:var(--mono);font-size:0.64rem;color:var(--dim);margin-top:6px">Not in database: ' + unmatched.map(esc).join(', ') + '</div>';
+  if(unmatched.length) html += '<div style="font-family:var(--mono);font-size:0.64rem;color:var(--dim);margin-top:6px">Not in database: '+unmatched.map(esc).join(', ')+'</div>';
+
+  // Export button
+  html += '<div style="margin-top:12px"><button class="expbtn" onclick="exportAnnotation()">&#8595; Export annotation table</button></div>';
   res.innerHTML = html;
   res.querySelectorAll('.clname[data-ct]').forEach(function(el){
     el.addEventListener('click', function(){ showDetail(el.dataset.ct); });
   });
+  // Store last results for export
+  window._lastAnnotation = {genes: genes, ranked: ranked, tissue: selTissueCluster};
 }
 
-function showDetail(ctName){
+function exportAnnotation(){
+  if(!window._lastAnnotation) return;
+  var ann = window._lastAnnotation;
+  var rows = ['Rank\tCell type\tScore\tMatched genes\tTotal markers\tTissue prior\tKey PMIDs'];
+  ann.ranked.forEach(function(entry, i){
+    var ct = entry[0], d = entry[1];
+    var ctData = DB.celltypes[ct];
+    var total = ctData ? (ctData.canonical_markers.length+ctData.supporting_markers.length) : '';
+    var pmids = ctData ? (ctData.pmids||[]).join(';') : '';
+    var prior = (ann.tissue !== 'all' && ctData && ctData.tissue_context[ann.tissue]) ? ctData.tissue_context[ann.tissue] : '';
+    rows.push([i+1, ct, d.score.toFixed(2), d.matched.join(';'), total, prior, pmids].join('\t'));
+  });
+  rows.push('');
+  rows.push('Input genes: ' + ann.genes.join(', '));
+  rows.push('Tissue context: ' + ann.tissue);
+  rows.push('Generated by MarkerAtlas (chakitarora.github.io/markeratlas)');
+  dl(new Blob([rows.join('\n')], {type:'text/plain'}), 'markeratlas_annotation.tsv');
+}
+
+// ── MINIMAL PANEL BUILDER ──
+function buildPanel(){
+  var sel = document.getElementById('panel-ct-sel');
+  if(!sel || !sel.value || !DB) return;
+  var ctName = sel.value;
   var ct = DB.celltypes[ctName];
   if(!ct) return;
   var col = cc(ct.category);
+  var res = document.getElementById('panel-result');
+
+  // Use pre-computed minimal panel from DB
+  var minimal = ct.minimal_panel || ct.canonical_markers.slice(0,3);
+  var unique   = ct.unique_markers || minimal;
+
+  // Find most confused cell types
+  var confused = [];
+  Object.entries(DB.celltypes).forEach(function(entry){
+    var n = entry[0], other = entry[1];
+    if(n === ctName) return;
+    var s1 = new Set(ct.canonical_markers.concat(ct.supporting_markers));
+    var s2 = new Set(other.canonical_markers.concat(other.supporting_markers));
+    var shared = Array.from(s1).filter(function(g){ return s2.has(g); });
+    if(shared.length > 0) confused.push({ct:n, shared:shared, col:cc(other.category)});
+  });
+  confused.sort(function(a,b){ return b.shared.length-a.shared.length; });
+  var topConfused = confused.slice(0,3);
+
+  // Key discriminators for each confused pair
+  var discriminators = topConfused.map(function(pair){
+    var otherCt = DB.celltypes[pair.ct];
+    // what does ct have that other doesn't (positive discriminators)
+    var posDisc = ct.canonical_markers.filter(function(g){ return otherCt.canonical_markers.indexOf(g)<0 && otherCt.supporting_markers.indexOf(g)<0; }).slice(0,2);
+    // what is negative in ct but positive in other
+    var negDisc = ct.negative_markers.filter(function(g){ return otherCt.canonical_markers.indexOf(g)>=0; }).slice(0,2);
+    return {ct: pair.ct, col: pair.col, shared: pair.shared, pos: posDisc, neg: negDisc};
+  });
+
+  var html = '<div class="panel-card">';
+  html += '<div class="panel-head" style="border-left:3px solid '+col+'"><div class="panel-ct">'+esc(ctName)+'</div>';
+  if(ct.cl_id) html += '<a class="cl-link" href="https://www.ebi.ac.uk/ols4/ontologies/cl/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252F'+ct.cl_id.replace(':','_')+'" target="_blank">'+esc(ct.cl_id)+' &#x2197;</a>';
+  html += '</div>';
+
+  html += '<div class="panel-section"><div class="panel-sec-title">Recommended minimal panel</div>';
+  html += '<div class="panel-genes">';
+  minimal.forEach(function(g){
+    var isUnique = unique.indexOf(g) >= 0;
+    html += '<span class="panel-gene '+(isUnique?'pg-unique':'pg-semi')+'" data-gene="'+esc(g)+'">'+esc(g)+'<span class="pg-badge">'+(isUnique?'unique':'semi-unique')+'</span></span>';
+  });
+  html += '</div>';
+  html += '<div class="panel-hint">Unique = canonical only in this cell type. Semi-unique = canonical in \u22641 other type.</div></div>';
+
+  if(ct.negative_markers.length){
+    html += '<div class="panel-section"><div class="panel-sec-title">Key negative markers <span style="font-weight:400;color:var(--dim)">(verify absent)</span></div>';
+    html += '<div class="panel-genes">';
+    ct.negative_markers.slice(0,4).forEach(function(g){
+      html += '<span class="panel-gene pg-neg">'+esc(g)+'</span>';
+    });
+    html += '</div></div>';
+  }
+
+  if(discriminators.length){
+    html += '<div class="panel-section"><div class="panel-sec-title">Disambiguation from most similar types</div>';
+    discriminators.forEach(function(d){
+      html += '<div class="disambig-row">';
+      html += '<span class="disambig-vs">vs <strong style="color:'+d.col+'">'+esc(d.ct)+'</strong></span>';
+      html += '<span class="disambig-shared">shared: '+d.shared.map(esc).join(', ')+'</span>';
+      if(d.pos.length) html += '<span class="disambig-pos">&#43; '+d.pos.map(esc).join(', ')+'</span>';
+      if(d.neg.length) html += '<span class="disambig-neg">&#8722; '+d.neg.map(esc).join(', ')+'</span>';
+      html += '</div>';
+    });
+    html += '</div>';
+  }
+
+  html += '<div class="panel-section"><button class="expbtn" onclick="exportPanel(\''+esc(ctName)+'\')">&#8595; Export panel</button></div>';
+  html += '</div>';
+  res.innerHTML = html;
+
+  // Attach gene click handlers
+  res.querySelectorAll('.panel-gene[data-gene]').forEach(function(el){
+    el.addEventListener('click', function(){ geneClick(el.dataset.gene); });
+  });
+}
+
+function exportPanel(ctName){
+  var ct = DB.celltypes[ctName];
+  if(!ct) return;
+  var lines = [
+    'MarkerAtlas — Minimal Marker Panel',
+    'Cell type: ' + ctName,
+    'CL ID: ' + (ct.cl_id||'N/A'),
+    'Category: ' + ct.category,
+    '',
+    'MINIMAL PANEL (recommended):',
+    (ct.minimal_panel||ct.canonical_markers.slice(0,3)).join(', '),
+    '',
+    'UNIQUE MARKERS (exclusive to this cell type):',
+    (ct.unique_markers||[]).join(', ') || 'None in current database',
+    '',
+    'ALL CANONICAL MARKERS:',
+    ct.canonical_markers.join(', '),
+    '',
+    'SUPPORTING MARKERS:',
+    ct.supporting_markers.join(', '),
+    '',
+    'NEGATIVE MARKERS (should be absent):',
+    ct.negative_markers.join(', '),
+    '',
+    'TISSUE CONFIDENCE:',
+  ];
+  Object.entries(ct.tissue_context).sort(function(a,b){return b[1]-a[1];}).forEach(function(e){
+    lines.push('  ' + e[0] + ': ' + Math.round(e[1]*100) + '%');
+  });
+  lines.push('');
+  lines.push('PRIMARY REFERENCES:');
+  (ct.pmids||[]).forEach(function(id){ lines.push('  PMID ' + id + ' — https://pubmed.ncbi.nlm.nih.gov/'+id+'/'); });
+  lines.push('');
+  lines.push('Generated by MarkerAtlas (chakitarora.github.io/markeratlas)');
+  dl(new Blob([lines.join('\n')],{type:'text/plain'}), ctName.replace(/[^a-z0-9]/gi,'_')+'_panel.txt');
+}
+
+// ── CONFUSION MATRIX ──
+function renderConfusion(){
+  if(!DB) return;
+  var cts = Object.keys(DB.celltypes);
+  var pairs = [];
+  for(var i=0;i<cts.length;i++){
+    for(var j=i+1;j<cts.length;j++){
+      var ct1 = DB.celltypes[cts[i]], ct2 = DB.celltypes[cts[j]];
+      var s1 = new Set(ct1.canonical_markers.concat(ct1.supporting_markers));
+      var s2 = new Set(ct2.canonical_markers.concat(ct2.supporting_markers));
+      var shared = Array.from(s1).filter(function(g){ return s2.has(g); });
+      if(shared.length > 0) pairs.push({ct1:cts[i],ct2:cts[j],shared:shared,n:shared.length});
+    }
+  }
+  pairs.sort(function(a,b){return b.n-a.n;});
+  var top = pairs.slice(0,20);
+
+  var html = '<div class="sech"><div class="secht">Marker overlap between cell types</div><div class="sechs">Pairs sharing the most markers — highest annotation ambiguity</div></div>';
+  html += '<div class="conf-table">';
+  html += '<div class="conf-head"><span class="conf-ct1">Cell type 1</span><span class="conf-ct2">Cell type 2</span><span class="conf-shared">Shared markers</span><span class="conf-n">N</span></div>';
+  top.forEach(function(p){
+    var col1 = cc(DB.celltypes[p.ct1].category);
+    var col2 = cc(DB.celltypes[p.ct2].category);
+    var geneLinks = p.shared.map(function(g){ return '<span class="conf-gene" data-gene="'+esc(g)+'">'+esc(g)+'</span>'; }).join('');
+    html += '<div class="conf-row">'
+      +'<span class="conf-ct1" style="color:'+col1+'" data-ct="'+esc(p.ct1)+'">'+esc(p.ct1)+'</span>'
+      +'<span class="conf-ct2" style="color:'+col2+'" data-ct="'+esc(p.ct2)+'">'+esc(p.ct2)+'</span>'
+      +'<span class="conf-shared">'+geneLinks+'</span>'
+      +'<span class="conf-n conf-bar-wrap"><div class="conf-bar" style="width:'+Math.round(p.n/pairs[0].n*100)+'%"></div><span class="conf-nval">'+p.n+'</span></span>'
+      +'</div>';
+  });
+  html += '</div>';
+  document.getElementById('confuse-result').innerHTML = html;
+  document.getElementById('confuse-result').querySelectorAll('.conf-ct1[data-ct], .conf-ct2[data-ct]').forEach(function(el){
+    el.addEventListener('click', function(){ showDetail(el.dataset.ct); });
+  });
+  document.getElementById('confuse-result').querySelectorAll('.conf-gene[data-gene]').forEach(function(el){
+    el.addEventListener('click', function(){ geneClick(el.dataset.gene); });
+  });
+}
+
+// ── DETAIL PANEL ──
+function showDetail(ctName){
+  var ct = DB.celltypes[ctName]; if(!ct) return;
+  var col = cc(ct.category);
   document.getElementById('dname').textContent = ctName;
   document.getElementById('dbadges').innerHTML =
-    '<span style="font-family:var(--mono);font-size:0.6rem;padding:2px 7px;background:' + col + ';color:white">' + esc(ct.category) + '</span>'
-    + '<span style="font-family:var(--mono);font-size:0.6rem;padding:2px 7px;border:1px solid ' + (ct.specificity==='high'?'var(--green)':'var(--ochre)') + ';color:' + (ct.specificity==='high'?'var(--green)':'var(--ochre)') + '">' + ct.specificity + ' specificity</span>';
-  var canEl = document.getElementById('dcan');
-  canEl.innerHTML = '';
+    '<span style="font-family:var(--mono);font-size:0.6rem;padding:2px 7px;background:'+col+';color:white">'+esc(ct.category)+'</span>'
+    +'<span style="font-family:var(--mono);font-size:0.6rem;padding:2px 7px;border:1px solid '+(ct.specificity==='high'?'var(--green)':'var(--ochre)')+';color:'+(ct.specificity==='high'?'var(--green)':'var(--ochre)')+'">'+ct.specificity+' specificity</span>'
+    +(ct.cl_id?'<a href="https://www.ebi.ac.uk/ols4/ontologies/cl/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252F'+ct.cl_id.replace(':','_')+'" target="_blank" style="font-family:var(--mono);font-size:0.6rem;padding:2px 7px;border:1px solid var(--faint2);color:var(--blue);text-decoration:none">'+esc(ct.cl_id)+' &#x2197;</a>':'');
+  var canEl = document.getElementById('dcan'); canEl.innerHTML = '';
   ct.canonical_markers.forEach(function(g){
-    var s = document.createElement('span');
-    s.className = 'dm dmc';
-    s.textContent = g;
-    s.onclick = function(){ geneClick(g); closeDetail(); };
-    canEl.appendChild(s);
+    var s = document.createElement('span'); s.className = 'dm dmc'; s.textContent = g;
+    s.onclick = function(){ geneClick(g); closeDetail(); }; canEl.appendChild(s);
   });
-  var supEl = document.getElementById('dsup');
-  supEl.innerHTML = '';
+  var supEl = document.getElementById('dsup'); supEl.innerHTML = '';
   ct.supporting_markers.forEach(function(g){
-    var s = document.createElement('span');
-    s.className = 'dm dms';
-    s.textContent = g;
-    s.onclick = function(){ geneClick(g); closeDetail(); };
-    supEl.appendChild(s);
+    var s = document.createElement('span'); s.className = 'dm dms'; s.textContent = g;
+    s.onclick = function(){ geneClick(g); closeDetail(); }; supEl.appendChild(s);
   });
-  document.getElementById('dneg').innerHTML = ct.negative_markers.map(function(g){
-    return '<span class="dm dmn">' + esc(g) + '</span>';
-  }).join('');
+  document.getElementById('dneg').innerHTML = ct.negative_markers.map(function(g){ return '<span class="dm dmn">'+esc(g)+'</span>'; }).join('');
+  // Minimal panel in detail
+  var minEl = document.getElementById('dminimal');
+  if(minEl){
+    var mp = ct.minimal_panel||[];
+    minEl.innerHTML = mp.length ? mp.map(function(g){ return '<span class="dm dmc" style="cursor:default">'+esc(g)+'</span>'; }).join('') : '<span style="color:var(--dim);font-size:0.74rem">See canonical markers above</span>';
+  }
   document.getElementById('dnotes').textContent = ct.notes || '\u2014';
   document.getElementById('dtissues').innerHTML = Object.entries(ct.tissue_context).sort(function(a,b){return b[1]-a[1];}).map(function(e){
-    return '<div class="tsrow"><span class="tsname">' + esc(e[0]) + '</span><div class="tstrack"><div class="tsfill" style="width:' + (e[1]*100) + '%"></div></div><span class="tsval">' + Math.round(e[1]*100) + '%</span></div>';
+    return '<div class="tsrow"><span class="tsname">'+esc(e[0])+'</span><div class="tstrack"><div class="tsfill" style="width:'+(e[1]*100)+'%"></div></div><span class="tsval">'+Math.round(e[1]*100)+'%</span></div>';
   }).join('');
   document.getElementById('dpmids').innerHTML = (ct.pmids||[]).map(function(id){
-    return '<div class="pmidrow"><a class="pmida" href="https://pubmed.ncbi.nlm.nih.gov/' + esc(id) + '/" target="_blank">PMID ' + esc(id) + ' &#x2197;</a></div>';
+    return '<div class="pmidrow"><a class="pmida" href="https://pubmed.ncbi.nlm.nih.gov/'+esc(id)+'/" target="_blank">PMID '+esc(id)+' &#x2197;</a></div>';
   }).join('');
-  document.getElementById('dsrcs').innerHTML = (ct.sources||[]).map(function(s){
-    return '<span class="srcbadge">' + esc(s) + '</span>';
-  }).join('');
+  document.getElementById('dsrcs').innerHTML = (ct.sources||[]).map(function(s){ return '<span class="srcbadge">'+esc(s)+'</span>'; }).join('');
   document.getElementById('detail').classList.add('open');
 }
 function closeDetail(){ document.getElementById('detail').classList.remove('open'); }
+
+function dl(blob,name){ var a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=name; a.click(); }
 
 window.addEventListener('load', init);
 </script>
