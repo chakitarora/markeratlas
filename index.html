@@ -15,40 +15,33 @@
   --ochre:#c8922a;--ochre2:#a87020;--ochre-pale:rgba(200,146,42,0.10);
   --terra:#b04a2a;--terra-pale:rgba(176,74,42,0.08);
   --green:#3a6b3a;--muted:#706858;--dim:#a09880;
-  --mono:'IBM Plex Mono',monospace;--sans:'IBM Plex Sans',sans-serif;
+  --mono:"IBM Plex Mono",monospace;--sans:"IBM Plex Sans",sans-serif;
 }
 body{font-family:var(--sans);background:var(--canvas);color:var(--ink);min-height:100vh;font-size:14px}
 ::-webkit-scrollbar{width:4px;height:4px}
 ::-webkit-scrollbar-track{background:var(--canvas2)}
 ::-webkit-scrollbar-thumb{background:var(--faint)}
 ::selection{background:rgba(41,82,163,0.12)}
-
-/* HEADER */
 .hdr{background:var(--ink);color:var(--canvas);padding:0 28px;height:56px;display:flex;align-items:center;gap:16px;border-bottom:3px solid var(--blue)}
 .hdr-logo{display:flex;align-items:center;gap:10px}
 .hdr-geo{width:28px;height:28px;flex-shrink:0}
 .hdr-name{font-family:var(--mono);font-size:0.92rem;font-weight:600;letter-spacing:0.08em}
 .hdr-tag{font-family:var(--mono);font-size:0.58rem;color:rgba(244,240,232,0.3);letter-spacing:0.1em}
 .hdr-rule{flex:1;height:1px;background:linear-gradient(to right,rgba(244,240,232,0.1),transparent)}
-.hdr-stats{font-family:var(--mono);font-size:0.62rem;color:rgba(244,240,232,0.35);text-align:right;line-height:1.7}
-
-/* LAYOUT */
+.hdr-stats{font-family:var(--mono);font-size:0.62rem;color:rgba(244,240,232,0.4);text-align:right;line-height:1.7}
 .layout{display:grid;grid-template-columns:296px 1fr;height:calc(100vh - 56px)}
 .sidebar{background:var(--canvas2);border-right:1px solid var(--faint);overflow-y:auto;display:flex;flex-direction:column}
-.main{overflow-y:auto;padding:24px 28px;position:relative}
-
-/* SIDEBAR */
+.main{overflow-y:auto;padding:24px 28px}
 .sb{padding:16px 16px 12px;border-bottom:1px solid var(--faint)}
-.sb:last-of-type{border-bottom:none;margin-top:auto}
 .sblabel{font-family:var(--mono);font-size:0.58rem;font-weight:600;text-transform:uppercase;letter-spacing:0.16em;color:var(--muted);margin-bottom:8px;display:flex;align-items:center;gap:0}
-.sblabel::before{content:'';display:inline-block;width:3px;height:8px;background:var(--blue);margin-right:7px;border-radius:1px}
+.sblabel::before{content:"";display:inline-block;width:3px;height:8px;background:var(--blue);margin-right:7px;border-radius:1px}
 .srchwrap{position:relative}
 .srch{width:100%;font-family:var(--mono);font-size:0.78rem;background:var(--canvas);border:1px solid var(--faint);padding:8px 10px 8px 30px;color:var(--ink);outline:none;transition:border-color 0.15s}
 .srch:focus{border-color:var(--blue)}
 .srch::placeholder{color:var(--dim);font-style:italic}
 .srch-icon{position:absolute;left:9px;top:50%;transform:translateY(-50%);color:var(--dim);font-size:0.78rem;pointer-events:none}
 .mode-row{display:flex;gap:3px;margin-top:8px}
-.mbtn{flex:1;font-family:var(--mono);font-size:0.66rem;font-weight:500;padding:6px 3px;text-align:center;border:1px solid var(--faint);background:var(--canvas);color:var(--muted);cursor:pointer;transition:all 0.12s;letter-spacing:0.02em}
+.mbtn{flex:1;font-family:var(--mono);font-size:0.66rem;font-weight:500;padding:6px 3px;text-align:center;border:1px solid var(--faint);background:var(--canvas);color:var(--muted);cursor:pointer;transition:all 0.12s}
 .mbtn.on{background:var(--blue);color:var(--canvas);border-color:var(--blue)}
 .mbtn:hover:not(.on){border-color:var(--faint2);color:var(--ink3)}
 .catbtn{display:flex;align-items:center;gap:7px;padding:5px 8px;border:1px solid transparent;background:transparent;cursor:pointer;transition:all 0.12s;font-family:var(--sans);font-size:0.74rem;color:var(--muted);text-align:left;width:100%}
@@ -64,29 +57,21 @@ body{font-family:var(--sans);background:var(--canvas);color:var(--ink);min-heigh
 .creator{font-family:var(--mono);font-size:0.6rem;color:var(--dim);padding-top:8px;border-top:1px solid var(--faint)}
 .creator a{color:var(--blue);text-decoration:none}
 .creator a:hover{text-decoration:underline}
-
-/* SECTION HEADER */
 .sech{display:flex;align-items:baseline;gap:12px;margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid var(--ink)}
 .secht{font-family:var(--sans);font-size:1.2rem;font-weight:600;letter-spacing:-0.02em}
 .sechs{font-family:var(--mono);font-size:0.64rem;color:var(--muted);font-style:italic}
 .sechc{font-family:var(--mono);font-size:0.7rem;color:var(--blue);margin-left:auto}
-
-/* LEGEND */
 .legend{display:flex;gap:14px;flex-wrap:wrap;padding:8px 0;margin-bottom:14px;border-bottom:1px solid var(--faint);font-family:var(--mono);font-size:0.62rem;color:var(--muted);align-items:center}
 .leg{display:flex;align-items:center;gap:4px}
 .legdot{width:9px;height:9px;border:1px solid;flex-shrink:0}
 .legc{border-color:var(--blue);background:var(--blue-pale)}
 .legs{border-color:var(--faint2);background:transparent}
 .legn{border-color:var(--terra);background:var(--terra-pale)}
-
-/* EXAMPLE CHIPS */
 .exrow{margin-bottom:14px}
 .exlabel{font-family:var(--mono);font-size:0.6rem;color:var(--muted);margin-bottom:6px;text-transform:uppercase;letter-spacing:0.1em}
 .exchips{display:flex;flex-wrap:wrap;gap:5px}
 .ex{font-family:var(--mono);font-size:0.67rem;padding:4px 10px;border:1px solid var(--faint2);background:var(--canvas2);color:var(--ink3);cursor:pointer;transition:all 0.12s}
 .ex:hover{border-color:var(--blue);background:var(--blue-pale);color:var(--blue)}
-
-/* CARD GRID */
 .ctgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:8px}
 .ctcard{background:var(--canvas);border:1px solid var(--faint);cursor:pointer;transition:all 0.12s}
 .ctcard:hover{border-color:var(--faint2);box-shadow:2px 2px 0 var(--faint)}
@@ -107,8 +92,6 @@ body{font-family:var(--sans);background:var(--canvas);color:var(--ink);min-heigh
 .mtn{border-color:var(--terra);color:var(--terra);background:var(--terra-pale)}
 .tpills{display:flex;flex-wrap:wrap;gap:3px;margin-top:5px}
 .tpill{font-family:var(--mono);font-size:0.58rem;padding:1px 5px;background:var(--ochre-pale);border:1px solid rgba(200,146,42,0.2);color:var(--ochre2)}
-
-/* GENE RESULTS */
 .gcard{background:var(--canvas);border:1px solid var(--faint);margin-bottom:8px}
 .gcard-h{display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--canvas2);border-bottom:1px solid var(--faint)}
 .gsym{font-family:var(--mono);font-size:1.05rem;font-weight:600;color:var(--blue)}
@@ -124,8 +107,6 @@ body{font-family:var(--sans);background:var(--canvas);color:var(--ink);min-heigh
 .rs{border-color:var(--faint2);color:var(--muted)}
 .growtissues{display:flex;flex-wrap:wrap;gap:3px;flex:1}
 .gtchip{font-family:var(--mono);font-size:0.58rem;padding:1px 5px;background:var(--ochre-pale);border:1px solid rgba(200,146,42,0.2);color:var(--ochre2)}
-
-/* CLUSTER */
 .clinput{width:100%;height:110px;font-family:var(--mono);font-size:0.76rem;line-height:1.8;background:var(--canvas2);border:1px solid var(--faint);padding:9px 11px;color:var(--ink);outline:none;resize:vertical;transition:border-color 0.15s;margin-bottom:8px}
 .clinput:focus{border-color:var(--blue)}
 .clinput::placeholder{color:var(--dim);font-style:italic}
@@ -138,12 +119,10 @@ body{font-family:var(--sans);background:var(--canvas);color:var(--ink);min-heigh
 .clname:hover{color:var(--blue)}
 .clscore{font-family:var(--mono);font-size:0.62rem;color:var(--muted)}
 .clbar-wrap{padding:0 12px 8px}
-.clbar{height:3px;background:var(--blue);transition:width 0.3s}
+.clbar{height:3px;transition:width 0.3s}
 .clgenes{padding:0 12px 9px;display:flex;flex-wrap:wrap;gap:3px}
 .clm{font-family:var(--mono);font-size:0.63rem;padding:2px 6px;border:1px solid var(--blue);color:var(--blue);background:var(--blue-pale)}
 .clnm{font-family:var(--mono);font-size:0.63rem;padding:2px 6px;border:1px solid var(--faint);color:var(--dim)}
-
-/* DETAIL PANEL */
 .detail{position:fixed;top:56px;right:0;width:420px;height:calc(100vh - 56px);background:var(--canvas);border-left:2px solid var(--blue);overflow-y:auto;z-index:200;transform:translateX(100%);transition:transform 0.22s;box-shadow:-4px 0 18px rgba(26,26,46,0.1)}
 .detail.open{transform:translateX(0)}
 .detail-h{background:var(--ink);color:var(--canvas);padding:14px 16px;border-bottom:2px solid var(--blue);display:flex;align-items:flex-start;gap:10px}
@@ -154,7 +133,7 @@ body{font-family:var(--sans);background:var(--canvas);color:var(--ink);min-heigh
 .dsec{margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid var(--faint)}
 .dsec:last-child{border-bottom:none;margin-bottom:0}
 .dsect{font-family:var(--mono);font-size:0.6rem;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;color:var(--muted);margin-bottom:7px;display:flex;align-items:center;gap:5px}
-.dsect::after{content:'';flex:1;height:1px;background:var(--faint)}
+.dsect::after{content:"";flex:1;height:1px;background:var(--faint)}
 .dmtags{display:flex;flex-wrap:wrap;gap:4px}
 .dm{font-family:var(--mono);font-size:0.68rem;padding:2px 8px;border:1px solid;cursor:pointer;transition:all 0.12s}
 .dmc{border-color:var(--blue);color:var(--blue);background:var(--blue-pale)}
@@ -163,31 +142,29 @@ body{font-family:var(--sans);background:var(--canvas);color:var(--ink);min-heigh
 .dms:hover{border-color:var(--ochre);color:var(--ochre)}
 .dmn{border-color:var(--terra);color:var(--terra);background:var(--terra-pale)}
 .dnotes{font-size:0.76rem;color:var(--muted);line-height:1.7;background:var(--canvas2);padding:9px 11px;border-left:2px solid var(--ochre)}
-.tsrow{display:flex;align-items:center;gap:7px;margin-bottom:4px;font-size:0.74rem}
+.tsrow{display:flex;align-items:center;gap:7px;margin-bottom:4px}
 .tsname{color:var(--ink3);min-width:105px;font-family:var(--mono);font-size:0.68rem}
 .tstrack{flex:1;height:5px;background:var(--faint);overflow:hidden}
-.tsfill{height:100%;background:var(--blue);transition:width 0.3s}
+.tsfill{height:100%;background:var(--blue)}
 .tsval{font-family:var(--mono);font-size:0.64rem;color:var(--muted);min-width:28px;text-align:right}
-.pmidrow{display:flex;align-items:center;gap:8px;margin-bottom:4px}
+.pmidrow{margin-bottom:4px}
 .pmida{font-family:var(--mono);font-size:0.67rem;color:var(--blue);text-decoration:none}
 .pmida:hover{text-decoration:underline}
 .srcbadge{font-family:var(--mono);font-size:0.58rem;padding:1px 6px;border:1px solid var(--faint2);color:var(--muted)}
-
-/* EMPTY */
 .empty{text-align:center;padding:60px 28px;color:var(--muted)}
-.empty-g{font-family:var(--sans);font-style:italic;font-size:5rem;color:var(--faint);margin-bottom:16px;line-height:1}
+.empty-g{font-style:italic;font-size:5rem;color:var(--faint);margin-bottom:16px;line-height:1}
 .empty-t{font-family:var(--sans);font-size:1.05rem;font-weight:500;color:var(--muted);margin-bottom:8px}
 .empty-b{font-family:var(--mono);font-size:0.7rem;line-height:1.9;color:var(--dim)}
 .nores{font-family:var(--mono);font-size:0.76rem;color:var(--dim);font-style:italic;padding:32px;text-align:center}
-
-/* FOOTER */
+.loading-state{text-align:center;padding:80px 28px}
+.loading-spinner{font-family:var(--mono);font-size:0.8rem;color:var(--muted);animation:pulse 1.5s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
 .footer{background:var(--ink);color:var(--canvas);padding:14px 28px;display:flex;gap:18px;flex-wrap:wrap;border-top:2px solid var(--blue);align-items:flex-start}
 .fdisclaim{font-family:var(--mono);font-size:0.6rem;color:rgba(244,240,232,0.32);line-height:1.8;flex:1}
 .fsources{font-family:var(--mono);font-size:0.6rem;color:rgba(244,240,232,0.32);line-height:1.8}
 .fsources a{color:rgba(244,240,232,0.5);text-decoration:none}
 .fsources a:hover{color:var(--canvas)}
 .fdesign{width:100%;border-top:1px solid rgba(244,240,232,0.07);padding-top:8px;margin-top:3px;font-family:var(--sans);font-style:italic;font-size:0.64rem;color:rgba(244,240,232,0.18)}
-
 @media(max-width:780px){
   .layout{grid-template-columns:1fr;height:auto}
   .sidebar{border-right:none;border-bottom:1px solid var(--faint)}
@@ -219,12 +196,11 @@ body{font-family:var(--sans);background:var(--canvas);color:var(--ink);min-heigh
 </header>
 
 <div class="layout">
-
   <aside class="sidebar">
     <div class="sb">
       <div class="sblabel">Search</div>
       <div class="srchwrap">
-        <span class="srch-icon">⌕</span>
+        <span class="srch-icon">&#x2315;</span>
         <input class="srch" id="srch" type="text" placeholder="Gene symbol or cell type…" oninput="onSearch()"/>
       </div>
       <div class="mode-row">
@@ -243,24 +219,27 @@ body{font-family:var(--sans);background:var(--canvas);color:var(--ink);min-heigh
     </div>
     <div class="sb">
       <div class="sblabel">About</div>
-      <p class="about-p">MarkerAtlas aggregates validated single-cell marker genes from CellMarker 2.0 and PanglaoDB, cross-referenced with primary literature. Confidence scores reflect cross-source agreement and tissue specificity. Every association links to verifiable PubMed sources.</p>
-      <div class="creator">Built by <a href="https://chakitarora.github.io" target="_blank">Chakit Arora</a> · BIO@SNS, Pisa</div>
+      <p class="about-p">Validated single-cell marker genes from CellMarker 2.0 and PanglaoDB, cross-referenced with primary literature. Every association links to verifiable PubMed sources.</p>
+      <div class="creator">Built by <a href="https://chakitarora.github.io" target="_blank">Chakit Arora</a> &middot; BIO@SNS, Pisa</div>
     </div>
   </aside>
 
   <main class="main">
+    <div id="loading-view" class="loading-state">
+      <div class="loading-spinner" id="loading-msg">Loading marker database&#8230;</div>
+    </div>
 
-    <div id="browse-view">
+    <div id="browse-view" style="display:none">
       <div class="sech">
         <div class="secht" id="btitle">All cell types</div>
-        <div class="sechs">Click a card to view full details · Click any gene tag to look it up · Filter by category and tissue on the left</div>
+        <div class="sechs">Click a card to view details &middot; click any gene tag to look it up</div>
         <div class="sechc" id="bcount"></div>
       </div>
       <div class="legend">
         <span>Marker types:</span>
         <span class="leg"><span class="legdot legc"></span>Canonical</span>
         <span class="leg"><span class="legdot legs"></span>Supporting</span>
-        <span class="leg"><span class="legdot legn"></span>Negative (should be absent)</span>
+        <span class="leg"><span class="legdot legn"></span>Negative</span>
       </div>
       <div class="ctgrid" id="ctgrid"></div>
     </div>
@@ -268,22 +247,11 @@ body{font-family:var(--sans);background:var(--canvas);color:var(--ink);min-heigh
     <div id="gene-view" style="display:none">
       <div class="sech">
         <div class="secht" id="gtitle">Gene lookup</div>
-        <div class="sechs">Search a gene symbol to see which cell types it marks, with role and tissue context</div>
+        <div class="sechs">Which cell types does this gene mark?</div>
       </div>
       <div class="exrow">
         <div class="exlabel">Example genes</div>
-        <div class="exchips">
-          <button class="ex" onclick="gex('CD3E')">CD3E <span style="color:var(--dim)">pan-T cell</span></button>
-          <button class="ex" onclick="gex('FOXP3')">FOXP3 <span style="color:var(--dim)">Treg</span></button>
-          <button class="ex" onclick="gex('MBP')">MBP <span style="color:var(--dim)">Oligodendrocyte</span></button>
-          <button class="ex" onclick="gex('SFTPC')">SFTPC <span style="color:var(--dim)">AT2 cell</span></button>
-          <button class="ex" onclick="gex('SPP1')">SPP1 <span style="color:var(--dim)">TAM</span></button>
-          <button class="ex" onclick="gex('ACTA2')">ACTA2 <span style="color:var(--dim)">multi-type</span></button>
-          <button class="ex" onclick="gex('TREM2')">TREM2 <span style="color:var(--dim)">DAM/TAM</span></button>
-          <button class="ex" onclick="gex('LGR5')">LGR5 <span style="color:var(--dim)">intestinal stem</span></button>
-          <button class="ex" onclick="gex('PDGFRB')">PDGFRB <span style="color:var(--dim)">pericyte</span></button>
-          <button class="ex" onclick="gex('ALB')">ALB <span style="color:var(--dim)">hepatocyte</span></button>
-        </div>
+        <div class="exchips" id="gene-examples"></div>
       </div>
       <div id="gresults"></div>
     </div>
@@ -291,24 +259,16 @@ body{font-family:var(--sans);background:var(--canvas);color:var(--ink);min-heigh
     <div id="cluster-view" style="display:none">
       <div class="sech">
         <div class="secht">Cluster annotation</div>
-        <div class="sechs">Paste top DE genes from a cluster — get ranked candidate cell type annotations with match scores</div>
+        <div class="sechs">Paste top DE genes &mdash; get ranked candidate cell type annotations</div>
       </div>
       <div class="exrow">
         <div class="exlabel">Load example cluster</div>
-        <div class="exchips">
-          <button class="ex" onclick="clex('cd8t')">CD8+ T cell</button>
-          <button class="ex" onclick="clex('mac')">Macrophage</button>
-          <button class="ex" onclick="clex('astro')">Astrocyte</button>
-          <button class="ex" onclick="clex('at2')">Lung AT2 cell</button>
-          <button class="ex" onclick="clex('fibro')">Fibroblast</button>
-          <button class="ex" onclick="clex('mixed')">Ambiguous cluster</button>
-        </div>
+        <div class="exchips" id="cluster-examples"></div>
       </div>
-      <textarea class="clinput" id="clinput" placeholder="CD3E&#10;CD8A&#10;GZMB&#10;PRF1&#10;NKG7&#10;&#10;One gene per line or comma-separated.&#10;Paste directly from Seurat FindMarkers() or Scanpy rank_genes_groups()."></textarea>
-      <button class="clbtn" onclick="annotate()">▶ Annotate cluster</button>
+      <textarea class="clinput" id="clinput" placeholder="CD3E&#10;CD8A&#10;GZMB&#10;PRF1&#10;NKG7&#10;&#10;One gene per line or comma-separated.&#10;Paste from Seurat FindMarkers() or Scanpy rank_genes_groups()."></textarea>
+      <button class="clbtn" onclick="annotate()">&#9658; Annotate cluster</button>
       <div id="cresults" style="margin-top:14px"></div>
     </div>
-
   </main>
 </div>
 
@@ -318,12 +278,12 @@ body{font-family:var(--sans);background:var(--canvas);color:var(--ink);min-heigh
       <div class="detail-name" id="dname"></div>
       <div id="dbadges" style="margin-top:5px;display:flex;gap:5px;flex-wrap:wrap"></div>
     </div>
-    <button class="detail-x" onclick="closeDetail()">✕</button>
+    <button class="detail-x" onclick="closeDetail()">&#x2715;</button>
   </div>
   <div class="dbody">
     <div class="dsec"><div class="dsect">Canonical markers</div><div class="dmtags" id="dcan"></div></div>
     <div class="dsec"><div class="dsect">Supporting markers</div><div class="dmtags" id="dsup"></div></div>
-    <div class="dsec"><div class="dsect">Negative markers <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--dim);font-size:0.56rem">(should be absent)</span></div><div class="dmtags" id="dneg"></div></div>
+    <div class="dsec"><div class="dsect">Negative markers</div><div class="dmtags" id="dneg"></div></div>
     <div class="dsec"><div class="dsect">Notes</div><div class="dnotes" id="dnotes"></div></div>
     <div class="dsec"><div class="dsect">Tissue confidence</div><div id="dtissues"></div></div>
     <div class="dsec"><div class="dsect">Primary references</div><div id="dpmids"></div></div>
@@ -332,187 +292,349 @@ body{font-family:var(--sans);background:var(--canvas);color:var(--ink);min-heigh
 </div>
 
 <footer class="footer">
-  <div class="fdisclaim">MarkerAtlas is a research reference tool. Marker gene associations are curated from published databases and literature but may not reflect all biological contexts, species variants, or disease states. Cell type classifications are based on consensus annotations and may differ from study-specific definitions. Users should verify marker suitability for their specific tissue, species, and experimental conditions before applying annotations in published work. This tool is not intended for clinical, diagnostic, or patient care use.</div>
+  <div class="fdisclaim">MarkerAtlas is a research reference tool. Marker gene associations are curated from published databases and literature but may not reflect all biological contexts, species variants, or disease states. Cell type classifications are based on consensus annotations and may differ from study-specific definitions. Users should verify marker suitability for their specific tissue, species, and experimental conditions before applying annotations in published work. Not intended for clinical or diagnostic use.</div>
   <div class="fsources">
     <div style="color:rgba(244,240,232,0.45);margin-bottom:3px;font-weight:500">Data sources</div>
-    <div><a href="https://biocc.hrbmu.edu.cn/CellMarker/" target="_blank">CellMarker 2.0</a> · Zhang et al., Nucleic Acids Res. 2023</div>
-    <div><a href="https://panglaodb.se" target="_blank">PanglaoDB</a> · Franzén et al., Database 2019</div>
-    <div><a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank">PubMed / NCBI</a> · National Library of Medicine</div>
-    <div style="margin-top:5px">Built by <a href="https://chakitarora.github.io" target="_blank">Chakit Arora</a> · Post-Doctoral Fellow, BIO@SNS Pisa</div>
+    <div><a href="https://biocc.hrbmu.edu.cn/CellMarker/" target="_blank">CellMarker 2.0</a> &middot; Zhang et al., Nucleic Acids Res. 2023</div>
+    <div><a href="https://panglaodb.se" target="_blank">PanglaoDB</a> &middot; Franz&eacute;n et al., Database 2019</div>
+    <div><a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank">PubMed / NCBI</a> &middot; National Library of Medicine</div>
+    <div style="margin-top:5px">Built by <a href="https://chakitarora.github.io" target="_blank">Chakit Arora</a> &middot; Post-Doctoral Fellow, BIO@SNS Pisa</div>
   </div>
-  <div class="fdesign">Design inspired by Wassily Kandinsky's Composition VIII (1923) — geometric order from apparent chaos. Single-cell sequencing and abstract art share the same underlying problem.</div>
+  <div class="fdesign">Design inspired by Wassily Kandinsky&#8217;s Composition VIII (1923) &#8212; geometric order from apparent chaos. Single-cell sequencing and abstract art share the same underlying problem.</div>
 </footer>
 
 <script>
-const CAT_COLORS={'Immune':'#2952a3','Epithelial':'#c8922a','Stromal':'#3a6b3a','Neural':'#7a3a9a','Stem/Progenitor':'#b04a2a','Tumor microenvironment':'#8a2a2a','Hematopoietic':'#2a7a8a'};
-const CL_EX={
-  cd8t:'CD3E\nCD3D\nCD8A\nCD8B\nGZMB\nGZMK\nPRF1\nNKG7\nGNLY\nIFNG',
-  mac:'C1QA\nC1QB\nC1QC\nCD68\nMRC1\nAPOE\nSPP1\nTREM2\nMARCO\nCD163',
-  astro:'GFAP\nAQP4\nS100B\nALDH1L1\nSLC1A3\nVIM\nGLUL\nSOX9\nGJA1\nCLU',
-  at2:'SFTPC\nSFTPB\nSFTPD\nABCA3\nETV5\nLAMP3\nSLC34A2\nNAPSA\nPGC',
-  fibro:'COL1A1\nCOL1A2\nCOL3A1\nDCN\nLUM\nPDGFRA\nFAP\nPOSTN\nTHY1\nACTA2',
-  mixed:'CD3E\nCOL1A1\nGFAP\nEPCAM\nCD68\nPECAM1\nHBB\nSFTPC'
+var DB = null;
+var mode = 'browse';
+var selCat = 'all';
+var selTissue = 'all';
+var q = '';
+
+var CAT_COLORS = {
+  'Immune':'#2952a3','Epithelial':'#c8922a','Stromal':'#3a6b3a',
+  'Neural':'#7a3a9a','Stem/Progenitor':'#b04a2a',
+  'Tumor microenvironment':'#8a2a2a','Hematopoietic':'#2a7a8a'
 };
 
-let DB=null, mode='browse', selCat='all', selTissue='all', q='';
+var CL_EX = {
+  cd8t: 'CD3E
+CD3D
+CD8A
+CD8B
+GZMB
+GZMK
+PRF1
+NKG7
+GNLY
+IFNG',
+  mac:  'C1QA
+C1QB
+C1QC
+CD68
+MRC1
+APOE
+SPP1
+TREM2
+MARCO
+CD163',
+  astro:'GFAP
+AQP4
+S100B
+ALDH1L1
+SLC1A3
+VIM
+GLUL
+SOX9
+GJA1
+CLU',
+  at2:  'SFTPC
+SFTPB
+SFTPD
+ABCA3
+ETV5
+LAMP3
+SLC34A2
+NAPSA
+PGC',
+  fibro:'COL1A1
+COL1A2
+COL3A1
+DCN
+LUM
+PDGFRA
+FAP
+POSTN
+THY1
+ACTA2',
+  mixed:'CD3E
+COL1A1
+GFAP
+EPCAM
+CD68
+PECAM1
+HBB
+SFTPC'
+};
 
-const DB_DATA = {"celltypes":{"CD4+ T cell":{"category":"Immune","canonical_markers":["CD3E","CD3D","CD3G","CD4","TRAC","TRBC1"],"supporting_markers":["IL7R","TCF7","LEF1","CCR7"],"negative_markers":["CD8A","CD8B","CD19","CD14"],"tissue_context":{"Blood":0.99,"Lymph node":0.98,"Spleen":0.95,"Tumor":0.9},"specificity":"high","notes":"Core T cell markers (CD3 complex) combined with CD4 define this population. CCR7/TCF7 further distinguish naive from memory.","pmids":["30726726","28228279","32103181"],"sources":["CellMarker","PanglaoDB"]},"CD8+ T cell":{"category":"Immune","canonical_markers":["CD3E","CD3D","CD8A","CD8B","GZMK","GZMB"],"supporting_markers":["PRF1","NKG7","GNLY","IFNG"],"negative_markers":["CD4","CD19","CD14"],"tissue_context":{"Blood":0.99,"Tumor":0.95,"Lymph node":0.97},"specificity":"high","notes":"Cytotoxic T cells. GZMB/PRF1 mark effector function. Exhausted CD8+ T cells additionally express PDCD1, HAVCR2, TIGIT.","pmids":["30726726","33558698","32103181"],"sources":["CellMarker","PanglaoDB"]},"Regulatory T cell":{"category":"Immune","canonical_markers":["FOXP3","IL2RA","CTLA4","IKZF2"],"supporting_markers":["CD3E","CD4","TNFRSF18","TIGIT"],"negative_markers":["CD8A","IL7R"],"tissue_context":{"Blood":0.9,"Tumor":0.95,"Lymph node":0.92},"specificity":"high","notes":"FOXP3 is the master regulator. IL2RA (CD25) co-expression with FOXP3 is the gold standard. Highly enriched in tumors.","pmids":["30726726","28825704"],"sources":["CellMarker","PanglaoDB"]},"NK cell":{"category":"Immune","canonical_markers":["NCAM1","KLRD1","NKG7","GNLY","PRF1"],"supporting_markers":["KLRB1","KLRC1","FCGR3A","GZMB","XCL1"],"negative_markers":["CD3E","CD19","CD14"],"tissue_context":{"Blood":0.98,"Liver":0.95,"Tumor":0.9},"specificity":"high","notes":"CD56 (NCAM1) is canonical. CD56dim (FCGR3A+) are cytotoxic; CD56bright (FCGR3A-) are cytokine producers. No TCR expression.","pmids":["30726726","31211237"],"sources":["CellMarker","PanglaoDB"]},"B cell":{"category":"Immune","canonical_markers":["CD19","MS4A1","CD79A","CD79B","IGHM"],"supporting_markers":["BANK1","BLK","FCRL1","PAX5"],"negative_markers":["CD3E","CD14","NCAM1"],"tissue_context":{"Blood":0.99,"Lymph node":0.99,"Spleen":0.97,"Tumor":0.85},"specificity":"high","notes":"CD20 (MS4A1) and CD19 are the clinical standard. CD79A/B are part of the B cell receptor complex.","pmids":["30726726","32103181"],"sources":["CellMarker","PanglaoDB"]},"Plasma cell":{"category":"Immune","canonical_markers":["IGHG1","IGKC","MZB1","SDC1","PRDM1"],"supporting_markers":["XBP1","IRF4","JCHAIN","DERL3"],"negative_markers":["CD19","MS4A1","CD3E"],"tissue_context":{"Blood":0.92,"Bone marrow":0.99,"Tumor":0.88},"specificity":"high","notes":"Terminally differentiated B cells. Note: CD19/CD20 are downregulated. PRDM1 (Blimp1) is the master regulator.","pmids":["30726726","32103181"],"sources":["CellMarker","PanglaoDB"]},"Monocyte":{"category":"Immune","canonical_markers":["CD14","LYZ","S100A8","S100A9","FCN1"],"supporting_markers":["VCAN","CD68","CSF1R","TYROBP"],"negative_markers":["CD3E","CD19","FCGR3A"],"tissue_context":{"Blood":0.99,"Bone marrow":0.95},"specificity":"high","notes":"Classical monocytes (CD14++CD16-). S100A8/S100A9 are highly specific. Non-classical monocytes are CD14+CD16+ (FCGR3A+).","pmids":["30726726","29942083"],"sources":["CellMarker","PanglaoDB"]},"Macrophage":{"category":"Immune","canonical_markers":["CD68","MRC1","MARCO","C1QA","C1QB"],"supporting_markers":["APOE","APOC1","SPP1","TREM2","CD163"],"negative_markers":["CD3E","CD19"],"tissue_context":{"Lung":0.98,"Liver":0.98,"Tumor":0.95,"Brain":0.92},"specificity":"medium","notes":"Tissue macrophages vary greatly by location. TREM2+ macrophages are a tumor-associated subset. C1Q complex is broadly reliable.","pmids":["30726726","32810438","33558698"],"sources":["CellMarker","PanglaoDB"]},"Dendritic cell":{"category":"Immune","canonical_markers":["ITGAX","CLEC9A","XCR1","FCER1A","CLEC10A"],"supporting_markers":["HLA-DRA","HLA-DRB1","CD1C","LILRA4","IRF4"],"negative_markers":["CD3E","CD19","CD14"],"tissue_context":{"Blood":0.95,"Lymph node":0.97,"Tumor":0.88},"specificity":"medium","notes":"cDC1: CLEC9A+XCR1+. cDC2: CD1C+FCER1A+. pDC: LILRA4+CLEC4C+. IRF8 marks cDC1 lineage commitment.","pmids":["30726726","32103181"],"sources":["CellMarker","PanglaoDB"]},"Mast cell":{"category":"Immune","canonical_markers":["TPSAB1","TPSB2","CPA3","KIT","HPGDS"],"supporting_markers":["MS4A2","GATA2","HDC","CLU"],"negative_markers":["CD3E","CD19","CD14"],"tissue_context":{"Skin":0.98,"Lung":0.95,"Gut":0.97,"Tumor":0.9},"specificity":"high","notes":"Tryptase (TPSAB1/TPSB2) is the gold standard. CPA3 is highly specific. KIT (CD117) alone is insufficient \u2014 also marks other cells.","pmids":["30726726","33558698"],"sources":["CellMarker","PanglaoDB"]},"Neutrophil":{"category":"Immune","canonical_markers":["FCGR3B","CXCR2","CSF3R","S100A8","CEACAM8"],"supporting_markers":["ELANE","MPO","LCN2","SELL","CXCR1"],"negative_markers":["CD3E","CD19","CD14"],"tissue_context":{"Blood":0.99,"Tumor":0.85,"Lung":0.88},"specificity":"high","notes":"FCGR3B (CD16b) is neutrophil-specific. MPO/ELANE are granule proteins. Hard to capture in standard scRNA-seq due to low RNA content.","pmids":["30726726","33558698"],"sources":["CellMarker","PanglaoDB"]},"Epithelial cell":{"category":"Epithelial","canonical_markers":["EPCAM","KRT8","KRT18","KRT19","CDH1"],"supporting_markers":["KRT7","CLDN4","MUC1","TACSTD2"],"negative_markers":["CD45","VIM","CD3E"],"tissue_context":{"Breast":0.98,"Lung":0.97,"Colon":0.98,"Liver":0.9},"specificity":"high","notes":"EpCAM and cytokeratins (KRT8/18/19) are canonical. CDH1 (E-cadherin) marks epithelial identity. Loss of CDH1 indicates EMT.","pmids":["30726726","32103181"],"sources":["CellMarker","PanglaoDB"]},"Club cell":{"category":"Epithelial","canonical_markers":["SCGB1A1","SCGB3A1","CYP2B6","CCKAR"],"supporting_markers":["SCGB3A2","SFTPB","ALDH1A1"],"negative_markers":["SFTPC","TP63","MUC5AC"],"tissue_context":{"Lung":0.99},"specificity":"high","notes":"Formerly Clara cells. SCGB1A1 (CC16) is the gold standard lung-specific marker. Found in bronchioles.","pmids":["33558698","32103181"],"sources":["CellMarker","PanglaoDB"]},"Alveolar type I cell":{"category":"Epithelial","canonical_markers":["AGER","PDPN","CAV1","AQP5","HOPX"],"supporting_markers":["CLIC5","RTKN2","GPRC5A"],"negative_markers":["SFTPC","SFTPB","TP63"],"tissue_context":{"Lung":0.99},"specificity":"high","notes":"AT1 cells are large, flat, cover 95% of alveolar surface. AGER (RAGE) and PDPN (podoplanin) are canonical.","pmids":["33558698"],"sources":["CellMarker","PanglaoDB"]},"Alveolar type II cell":{"category":"Epithelial","canonical_markers":["SFTPC","SFTPB","SFTPD","ABCA3","ETV5"],"supporting_markers":["LAMP3","SLC34A2","NAPSA","PGC"],"negative_markers":["AGER","PDPN","TP63"],"tissue_context":{"Lung":0.99},"specificity":"high","notes":"Surfactant protein C (SFTPC) is the gold standard AT2 marker. AT2 cells are the lung stem cell population.","pmids":["33558698","32103181"],"sources":["CellMarker","PanglaoDB"]},"Hepatocyte":{"category":"Epithelial","canonical_markers":["ALB","APOB","APOE","TTR","FGB"],"supporting_markers":["CYP3A4","CYP2E1","ASGR1","HNF4A","PCK1"],"negative_markers":["CD3E","CD19","EPCAM"],"tissue_context":{"Liver":0.99},"specificity":"high","notes":"Albumin (ALB) is canonical. Zonation exists: pericentral (CYP2E1+) vs periportal (PCK1+). HNF4A is the master TF.","pmids":["30726726","33558698"],"sources":["CellMarker","PanglaoDB"]},"Cholangiocyte":{"category":"Epithelial","canonical_markers":["KRT19","KRT7","EPCAM","CFTR","SLC4A2"],"supporting_markers":["SOX9","HNF1B","ANXA4","TFF2"],"negative_markers":["ALB","HNF4A"],"tissue_context":{"Liver":0.98},"specificity":"high","notes":"Biliary epithelial cells. KRT19+KRT7+ALB- distinguishes from hepatocytes. SOX9 marks biliary progenitors.","pmids":["33558698"],"sources":["CellMarker","PanglaoDB"]},"Enterocyte":{"category":"Epithelial","canonical_markers":["FABP1","FABP2","SLC5A1","APOA1","APOA4"],"supporting_markers":["VIL1","LCT","SI","ALDOB","ANPEP"],"negative_markers":["MUC2","LGR5","CHGA"],"tissue_context":{"Small intestine":0.99,"Colon":0.85},"specificity":"high","notes":"Absorptive cells lining the small intestine. FABP1/2 and brush border enzymes (SI, LCT) are canonical.","pmids":["30726726","33558698"],"sources":["CellMarker","PanglaoDB"]},"Goblet cell":{"category":"Epithelial","canonical_markers":["MUC2","TFF3","SPDEF","FCGBP","CLCA1"],"supporting_markers":["ATOH1","KLF4","AGR2","ZG16"],"negative_markers":["CHGA","LGR5","FABP1"],"tissue_context":{"Colon":0.99,"Small intestine":0.97,"Lung":0.9},"specificity":"high","notes":"MUC2 is the gold standard mucin for intestinal goblet cells. TFF3 (trefoil factor 3) is highly specific.","pmids":["30726726","33558698"],"sources":["CellMarker","PanglaoDB"]},"Fibroblast":{"category":"Stromal","canonical_markers":["COL1A1","COL1A2","COL3A1","DCN","LUM"],"supporting_markers":["PDGFRA","FAP","ACTA2","POSTN","THY1"],"negative_markers":["EPCAM","CD3E","CD19","PECAM1"],"tissue_context":{"Tumor":0.95,"Skin":0.97,"Lung":0.95,"Breast":0.96},"specificity":"medium","notes":"Collagen genes (COL1A1/1A2/3A1) are canonical but not exclusive. FAP marks cancer-associated fibroblasts. ACTA2 marks myofibroblasts.","pmids":["30726726","32810438"],"sources":["CellMarker","PanglaoDB"]},"Endothelial cell":{"category":"Stromal","canonical_markers":["PECAM1","CDH5","VWF","CLDN5","FLT1"],"supporting_markers":["PLVAP","MCAM","ENG","ESAM","TIE1"],"negative_markers":["EPCAM","CD3E","CD19"],"tissue_context":{"All tissues":0.97,"Tumor":0.95},"specificity":"high","notes":"CD31 (PECAM1) and VE-cadherin (CDH5) are the gold standard. PLVAP marks fenestrated endothelium. FLT1 marks tip cells.","pmids":["30726726","32103181"],"sources":["CellMarker","PanglaoDB"]},"Pericyte":{"category":"Stromal","canonical_markers":["PDGFRB","RGS5","ACTA2","NOTCH3","CSPG4"],"supporting_markers":["MCAM","ABCC9","KCNJ8","DES"],"negative_markers":["PECAM1","EPCAM","CD3E"],"tissue_context":{"Brain":0.97,"Tumor":0.9,"Kidney":0.93},"specificity":"medium","notes":"RGS5 is highly specific. PDGFRB alone insufficient \u2014 also marks fibroblasts. ACTA2 marks contractile pericytes/smooth muscle.","pmids":["30726726","33558698"],"sources":["CellMarker","PanglaoDB"]},"Smooth muscle cell":{"category":"Stromal","canonical_markers":["ACTA2","MYH11","TAGLN","CNN1","DES"],"supporting_markers":["MYLK","SMTN","TPM2","ACTG2"],"negative_markers":["PECAM1","EPCAM","CD3E"],"tissue_context":{"Vasculature":0.98,"Gut":0.97,"Bladder":0.97},"specificity":"medium","notes":"MYH11 is the most specific smooth muscle marker. ACTA2 (\u03b1SMA) is shared with myofibroblasts and pericytes.","pmids":["30726726","32103181"],"sources":["CellMarker","PanglaoDB"]},"Adipocyte":{"category":"Stromal","canonical_markers":["ADIPOQ","LEP","PLIN1","FABP4","PPARG"],"supporting_markers":["LPL","CIDEC","DGAT2","FASN"],"negative_markers":["EPCAM","CD3E","CD19"],"tissue_context":{"Adipose":0.99,"Breast":0.9},"specificity":"high","notes":"Adiponectin (ADIPOQ) and leptin (LEP) are gold standard. PLIN1 marks lipid droplet-associated protein. PPARG is the master TF.","pmids":["30726726","33558698"],"sources":["CellMarker","PanglaoDB"]},"Neuron":{"category":"Neural","canonical_markers":["RBFOX3","SYP","SYT1","SNAP25","MAP2"],"supporting_markers":["NEFL","NEFM","STMN2","GAP43","DCX"],"negative_markers":["GFAP","AQP4","CX3CR1"],"tissue_context":{"Brain":0.99,"Spinal cord":0.98},"specificity":"high","notes":"NeuN (RBFOX3) is the gold standard post-mitotic neuron marker. SYP/SYT1 mark synaptic vesicles. DCX marks immature neurons.","pmids":["30726726","33558698"],"sources":["CellMarker","PanglaoDB"]},"Astrocyte":{"category":"Neural","canonical_markers":["GFAP","AQP4","S100B","ALDH1L1","SLC1A3"],"supporting_markers":["VIM","GLUL","SOX9","GJA1","CLU"],"negative_markers":["RBFOX3","CX3CR1","OLIG2"],"tissue_context":{"Brain":0.99},"specificity":"high","notes":"GFAP is canonical but varies by region and reactivity. ALDH1L1 is more broadly expressed. AQP4 marks endfeet. Reactive astrocytes upregulate VIM.","pmids":["30726726","33558698"],"sources":["CellMarker","PanglaoDB"]},"Oligodendrocyte":{"category":"Neural","canonical_markers":["MBP","MOG","PLP1","MAG","CLDN11"],"supporting_markers":["OLIG1","OLIG2","CNP","MOBP","SOX10"],"negative_markers":["GFAP","RBFOX3","CX3CR1"],"tissue_context":{"Brain":0.99,"Spinal cord":0.99},"specificity":"high","notes":"Myelin genes (MBP, MOG, PLP1) are highly specific. OLIG2 marks both OPC and oligodendrocytes. CNP marks mature myelinating cells.","pmids":["30726726","33558698"],"sources":["CellMarker","PanglaoDB"]},"Oligodendrocyte precursor cell":{"category":"Neural","canonical_markers":["PDGFRA","CSPG4","SOX10","OLIG2","VCAN"],"supporting_markers":["GPR17","NEU4","LHFPL3","TNR"],"negative_markers":["MBP","MOG","GFAP","RBFOX3"],"tissue_context":{"Brain":0.99},"specificity":"high","notes":"NG2 (CSPG4) is canonical OPC marker. PDGFRA drives OPC proliferation. Distinguished from mature oligodendrocytes by absence of MBP/MOG.","pmids":["30726726","33558698"],"sources":["CellMarker","PanglaoDB"]},"Microglia":{"category":"Neural","canonical_markers":["CX3CR1","P2RY12","TMEM119","HEXB","TREM2"],"supporting_markers":["SALL1","FCRLS","ITGAM","CD68","IBA1"],"negative_markers":["GFAP","RBFOX3","OLIG2"],"tissue_context":{"Brain":0.99},"specificity":"high","notes":"P2RY12 and TMEM119 are highly CNS-specific homeostatic markers, lost in disease-associated microglia (DAM). TREM2 marks DAM subset.","pmids":["30726726","33558698","32810438"],"sources":["CellMarker","PanglaoDB"]},"Intestinal stem cell":{"category":"Stem/Progenitor","canonical_markers":["LGR5","OLFM4","ASCL2","SMOC2","EPHB2"],"supporting_markers":["AXIN2","CD44","SOX9","LRIG1","PROM1"],"negative_markers":["MUC2","CHGA","FABP1"],"tissue_context":{"Small intestine":0.99,"Colon":0.98},"specificity":"high","notes":"LGR5 is the definitive intestinal stem cell marker. OLFM4 is highly expressed and more stable than LGR5 in sequencing data.","pmids":["30726726","33558698"],"sources":["CellMarker","PanglaoDB"]},"Hematopoietic stem cell":{"category":"Stem/Progenitor","canonical_markers":["CD34","PROM1","THY1","MLLT3","SPINK2"],"supporting_markers":["HOPX","AVP","HLF","MECOM","CD38"],"negative_markers":["CD3E","CD19","CD14","GYPA"],"tissue_context":{"Bone marrow":0.99,"Cord blood":0.97},"specificity":"medium","notes":"CD34 is broadly expressed on progenitors. True HSCs are CD34+CD38-CD90+CD45RA-. MLLT3 and SPINK2 are more specific in scRNA-seq.","pmids":["30726726","33558698"],"sources":["CellMarker","PanglaoDB"]},"Cancer-associated fibroblast":{"category":"Tumor microenvironment","canonical_markers":["FAP","ACTA2","POSTN","PDPN","MMP11"],"supporting_markers":["COL11A1","FN1","PDGFRB","THY1","S100A4"],"negative_markers":["EPCAM","CD3E","PECAM1"],"tissue_context":{"Tumor":0.95},"specificity":"medium","notes":"FAP is the most specific CAF marker. Multiple CAF subtypes exist: myoCAF (ACTA2+), iCAF (IL6+), apCAF (MHC-II+). Context-dependent.","pmids":["32810438","33558698"],"sources":["CellMarker","PanglaoDB"]},"Tumor-associated macrophage":{"category":"Tumor microenvironment","canonical_markers":["SPP1","TREM2","C1QA","APOE","CD68"],"supporting_markers":["MRC1","MARCO","IL10","VEGFA","CD163"],"negative_markers":["CD3E","CD19","FCGR3B"],"tissue_context":{"Tumor":0.95},"specificity":"medium","notes":"SPP1+ TAMs are associated with poor prognosis. TREM2+ TAMs are immunosuppressive. M1/M2 polarization is a simplification \u2014 TAM states exist on a continuum.","pmids":["32810438","33558698","30726726"],"sources":["CellMarker","PanglaoDB"]},"Exhausted T cell":{"category":"Tumor microenvironment","canonical_markers":["PDCD1","HAVCR2","TIGIT","LAG3","CTLA4"],"supporting_markers":["TOX","NR4A1","ENTPD1","CXCL13","VCAM1"],"negative_markers":["TCF7","IL7R","CCR7"],"tissue_context":{"Tumor":0.97,"Chronic infection":0.95},"specificity":"high","notes":"Co-expression of multiple inhibitory receptors defines exhaustion. TOX is a key TF. TCF7+ progenitor exhausted cells can respond to checkpoint blockade.","pmids":["33558698","32810438"],"sources":["CellMarker","PanglaoDB"]},"Erythrocyte":{"category":"Hematopoietic","canonical_markers":["HBB","HBA1","HBA2","GYPA","ALAS2"],"supporting_markers":["SLC4A1","CA1","CA2","BNIP3L"],"negative_markers":["CD3E","CD19","CD14","PECAM1"],"tissue_context":{"Blood":0.99,"Bone marrow":0.95},"specificity":"high","notes":"Hemoglobin genes (HBB, HBA1/2) are definitive. Often considered contamination in non-blood tissues. GYPA (glycophorin A) is highly specific.","pmids":["30726726"],"sources":["CellMarker","PanglaoDB"]},"Megakaryocyte":{"category":"Hematopoietic","canonical_markers":["PF4","PPBP","GP1BA","ITGA2B","VWF"],"supporting_markers":["TUBB1","NRGN","CLEC1B","TREML1"],"negative_markers":["CD3E","CD19","HBB"],"tissue_context":{"Blood":0.95,"Bone marrow":0.99},"specificity":"high","notes":"PF4 (CXCL4) and PPBP (CXCL7) are platelet-derived. GP1BA (CD42b) is the von Willebrand factor receptor.","pmids":["30726726"],"sources":["CellMarker","PanglaoDB"]}},"gene_index":{"CD3E":[{"celltype":"CD4+ T cell","category":"Immune","role":"canonical","specificity":"high","tissue_context":{"Blood":0.99,"Lymph node":0.98,"Spleen":0.95,"Tumor":0.9},"confidence":0.95},{"celltype":"CD8+ T cell","category":"Immune","role":"canonical","specificity":"high","tissue_context":{"Blood":0.99,"Tumor":0.95,"Lymph node":0.97},"confidence":0.95},{"celltype":"Regulatory T cell","category":"Immune","role":"supporting","specificity":"high","tissue_context":{"Blood":0.9,"Tumor":0.95,"Lymph node":0.92},"confidence":0.7}],"CD3D":[{"celltype":"CD4+ T cell","category":"Immune","role":"canonical","specificity":"high","tissue_context":{"Blood":0.99,"Lymph node":0.98,"Spleen":0.95,"Tumor":0.9},"confidence":0.95},{"celltype":"CD8+ T cell","category":"Immune","role":"canonical","specificity":"high","tissue_context":{"Blood":0.99,"Tumor":0.95,"Lymph node":0.97},"confidence":0.95}],"CD3G":[{"celltype":"CD4+ T cell","category":"Immune","role":"canonical","specificity":"high","tissue_context":{"Blood":0.99,"Lymph node":0.98,"Spleen":0.95,"Tumor":0.9},"confidence":0.95}],"CD4":[{"celltype":"CD4+ T cell","category":"Immune","role":"canonical","specificity":"high","tissue_context":{"Blood":0.99,"Lymph node":0.98,"Spleen":0.95,"Tumor":0.9},"confidence":0.95},{"celltype":"Regulatory T cell","category":"Immune","role":"supporting","specificity":"high","tissue_context":{"Blood":0.9,"Tumor":0.95,"Lymph node":0.92},"confidence":0.7}],"TRAC":[{"celltype":"CD4+ T cell","category":"Immune","role":"canonical","specificity":"high","tissue_context":{"Blood":0.99,"Lymph node":0.98,"Spleen":0.95,"Tumor":0.9},"confidence":0.95}],"TRBC1":[{"celltype":"CD4+ T cell","category":"Immune","role":"canonical","specificity":"high","tissue_context":{"Blood":0.99,"Lymph node":0.98,"Spleen":0.95,"Tumor":0.9},"confidence":0.95}],"IL7R":[{"celltype":"CD4+ T cell","category":"Immune","role":"supporting","specificity":"high","tissue_context":{"Blood":0.99,"Lymph node":0.98,"Spleen":0.95,"Tumor":0.9},"confidence":0.7}],"TCF7":[{"celltype":"CD4+ T cell","category":"Immune","role":"supporting","specificity":"high","tissue_context":{"Blood":0.99,"Lymph node":0.98,"Spleen":0.95,"Tumor":0.9},"confidence":0.7}],"LEF1":[{"celltype":"CD4+ T cell","category":"Immune","role":"supporting","specificity":"high","tissue_context":{"Blood":0.99,"Lymph node":0.98,"Spleen":0.95,"Tumor":0.9},"confidence":0.7}],"CCR7":[{"celltype":"CD4+ T cell","category":"Immune","role":"supporting","specificity":"high","tissue_context":{"Blood":0.99,"Lymph node":0.98,"Spleen":0.95,"Tumor":0.9},"confidence":0.7}],"CD8A":[{"celltype":"CD8+ T cell","category":"Immune","role":"canonical","specificity":"high","tissue_context":{"Blood":0.99,"Tumor":0.95,"Lymph node":0.97},"confidence":0.95}],"CD8B":[{"celltype":"CD8+ T cell","category":"Immune","role":"canonical","specificity":"high","tissue_context":{"Blood":0.99,"Tumor":0.95,"Lymph node":0.97},"confidence":0.95}],"GZMK":[{"celltype":"CD8+ T cell","category":"Immune","role":"canonical","specificity":"high","tissue_context":{"Blood":0.99,"Tumor":0.95,"Lymph node":0.97},"confidence":0.95}],"GZMB":[{"celltype":"CD8+ T cell","category":"Immune","role":"canonical","specificity":"high","tissue_context":{"Blood":0.99,"Tumor":0.95,"Lymph node":0.97},"confidence":0.95},{"celltype":"NK cell","category":"Immune","role":"supporting","specificity":"high","tissue_context":{"Blood":0.98,"Liver":0.95,"Tumor":0.9},"confidence":0.7}],"PRF1":[{"celltype":"CD8+ T cell","category":"Immune","role":"supporting","specificity":"high","tissue_context":{"Blood":0.99,"Tumor":0.95,"Lymph node":0.97},"confidence":0.7},{"celltype":"NK cell","category":"Immune","role":"canonical","specificity":"high","tissue_context":{"Blood":0.98,"Liver":0.95,"Tumor":0.9},"confidence":0.95}],"NKG7":[{"celltype":"CD8+ T cell","category":"Immune","role":"supporting","specificity":"high","tissue_context":{"Blood":0.99,"Tumor":0.95,"Lymph node":0.97},"confidence":0.7},{"celltype":"NK cell","category":"Immune","role":"canonical","specificity":"high","tissue_context":{"Blood":0.98,"Liver":0.95,"Tumor":0.9},"confidence":0.95}],"GNLY":[{"celltype":"CD8+ T cell","category":"Immune","role":"supporting","specificity":"high","tissue_context":{"Blood":0.99,"Tumor":0.95,"Lymph node":0.97},"confidence":0.7},{"celltype":"NK cell","category":"Immune","role":"canonical","specificity":"high","tissue_context":{"Blood":0.98,"Liver":0.95,"Tumor":0.9},"confidence":0.95}],"IFNG":[{"celltype":"CD8+ T cell","category":"Immune","role":"supporting","specificity":"high","tissue_context":{"Blood":0.99,"Tumor":0.95,"Lymph node":0.97},"confidence":0.7}],"FOXP3":[{"celltype":"Regulatory T cell","category":"Immune","role":"canonical","specificity":"high","tissue_context":{"Blood":0.9,"Tumor":0.95,"Lymph node":0.92},"confidence":0.95}],"IL2RA":[{"celltype":"Regulatory T cell","category":"Immune","role":"canonical","specificity":"high","tissue_context":{"Blood":0.9,"Tumor":0.95,"Lymph node":0.92},"confidence":0.95}],"CTLA4":[{"celltype":"Regulatory T cell","category":"Immune","role":"canonical","specificity":"high","tissue_context":{"Blood":0.9,"Tumor":0.95,"Lymph node":0.92},"confidence":0.95},{"celltype":"Exhausted T cell","category":"Tumor microenvironment","role":"canonical","specificity":"high","tissue_context":{"Tumor":0.97,"Chronic infection":0.95},"confidence":0.95}],"IKZF2":[{"celltype":"Regulatory T cell","category":"Immune","role":"canonical","specificity":"high","tissue_context":{"Blood":0.9,"Tumor":0.95,"Lymph node":0.92},"confidence":0.95}],"TNFRSF18":[{"celltype":"Regulatory T cell","category":"Immune","role":"supporting","specificity":"high","tissue_context":{"Blood":0.9,"Tumor":0.95,"Lymph node":0.92},"confidence":0.7}],"TIGIT":[{"celltype":"Regulatory T cell","category":"Immune","role":"supporting","specificity":"high","tissue_context":{"Blood":0.9,"Tumor":0.95,"Lymph node":0.92},"confidence":0.7},{"celltype":"Exhausted T cell","category":"Tumor microenvironment","role":"canonical","specificity":"high","tissue_context":{"Tumor":0.97,"Chronic infection":0.95},"confidence":0.95}],"NCAM1":[{"celltype":"NK cell","category":"Immune","role":"canonical","specificity":"high","tissue_context":{"Blood":0.98,"Liver":0.95,"Tumor":0.9},"confidence":0.95}],"KLRD1":[{"celltype":"NK cell","category":"Immune","role":"canonical","specificity":"high","tissue_context":{"Blood":0.98,"Liver":0.95,"Tumor":0.9},"confidence":0.95}],"KLRB1":[{"celltype":"NK cell","category":"Immune","role":"supporting","specificity":"high","tissue_context":{"Blood":0.98,"Liver":0.95,"Tumor":0.9},"confidence":0.7}],"KLRC1":[{"celltype":"NK cell","category":"Immune","role":"supporting","specificity":"high","tissue_context":{"Blood":0.98,"Liver":0.95,"Tumor":0.9},"confidence":0.7}],"FCGR3A":[{"celltype":"NK cell","category":"Immune","role":"supporting","specificity":"high","tissue_context":{"Blood":0.98,"Liver":0.95,"Tumor":0.9},"confidence":0.7}],"XCL1":[{"celltype":"NK cell","category":"Immune","role":"supporting","specificity":"high","tissue_context":{"Blood":0.98,"Liver":0.95,"Tumor":0.9},"confidence":0.7}],"CD19":[{"celltype":"B cell","category":"Immune","role":"canonical","specificity":"high","tissue_context":{"Blood":0.99,"Lymph node":0.99,"Spleen":0.97,"Tumor":0.85},"confidence":0.95}],"MS4A1":[{"celltype":"B cell","category":"Immune","role":"canonical","specificity":"high","tissue_context":{"Blood":0.99,"Lymph node":0.99,"Spleen":0.97,"Tumor":0.85},"confidence":0.95}],"CD79A":[{"celltype":"B cell","category":"Immune","role":"canonical","specificity":"high","tissue_context":{"Blood":0.99,"Lymph node":0.99,"Spleen":0.97,"Tumor":0.85},"confidence":0.95}],"CD79B":[{"celltype":"B cell","category":"Immune","role":"canonical","specificity":"high","tissue_context":{"Blood":0.99,"Lymph node":0.99,"Spleen":0.97,"Tumor":0.85},"confidence":0.95}],"IGHM":[{"celltype":"B cell","category":"Immune","role":"canonical","specificity":"high","tissue_context":{"Blood":0.99,"Lymph node":0.99,"Spleen":0.97,"Tumor":0.85},"confidence":0.95}],"BANK1":[{"celltype":"B cell","category":"Immune","role":"supporting","specificity":"high","tissue_context":{"Blood":0.99,"Lymph node":0.99,"Spleen":0.97,"Tumor":0.85},"confidence":0.7}],"BLK":[{"celltype":"B cell","category":"Immune","role":"supporting","specificity":"high","tissue_context":{"Blood":0.99,"Lymph node":0.99,"Spleen":0.97,"Tumor":0.85},"confidence":0.7}],"FCRL1":[{"celltype":"B cell","category":"Immune","role":"supporting","specificity":"high","tissue_context":{"Blood":0.99,"Lymph node":0.99,"Spleen":0.97,"Tumor":0.85},"confidence":0.7}],"PAX5":[{"celltype":"B cell","category":"Immune","role":"supporting","specificity":"high","tissue_context":{"Blood":0.99,"Lymph node":0.99,"Spleen":0.97,"Tumor":0.85},"confidence":0.7}],"IGHG1":[{"celltype":"Plasma cell","category":"Immune","role":"canonical","specificity":"high","tissue_context":{"Blood":0.92,"Bone marrow":0.99,"Tumor":0.88},"confidence":0.95}],"IGKC":[{"celltype":"Plasma cell","category":"Immune","role":"canonical","specificity":"high","tissue_context":{"Blood":0.92,"Bone marrow":0.99,"Tumor":0.88},"confidence":0.95}],"MZB1":[{"celltype":"Plasma cell","category":"Immune","role":"canonical","specificity":"high","tissue_context":{"Blood":0.92,"Bone marrow":0.99,"Tumor":0.88},"confidence":0.95}],"SDC1":[{"celltype":"Plasma cell","category":"Immune","role":"canonical","specificity":"high","tissue_context":{"Blood":0.92,"Bone marrow":0.99,"Tumor":0.88},"confidence":0.95}],"PRDM1":[{"celltype":"Plasma cell","category":"Immune","role":"canonical","specificity":"high","tissue_context":{"Blood":0.92,"Bone marrow":0.99,"Tumor":0.88},"confidence":0.95}],"XBP1":[{"celltype":"Plasma cell","category":"Immune","role":"supporting","specificity":"high","tissue_context":{"Blood":0.92,"Bone marrow":0.99,"Tumor":0.88},"confidence":0.7}],"IRF4":[{"celltype":"Plasma cell","category":"Immune","role":"supporting","specificity":"high","tissue_context":{"Blood":0.92,"Bone marrow":0.99,"Tumor":0.88},"confidence":0.7},{"celltype":"Dendritic cell","category":"Immune","role":"supporting","specificity":"medium","tissue_context":{"Blood":0.95,"Lymph node":0.97,"Tumor":0.88},"confidence":0.7}],"JCHAIN":[{"celltype":"Plasma cell","category":"Immune","role":"supporting","specificity":"high","tissue_context":{"Blood":0.92,"Bone marrow":0.99,"Tumor":0.88},"confidence":0.7}],"DERL3":[{"celltype":"Plasma cell","category":"Immune","role":"supporting","specificity":"high","tissue_context":{"Blood":0.92,"Bone marrow":0.99,"Tumor":0.88},"confidence":0.7}],"CD14":[{"celltype":"Monocyte","category":"Immune","role":"canonical","specificity":"high","tissue_context":{"Blood":0.99,"Bone marrow":0.95},"confidence":0.95}],"LYZ":[{"celltype":"Monocyte","category":"Immune","role":"canonical","specificity":"high","tissue_context":{"Blood":0.99,"Bone marrow":0.95},"confidence":0.95}],"S100A8":[{"celltype":"Monocyte","category":"Immune","role":"canonical","specificity":"high","tissue_context":{"Blood":0.99,"Bone marrow":0.95},"confidence":0.95},{"celltype":"Neutrophil","category":"Immune","role":"canonical","specificity":"high","tissue_context":{"Blood":0.99,"Tumor":0.85,"Lung":0.88},"confidence":0.95}],"S100A9":[{"celltype":"Monocyte","category":"Immune","role":"canonical","specificity":"high","tissue_context":{"Blood":0.99,"Bone marrow":0.95},"confidence":0.95}],"FCN1":[{"celltype":"Monocyte","category":"Immune","role":"canonical","specificity":"high","tissue_context":{"Blood":0.99,"Bone marrow":0.95},"confidence":0.95}],"VCAN":[{"celltype":"Monocyte","category":"Immune","role":"supporting","specificity":"high","tissue_context":{"Blood":0.99,"Bone marrow":0.95},"confidence":0.7},{"celltype":"Oligodendrocyte precursor cell","category":"Neural","role":"canonical","specificity":"high","tissue_context":{"Brain":0.99},"confidence":0.95}],"CD68":[{"celltype":"Monocyte","category":"Immune","role":"supporting","specificity":"high","tissue_context":{"Blood":0.99,"Bone marrow":0.95},"confidence":0.7},{"celltype":"Macrophage","category":"Immune","role":"canonical","specificity":"medium","tissue_context":{"Lung":0.98,"Liver":0.98,"Tumor":0.95,"Brain":0.92},"confidence":0.95},{"celltype":"Microglia","category":"Neural","role":"supporting","specificity":"high","tissue_context":{"Brain":0.99},"confidence":0.7},{"celltype":"Tumor-associated macrophage","category":"Tumor microenvironment","role":"canonical","specificity":"medium","tissue_context":{"Tumor":0.95},"confidence":0.95}],"CSF1R":[{"celltype":"Monocyte","category":"Immune","role":"supporting","specificity":"high","tissue_context":{"Blood":0.99,"Bone marrow":0.95},"confidence":0.7}],"TYROBP":[{"celltype":"Monocyte","category":"Immune","role":"supporting","specificity":"high","tissue_context":{"Blood":0.99,"Bone marrow":0.95},"confidence":0.7}],"MRC1":[{"celltype":"Macrophage","category":"Immune","role":"canonical","specificity":"medium","tissue_context":{"Lung":0.98,"Liver":0.98,"Tumor":0.95,"Brain":0.92},"confidence":0.95},{"celltype":"Tumor-associated macrophage","category":"Tumor microenvironment","role":"supporting","specificity":"medium","tissue_context":{"Tumor":0.95},"confidence":0.7}],"MARCO":[{"celltype":"Macrophage","category":"Immune","role":"canonical","specificity":"medium","tissue_context":{"Lung":0.98,"Liver":0.98,"Tumor":0.95,"Brain":0.92},"confidence":0.95},{"celltype":"Tumor-associated macrophage","category":"Tumor microenvironment","role":"supporting","specificity":"medium","tissue_context":{"Tumor":0.95},"confidence":0.7}],"C1QA":[{"celltype":"Macrophage","category":"Immune","role":"canonical","specificity":"medium","tissue_context":{"Lung":0.98,"Liver":0.98,"Tumor":0.95,"Brain":0.92},"confidence":0.95},{"celltype":"Tumor-associated macrophage","category":"Tumor microenvironment","role":"canonical","specificity":"medium","tissue_context":{"Tumor":0.95},"confidence":0.95}],"C1QB":[{"celltype":"Macrophage","category":"Immune","role":"canonical","specificity":"medium","tissue_context":{"Lung":0.98,"Liver":0.98,"Tumor":0.95,"Brain":0.92},"confidence":0.95}],"APOE":[{"celltype":"Macrophage","category":"Immune","role":"supporting","specificity":"medium","tissue_context":{"Lung":0.98,"Liver":0.98,"Tumor":0.95,"Brain":0.92},"confidence":0.7},{"celltype":"Hepatocyte","category":"Epithelial","role":"canonical","specificity":"high","tissue_context":{"Liver":0.99},"confidence":0.95},{"celltype":"Tumor-associated macrophage","category":"Tumor microenvironment","role":"canonical","specificity":"medium","tissue_context":{"Tumor":0.95},"confidence":0.95}],"APOC1":[{"celltype":"Macrophage","category":"Immune","role":"supporting","specificity":"medium","tissue_context":{"Lung":0.98,"Liver":0.98,"Tumor":0.95,"Brain":0.92},"confidence":0.7}],"SPP1":[{"celltype":"Macrophage","category":"Immune","role":"supporting","specificity":"medium","tissue_context":{"Lung":0.98,"Liver":0.98,"Tumor":0.95,"Brain":0.92},"confidence":0.7},{"celltype":"Tumor-associated macrophage","category":"Tumor microenvironment","role":"canonical","specificity":"medium","tissue_context":{"Tumor":0.95},"confidence":0.95}],"TREM2":[{"celltype":"Macrophage","category":"Immune","role":"supporting","specificity":"medium","tissue_context":{"Lung":0.98,"Liver":0.98,"Tumor":0.95,"Brain":0.92},"confidence":0.7},{"celltype":"Microglia","category":"Neural","role":"canonical","specificity":"high","tissue_context":{"Brain":0.99},"confidence":0.95},{"celltype":"Tumor-associated macrophage","category":"Tumor microenvironment","role":"canonical","specificity":"medium","tissue_context":{"Tumor":0.95},"confidence":0.95}],"CD163":[{"celltype":"Macrophage","category":"Immune","role":"supporting","specificity":"medium","tissue_context":{"Lung":0.98,"Liver":0.98,"Tumor":0.95,"Brain":0.92},"confidence":0.7},{"celltype":"Tumor-associated macrophage","category":"Tumor microenvironment","role":"supporting","specificity":"medium","tissue_context":{"Tumor":0.95},"confidence":0.7}],"ITGAX":[{"celltype":"Dendritic cell","category":"Immune","role":"canonical","specificity":"medium","tissue_context":{"Blood":0.95,"Lymph node":0.97,"Tumor":0.88},"confidence":0.95}],"CLEC9A":[{"celltype":"Dendritic cell","category":"Immune","role":"canonical","specificity":"medium","tissue_context":{"Blood":0.95,"Lymph node":0.97,"Tumor":0.88},"confidence":0.95}],"XCR1":[{"celltype":"Dendritic cell","category":"Immune","role":"canonical","specificity":"medium","tissue_context":{"Blood":0.95,"Lymph node":0.97,"Tumor":0.88},"confidence":0.95}],"FCER1A":[{"celltype":"Dendritic cell","category":"Immune","role":"canonical","specificity":"medium","tissue_context":{"Blood":0.95,"Lymph node":0.97,"Tumor":0.88},"confidence":0.95}],"CLEC10A":[{"celltype":"Dendritic cell","category":"Immune","role":"canonical","specificity":"medium","tissue_context":{"Blood":0.95,"Lymph node":0.97,"Tumor":0.88},"confidence":0.95}],"HLA-DRA":[{"celltype":"Dendritic cell","category":"Immune","role":"supporting","specificity":"medium","tissue_context":{"Blood":0.95,"Lymph node":0.97,"Tumor":0.88},"confidence":0.7}],"HLA-DRB1":[{"celltype":"Dendritic cell","category":"Immune","role":"supporting","specificity":"medium","tissue_context":{"Blood":0.95,"Lymph node":0.97,"Tumor":0.88},"confidence":0.7}],"CD1C":[{"celltype":"Dendritic cell","category":"Immune","role":"supporting","specificity":"medium","tissue_context":{"Blood":0.95,"Lymph node":0.97,"Tumor":0.88},"confidence":0.7}],"LILRA4":[{"celltype":"Dendritic cell","category":"Immune","role":"supporting","specificity":"medium","tissue_context":{"Blood":0.95,"Lymph node":0.97,"Tumor":0.88},"confidence":0.7}],"TPSAB1":[{"celltype":"Mast cell","category":"Immune","role":"canonical","specificity":"high","tissue_context":{"Skin":0.98,"Lung":0.95,"Gut":0.97,"Tumor":0.9},"confidence":0.95}],"TPSB2":[{"celltype":"Mast cell","category":"Immune","role":"canonical","specificity":"high","tissue_context":{"Skin":0.98,"Lung":0.95,"Gut":0.97,"Tumor":0.9},"confidence":0.95}],"CPA3":[{"celltype":"Mast cell","category":"Immune","role":"canonical","specificity":"high","tissue_context":{"Skin":0.98,"Lung":0.95,"Gut":0.97,"Tumor":0.9},"confidence":0.95}],"KIT":[{"celltype":"Mast cell","category":"Immune","role":"canonical","specificity":"high","tissue_context":{"Skin":0.98,"Lung":0.95,"Gut":0.97,"Tumor":0.9},"confidence":0.95}],"HPGDS":[{"celltype":"Mast cell","category":"Immune","role":"canonical","specificity":"high","tissue_context":{"Skin":0.98,"Lung":0.95,"Gut":0.97,"Tumor":0.9},"confidence":0.95}],"MS4A2":[{"celltype":"Mast cell","category":"Immune","role":"supporting","specificity":"high","tissue_context":{"Skin":0.98,"Lung":0.95,"Gut":0.97,"Tumor":0.9},"confidence":0.7}],"GATA2":[{"celltype":"Mast cell","category":"Immune","role":"supporting","specificity":"high","tissue_context":{"Skin":0.98,"Lung":0.95,"Gut":0.97,"Tumor":0.9},"confidence":0.7}],"HDC":[{"celltype":"Mast cell","category":"Immune","role":"supporting","specificity":"high","tissue_context":{"Skin":0.98,"Lung":0.95,"Gut":0.97,"Tumor":0.9},"confidence":0.7}],"CLU":[{"celltype":"Mast cell","category":"Immune","role":"supporting","specificity":"high","tissue_context":{"Skin":0.98,"Lung":0.95,"Gut":0.97,"Tumor":0.9},"confidence":0.7},{"celltype":"Astrocyte","category":"Neural","role":"supporting","specificity":"high","tissue_context":{"Brain":0.99},"confidence":0.7}],"FCGR3B":[{"celltype":"Neutrophil","category":"Immune","role":"canonical","specificity":"high","tissue_context":{"Blood":0.99,"Tumor":0.85,"Lung":0.88},"confidence":0.95}],"CXCR2":[{"celltype":"Neutrophil","category":"Immune","role":"canonical","specificity":"high","tissue_context":{"Blood":0.99,"Tumor":0.85,"Lung":0.88},"confidence":0.95}],"CSF3R":[{"celltype":"Neutrophil","category":"Immune","role":"canonical","specificity":"high","tissue_context":{"Blood":0.99,"Tumor":0.85,"Lung":0.88},"confidence":0.95}],"CEACAM8":[{"celltype":"Neutrophil","category":"Immune","role":"canonical","specificity":"high","tissue_context":{"Blood":0.99,"Tumor":0.85,"Lung":0.88},"confidence":0.95}],"ELANE":[{"celltype":"Neutrophil","category":"Immune","role":"supporting","specificity":"high","tissue_context":{"Blood":0.99,"Tumor":0.85,"Lung":0.88},"confidence":0.7}],"MPO":[{"celltype":"Neutrophil","category":"Immune","role":"supporting","specificity":"high","tissue_context":{"Blood":0.99,"Tumor":0.85,"Lung":0.88},"confidence":0.7}],"LCN2":[{"celltype":"Neutrophil","category":"Immune","role":"supporting","specificity":"high","tissue_context":{"Blood":0.99,"Tumor":0.85,"Lung":0.88},"confidence":0.7}],"SELL":[{"celltype":"Neutrophil","category":"Immune","role":"supporting","specificity":"high","tissue_context":{"Blood":0.99,"Tumor":0.85,"Lung":0.88},"confidence":0.7}],"CXCR1":[{"celltype":"Neutrophil","category":"Immune","role":"supporting","specificity":"high","tissue_context":{"Blood":0.99,"Tumor":0.85,"Lung":0.88},"confidence":0.7}],"EPCAM":[{"celltype":"Epithelial cell","category":"Epithelial","role":"canonical","specificity":"high","tissue_context":{"Breast":0.98,"Lung":0.97,"Colon":0.98,"Liver":0.9},"confidence":0.95},{"celltype":"Cholangiocyte","category":"Epithelial","role":"canonical","specificity":"high","tissue_context":{"Liver":0.98},"confidence":0.95}],"KRT8":[{"celltype":"Epithelial cell","category":"Epithelial","role":"canonical","specificity":"high","tissue_context":{"Breast":0.98,"Lung":0.97,"Colon":0.98,"Liver":0.9},"confidence":0.95}],"KRT18":[{"celltype":"Epithelial cell","category":"Epithelial","role":"canonical","specificity":"high","tissue_context":{"Breast":0.98,"Lung":0.97,"Colon":0.98,"Liver":0.9},"confidence":0.95}],"KRT19":[{"celltype":"Epithelial cell","category":"Epithelial","role":"canonical","specificity":"high","tissue_context":{"Breast":0.98,"Lung":0.97,"Colon":0.98,"Liver":0.9},"confidence":0.95},{"celltype":"Cholangiocyte","category":"Epithelial","role":"canonical","specificity":"high","tissue_context":{"Liver":0.98},"confidence":0.95}],"CDH1":[{"celltype":"Epithelial cell","category":"Epithelial","role":"canonical","specificity":"high","tissue_context":{"Breast":0.98,"Lung":0.97,"Colon":0.98,"Liver":0.9},"confidence":0.95}],"KRT7":[{"celltype":"Epithelial cell","category":"Epithelial","role":"supporting","specificity":"high","tissue_context":{"Breast":0.98,"Lung":0.97,"Colon":0.98,"Liver":0.9},"confidence":0.7},{"celltype":"Cholangiocyte","category":"Epithelial","role":"canonical","specificity":"high","tissue_context":{"Liver":0.98},"confidence":0.95}],"CLDN4":[{"celltype":"Epithelial cell","category":"Epithelial","role":"supporting","specificity":"high","tissue_context":{"Breast":0.98,"Lung":0.97,"Colon":0.98,"Liver":0.9},"confidence":0.7}],"MUC1":[{"celltype":"Epithelial cell","category":"Epithelial","role":"supporting","specificity":"high","tissue_context":{"Breast":0.98,"Lung":0.97,"Colon":0.98,"Liver":0.9},"confidence":0.7}],"TACSTD2":[{"celltype":"Epithelial cell","category":"Epithelial","role":"supporting","specificity":"high","tissue_context":{"Breast":0.98,"Lung":0.97,"Colon":0.98,"Liver":0.9},"confidence":0.7}],"SCGB1A1":[{"celltype":"Club cell","category":"Epithelial","role":"canonical","specificity":"high","tissue_context":{"Lung":0.99},"confidence":0.95}],"SCGB3A1":[{"celltype":"Club cell","category":"Epithelial","role":"canonical","specificity":"high","tissue_context":{"Lung":0.99},"confidence":0.95}],"CYP2B6":[{"celltype":"Club cell","category":"Epithelial","role":"canonical","specificity":"high","tissue_context":{"Lung":0.99},"confidence":0.95}],"CCKAR":[{"celltype":"Club cell","category":"Epithelial","role":"canonical","specificity":"high","tissue_context":{"Lung":0.99},"confidence":0.95}],"SCGB3A2":[{"celltype":"Club cell","category":"Epithelial","role":"supporting","specificity":"high","tissue_context":{"Lung":0.99},"confidence":0.7}],"SFTPB":[{"celltype":"Club cell","category":"Epithelial","role":"supporting","specificity":"high","tissue_context":{"Lung":0.99},"confidence":0.7},{"celltype":"Alveolar type II cell","category":"Epithelial","role":"canonical","specificity":"high","tissue_context":{"Lung":0.99},"confidence":0.95}],"ALDH1A1":[{"celltype":"Club cell","category":"Epithelial","role":"supporting","specificity":"high","tissue_context":{"Lung":0.99},"confidence":0.7}],"AGER":[{"celltype":"Alveolar type I cell","category":"Epithelial","role":"canonical","specificity":"high","tissue_context":{"Lung":0.99},"confidence":0.95}],"PDPN":[{"celltype":"Alveolar type I cell","category":"Epithelial","role":"canonical","specificity":"high","tissue_context":{"Lung":0.99},"confidence":0.95},{"celltype":"Cancer-associated fibroblast","category":"Tumor microenvironment","role":"canonical","specificity":"medium","tissue_context":{"Tumor":0.95},"confidence":0.95}],"CAV1":[{"celltype":"Alveolar type I cell","category":"Epithelial","role":"canonical","specificity":"high","tissue_context":{"Lung":0.99},"confidence":0.95}],"AQP5":[{"celltype":"Alveolar type I cell","category":"Epithelial","role":"canonical","specificity":"high","tissue_context":{"Lung":0.99},"confidence":0.95}],"HOPX":[{"celltype":"Alveolar type I cell","category":"Epithelial","role":"canonical","specificity":"high","tissue_context":{"Lung":0.99},"confidence":0.95},{"celltype":"Hematopoietic stem cell","category":"Stem/Progenitor","role":"supporting","specificity":"medium","tissue_context":{"Bone marrow":0.99,"Cord blood":0.97},"confidence":0.7}],"CLIC5":[{"celltype":"Alveolar type I cell","category":"Epithelial","role":"supporting","specificity":"high","tissue_context":{"Lung":0.99},"confidence":0.7}],"RTKN2":[{"celltype":"Alveolar type I cell","category":"Epithelial","role":"supporting","specificity":"high","tissue_context":{"Lung":0.99},"confidence":0.7}],"GPRC5A":[{"celltype":"Alveolar type I cell","category":"Epithelial","role":"supporting","specificity":"high","tissue_context":{"Lung":0.99},"confidence":0.7}],"SFTPC":[{"celltype":"Alveolar type II cell","category":"Epithelial","role":"canonical","specificity":"high","tissue_context":{"Lung":0.99},"confidence":0.95}],"SFTPD":[{"celltype":"Alveolar type II cell","category":"Epithelial","role":"canonical","specificity":"high","tissue_context":{"Lung":0.99},"confidence":0.95}],"ABCA3":[{"celltype":"Alveolar type II cell","category":"Epithelial","role":"canonical","specificity":"high","tissue_context":{"Lung":0.99},"confidence":0.95}],"ETV5":[{"celltype":"Alveolar type II cell","category":"Epithelial","role":"canonical","specificity":"high","tissue_context":{"Lung":0.99},"confidence":0.95}],"LAMP3":[{"celltype":"Alveolar type II cell","category":"Epithelial","role":"supporting","specificity":"high","tissue_context":{"Lung":0.99},"confidence":0.7}],"SLC34A2":[{"celltype":"Alveolar type II cell","category":"Epithelial","role":"supporting","specificity":"high","tissue_context":{"Lung":0.99},"confidence":0.7}],"NAPSA":[{"celltype":"Alveolar type II cell","category":"Epithelial","role":"supporting","specificity":"high","tissue_context":{"Lung":0.99},"confidence":0.7}],"PGC":[{"celltype":"Alveolar type II cell","category":"Epithelial","role":"supporting","specificity":"high","tissue_context":{"Lung":0.99},"confidence":0.7}],"ALB":[{"celltype":"Hepatocyte","category":"Epithelial","role":"canonical","specificity":"high","tissue_context":{"Liver":0.99},"confidence":0.95}],"APOB":[{"celltype":"Hepatocyte","category":"Epithelial","role":"canonical","specificity":"high","tissue_context":{"Liver":0.99},"confidence":0.95}],"TTR":[{"celltype":"Hepatocyte","category":"Epithelial","role":"canonical","specificity":"high","tissue_context":{"Liver":0.99},"confidence":0.95}],"FGB":[{"celltype":"Hepatocyte","category":"Epithelial","role":"canonical","specificity":"high","tissue_context":{"Liver":0.99},"confidence":0.95}],"CYP3A4":[{"celltype":"Hepatocyte","category":"Epithelial","role":"supporting","specificity":"high","tissue_context":{"Liver":0.99},"confidence":0.7}],"CYP2E1":[{"celltype":"Hepatocyte","category":"Epithelial","role":"supporting","specificity":"high","tissue_context":{"Liver":0.99},"confidence":0.7}],"ASGR1":[{"celltype":"Hepatocyte","category":"Epithelial","role":"supporting","specificity":"high","tissue_context":{"Liver":0.99},"confidence":0.7}],"HNF4A":[{"celltype":"Hepatocyte","category":"Epithelial","role":"supporting","specificity":"high","tissue_context":{"Liver":0.99},"confidence":0.7}],"PCK1":[{"celltype":"Hepatocyte","category":"Epithelial","role":"supporting","specificity":"high","tissue_context":{"Liver":0.99},"confidence":0.7}],"CFTR":[{"celltype":"Cholangiocyte","category":"Epithelial","role":"canonical","specificity":"high","tissue_context":{"Liver":0.98},"confidence":0.95}],"SLC4A2":[{"celltype":"Cholangiocyte","category":"Epithelial","role":"canonical","specificity":"high","tissue_context":{"Liver":0.98},"confidence":0.95}],"SOX9":[{"celltype":"Cholangiocyte","category":"Epithelial","role":"supporting","specificity":"high","tissue_context":{"Liver":0.98},"confidence":0.7},{"celltype":"Astrocyte","category":"Neural","role":"supporting","specificity":"high","tissue_context":{"Brain":0.99},"confidence":0.7},{"celltype":"Intestinal stem cell","category":"Stem/Progenitor","role":"supporting","specificity":"high","tissue_context":{"Small intestine":0.99,"Colon":0.98},"confidence":0.7}],"HNF1B":[{"celltype":"Cholangiocyte","category":"Epithelial","role":"supporting","specificity":"high","tissue_context":{"Liver":0.98},"confidence":0.7}],"ANXA4":[{"celltype":"Cholangiocyte","category":"Epithelial","role":"supporting","specificity":"high","tissue_context":{"Liver":0.98},"confidence":0.7}],"TFF2":[{"celltype":"Cholangiocyte","category":"Epithelial","role":"supporting","specificity":"high","tissue_context":{"Liver":0.98},"confidence":0.7}],"FABP1":[{"celltype":"Enterocyte","category":"Epithelial","role":"canonical","specificity":"high","tissue_context":{"Small intestine":0.99,"Colon":0.85},"confidence":0.95}],"FABP2":[{"celltype":"Enterocyte","category":"Epithelial","role":"canonical","specificity":"high","tissue_context":{"Small intestine":0.99,"Colon":0.85},"confidence":0.95}],"SLC5A1":[{"celltype":"Enterocyte","category":"Epithelial","role":"canonical","specificity":"high","tissue_context":{"Small intestine":0.99,"Colon":0.85},"confidence":0.95}],"APOA1":[{"celltype":"Enterocyte","category":"Epithelial","role":"canonical","specificity":"high","tissue_context":{"Small intestine":0.99,"Colon":0.85},"confidence":0.95}],"APOA4":[{"celltype":"Enterocyte","category":"Epithelial","role":"canonical","specificity":"high","tissue_context":{"Small intestine":0.99,"Colon":0.85},"confidence":0.95}],"VIL1":[{"celltype":"Enterocyte","category":"Epithelial","role":"supporting","specificity":"high","tissue_context":{"Small intestine":0.99,"Colon":0.85},"confidence":0.7}],"LCT":[{"celltype":"Enterocyte","category":"Epithelial","role":"supporting","specificity":"high","tissue_context":{"Small intestine":0.99,"Colon":0.85},"confidence":0.7}],"SI":[{"celltype":"Enterocyte","category":"Epithelial","role":"supporting","specificity":"high","tissue_context":{"Small intestine":0.99,"Colon":0.85},"confidence":0.7}],"ALDOB":[{"celltype":"Enterocyte","category":"Epithelial","role":"supporting","specificity":"high","tissue_context":{"Small intestine":0.99,"Colon":0.85},"confidence":0.7}],"ANPEP":[{"celltype":"Enterocyte","category":"Epithelial","role":"supporting","specificity":"high","tissue_context":{"Small intestine":0.99,"Colon":0.85},"confidence":0.7}],"MUC2":[{"celltype":"Goblet cell","category":"Epithelial","role":"canonical","specificity":"high","tissue_context":{"Colon":0.99,"Small intestine":0.97,"Lung":0.9},"confidence":0.95}],"TFF3":[{"celltype":"Goblet cell","category":"Epithelial","role":"canonical","specificity":"high","tissue_context":{"Colon":0.99,"Small intestine":0.97,"Lung":0.9},"confidence":0.95}],"SPDEF":[{"celltype":"Goblet cell","category":"Epithelial","role":"canonical","specificity":"high","tissue_context":{"Colon":0.99,"Small intestine":0.97,"Lung":0.9},"confidence":0.95}],"FCGBP":[{"celltype":"Goblet cell","category":"Epithelial","role":"canonical","specificity":"high","tissue_context":{"Colon":0.99,"Small intestine":0.97,"Lung":0.9},"confidence":0.95}],"CLCA1":[{"celltype":"Goblet cell","category":"Epithelial","role":"canonical","specificity":"high","tissue_context":{"Colon":0.99,"Small intestine":0.97,"Lung":0.9},"confidence":0.95}],"ATOH1":[{"celltype":"Goblet cell","category":"Epithelial","role":"supporting","specificity":"high","tissue_context":{"Colon":0.99,"Small intestine":0.97,"Lung":0.9},"confidence":0.7}],"KLF4":[{"celltype":"Goblet cell","category":"Epithelial","role":"supporting","specificity":"high","tissue_context":{"Colon":0.99,"Small intestine":0.97,"Lung":0.9},"confidence":0.7}],"AGR2":[{"celltype":"Goblet cell","category":"Epithelial","role":"supporting","specificity":"high","tissue_context":{"Colon":0.99,"Small intestine":0.97,"Lung":0.9},"confidence":0.7}],"ZG16":[{"celltype":"Goblet cell","category":"Epithelial","role":"supporting","specificity":"high","tissue_context":{"Colon":0.99,"Small intestine":0.97,"Lung":0.9},"confidence":0.7}],"COL1A1":[{"celltype":"Fibroblast","category":"Stromal","role":"canonical","specificity":"medium","tissue_context":{"Tumor":0.95,"Skin":0.97,"Lung":0.95,"Breast":0.96},"confidence":0.95}],"COL1A2":[{"celltype":"Fibroblast","category":"Stromal","role":"canonical","specificity":"medium","tissue_context":{"Tumor":0.95,"Skin":0.97,"Lung":0.95,"Breast":0.96},"confidence":0.95}],"COL3A1":[{"celltype":"Fibroblast","category":"Stromal","role":"canonical","specificity":"medium","tissue_context":{"Tumor":0.95,"Skin":0.97,"Lung":0.95,"Breast":0.96},"confidence":0.95}],"DCN":[{"celltype":"Fibroblast","category":"Stromal","role":"canonical","specificity":"medium","tissue_context":{"Tumor":0.95,"Skin":0.97,"Lung":0.95,"Breast":0.96},"confidence":0.95}],"LUM":[{"celltype":"Fibroblast","category":"Stromal","role":"canonical","specificity":"medium","tissue_context":{"Tumor":0.95,"Skin":0.97,"Lung":0.95,"Breast":0.96},"confidence":0.95}],"PDGFRA":[{"celltype":"Fibroblast","category":"Stromal","role":"supporting","specificity":"medium","tissue_context":{"Tumor":0.95,"Skin":0.97,"Lung":0.95,"Breast":0.96},"confidence":0.7},{"celltype":"Oligodendrocyte precursor cell","category":"Neural","role":"canonical","specificity":"high","tissue_context":{"Brain":0.99},"confidence":0.95}],"FAP":[{"celltype":"Fibroblast","category":"Stromal","role":"supporting","specificity":"medium","tissue_context":{"Tumor":0.95,"Skin":0.97,"Lung":0.95,"Breast":0.96},"confidence":0.7},{"celltype":"Cancer-associated fibroblast","category":"Tumor microenvironment","role":"canonical","specificity":"medium","tissue_context":{"Tumor":0.95},"confidence":0.95}],"ACTA2":[{"celltype":"Fibroblast","category":"Stromal","role":"supporting","specificity":"medium","tissue_context":{"Tumor":0.95,"Skin":0.97,"Lung":0.95,"Breast":0.96},"confidence":0.7},{"celltype":"Pericyte","category":"Stromal","role":"canonical","specificity":"medium","tissue_context":{"Brain":0.97,"Tumor":0.9,"Kidney":0.93},"confidence":0.95},{"celltype":"Smooth muscle cell","category":"Stromal","role":"canonical","specificity":"medium","tissue_context":{"Vasculature":0.98,"Gut":0.97,"Bladder":0.97},"confidence":0.95},{"celltype":"Cancer-associated fibroblast","category":"Tumor microenvironment","role":"canonical","specificity":"medium","tissue_context":{"Tumor":0.95},"confidence":0.95}],"POSTN":[{"celltype":"Fibroblast","category":"Stromal","role":"supporting","specificity":"medium","tissue_context":{"Tumor":0.95,"Skin":0.97,"Lung":0.95,"Breast":0.96},"confidence":0.7},{"celltype":"Cancer-associated fibroblast","category":"Tumor microenvironment","role":"canonical","specificity":"medium","tissue_context":{"Tumor":0.95},"confidence":0.95}],"THY1":[{"celltype":"Fibroblast","category":"Stromal","role":"supporting","specificity":"medium","tissue_context":{"Tumor":0.95,"Skin":0.97,"Lung":0.95,"Breast":0.96},"confidence":0.7},{"celltype":"Hematopoietic stem cell","category":"Stem/Progenitor","role":"canonical","specificity":"medium","tissue_context":{"Bone marrow":0.99,"Cord blood":0.97},"confidence":0.95},{"celltype":"Cancer-associated fibroblast","category":"Tumor microenvironment","role":"supporting","specificity":"medium","tissue_context":{"Tumor":0.95},"confidence":0.7}],"PECAM1":[{"celltype":"Endothelial cell","category":"Stromal","role":"canonical","specificity":"high","tissue_context":{"All tissues":0.97,"Tumor":0.95},"confidence":0.95}],"CDH5":[{"celltype":"Endothelial cell","category":"Stromal","role":"canonical","specificity":"high","tissue_context":{"All tissues":0.97,"Tumor":0.95},"confidence":0.95}],"VWF":[{"celltype":"Endothelial cell","category":"Stromal","role":"canonical","specificity":"high","tissue_context":{"All tissues":0.97,"Tumor":0.95},"confidence":0.95},{"celltype":"Megakaryocyte","category":"Hematopoietic","role":"canonical","specificity":"high","tissue_context":{"Blood":0.95,"Bone marrow":0.99},"confidence":0.95}],"CLDN5":[{"celltype":"Endothelial cell","category":"Stromal","role":"canonical","specificity":"high","tissue_context":{"All tissues":0.97,"Tumor":0.95},"confidence":0.95}],"FLT1":[{"celltype":"Endothelial cell","category":"Stromal","role":"canonical","specificity":"high","tissue_context":{"All tissues":0.97,"Tumor":0.95},"confidence":0.95}],"PLVAP":[{"celltype":"Endothelial cell","category":"Stromal","role":"supporting","specificity":"high","tissue_context":{"All tissues":0.97,"Tumor":0.95},"confidence":0.7}],"MCAM":[{"celltype":"Endothelial cell","category":"Stromal","role":"supporting","specificity":"high","tissue_context":{"All tissues":0.97,"Tumor":0.95},"confidence":0.7},{"celltype":"Pericyte","category":"Stromal","role":"supporting","specificity":"medium","tissue_context":{"Brain":0.97,"Tumor":0.9,"Kidney":0.93},"confidence":0.7}],"ENG":[{"celltype":"Endothelial cell","category":"Stromal","role":"supporting","specificity":"high","tissue_context":{"All tissues":0.97,"Tumor":0.95},"confidence":0.7}],"ESAM":[{"celltype":"Endothelial cell","category":"Stromal","role":"supporting","specificity":"high","tissue_context":{"All tissues":0.97,"Tumor":0.95},"confidence":0.7}],"TIE1":[{"celltype":"Endothelial cell","category":"Stromal","role":"supporting","specificity":"high","tissue_context":{"All tissues":0.97,"Tumor":0.95},"confidence":0.7}],"PDGFRB":[{"celltype":"Pericyte","category":"Stromal","role":"canonical","specificity":"medium","tissue_context":{"Brain":0.97,"Tumor":0.9,"Kidney":0.93},"confidence":0.95},{"celltype":"Cancer-associated fibroblast","category":"Tumor microenvironment","role":"supporting","specificity":"medium","tissue_context":{"Tumor":0.95},"confidence":0.7}],"RGS5":[{"celltype":"Pericyte","category":"Stromal","role":"canonical","specificity":"medium","tissue_context":{"Brain":0.97,"Tumor":0.9,"Kidney":0.93},"confidence":0.95}],"NOTCH3":[{"celltype":"Pericyte","category":"Stromal","role":"canonical","specificity":"medium","tissue_context":{"Brain":0.97,"Tumor":0.9,"Kidney":0.93},"confidence":0.95}],"CSPG4":[{"celltype":"Pericyte","category":"Stromal","role":"canonical","specificity":"medium","tissue_context":{"Brain":0.97,"Tumor":0.9,"Kidney":0.93},"confidence":0.95},{"celltype":"Oligodendrocyte precursor cell","category":"Neural","role":"canonical","specificity":"high","tissue_context":{"Brain":0.99},"confidence":0.95}],"ABCC9":[{"celltype":"Pericyte","category":"Stromal","role":"supporting","specificity":"medium","tissue_context":{"Brain":0.97,"Tumor":0.9,"Kidney":0.93},"confidence":0.7}],"KCNJ8":[{"celltype":"Pericyte","category":"Stromal","role":"supporting","specificity":"medium","tissue_context":{"Brain":0.97,"Tumor":0.9,"Kidney":0.93},"confidence":0.7}],"DES":[{"celltype":"Pericyte","category":"Stromal","role":"supporting","specificity":"medium","tissue_context":{"Brain":0.97,"Tumor":0.9,"Kidney":0.93},"confidence":0.7},{"celltype":"Smooth muscle cell","category":"Stromal","role":"canonical","specificity":"medium","tissue_context":{"Vasculature":0.98,"Gut":0.97,"Bladder":0.97},"confidence":0.95}],"MYH11":[{"celltype":"Smooth muscle cell","category":"Stromal","role":"canonical","specificity":"medium","tissue_context":{"Vasculature":0.98,"Gut":0.97,"Bladder":0.97},"confidence":0.95}],"TAGLN":[{"celltype":"Smooth muscle cell","category":"Stromal","role":"canonical","specificity":"medium","tissue_context":{"Vasculature":0.98,"Gut":0.97,"Bladder":0.97},"confidence":0.95}],"CNN1":[{"celltype":"Smooth muscle cell","category":"Stromal","role":"canonical","specificity":"medium","tissue_context":{"Vasculature":0.98,"Gut":0.97,"Bladder":0.97},"confidence":0.95}],"MYLK":[{"celltype":"Smooth muscle cell","category":"Stromal","role":"supporting","specificity":"medium","tissue_context":{"Vasculature":0.98,"Gut":0.97,"Bladder":0.97},"confidence":0.7}],"SMTN":[{"celltype":"Smooth muscle cell","category":"Stromal","role":"supporting","specificity":"medium","tissue_context":{"Vasculature":0.98,"Gut":0.97,"Bladder":0.97},"confidence":0.7}],"TPM2":[{"celltype":"Smooth muscle cell","category":"Stromal","role":"supporting","specificity":"medium","tissue_context":{"Vasculature":0.98,"Gut":0.97,"Bladder":0.97},"confidence":0.7}],"ACTG2":[{"celltype":"Smooth muscle cell","category":"Stromal","role":"supporting","specificity":"medium","tissue_context":{"Vasculature":0.98,"Gut":0.97,"Bladder":0.97},"confidence":0.7}],"ADIPOQ":[{"celltype":"Adipocyte","category":"Stromal","role":"canonical","specificity":"high","tissue_context":{"Adipose":0.99,"Breast":0.9},"confidence":0.95}],"LEP":[{"celltype":"Adipocyte","category":"Stromal","role":"canonical","specificity":"high","tissue_context":{"Adipose":0.99,"Breast":0.9},"confidence":0.95}],"PLIN1":[{"celltype":"Adipocyte","category":"Stromal","role":"canonical","specificity":"high","tissue_context":{"Adipose":0.99,"Breast":0.9},"confidence":0.95}],"FABP4":[{"celltype":"Adipocyte","category":"Stromal","role":"canonical","specificity":"high","tissue_context":{"Adipose":0.99,"Breast":0.9},"confidence":0.95}],"PPARG":[{"celltype":"Adipocyte","category":"Stromal","role":"canonical","specificity":"high","tissue_context":{"Adipose":0.99,"Breast":0.9},"confidence":0.95}],"LPL":[{"celltype":"Adipocyte","category":"Stromal","role":"supporting","specificity":"high","tissue_context":{"Adipose":0.99,"Breast":0.9},"confidence":0.7}],"CIDEC":[{"celltype":"Adipocyte","category":"Stromal","role":"supporting","specificity":"high","tissue_context":{"Adipose":0.99,"Breast":0.9},"confidence":0.7}],"DGAT2":[{"celltype":"Adipocyte","category":"Stromal","role":"supporting","specificity":"high","tissue_context":{"Adipose":0.99,"Breast":0.9},"confidence":0.7}],"FASN":[{"celltype":"Adipocyte","category":"Stromal","role":"supporting","specificity":"high","tissue_context":{"Adipose":0.99,"Breast":0.9},"confidence":0.7}],"RBFOX3":[{"celltype":"Neuron","category":"Neural","role":"canonical","specificity":"high","tissue_context":{"Brain":0.99,"Spinal cord":0.98},"confidence":0.95}],"SYP":[{"celltype":"Neuron","category":"Neural","role":"canonical","specificity":"high","tissue_context":{"Brain":0.99,"Spinal cord":0.98},"confidence":0.95}],"SYT1":[{"celltype":"Neuron","category":"Neural","role":"canonical","specificity":"high","tissue_context":{"Brain":0.99,"Spinal cord":0.98},"confidence":0.95}],"SNAP25":[{"celltype":"Neuron","category":"Neural","role":"canonical","specificity":"high","tissue_context":{"Brain":0.99,"Spinal cord":0.98},"confidence":0.95}],"MAP2":[{"celltype":"Neuron","category":"Neural","role":"canonical","specificity":"high","tissue_context":{"Brain":0.99,"Spinal cord":0.98},"confidence":0.95}],"NEFL":[{"celltype":"Neuron","category":"Neural","role":"supporting","specificity":"high","tissue_context":{"Brain":0.99,"Spinal cord":0.98},"confidence":0.7}],"NEFM":[{"celltype":"Neuron","category":"Neural","role":"supporting","specificity":"high","tissue_context":{"Brain":0.99,"Spinal cord":0.98},"confidence":0.7}],"STMN2":[{"celltype":"Neuron","category":"Neural","role":"supporting","specificity":"high","tissue_context":{"Brain":0.99,"Spinal cord":0.98},"confidence":0.7}],"GAP43":[{"celltype":"Neuron","category":"Neural","role":"supporting","specificity":"high","tissue_context":{"Brain":0.99,"Spinal cord":0.98},"confidence":0.7}],"DCX":[{"celltype":"Neuron","category":"Neural","role":"supporting","specificity":"high","tissue_context":{"Brain":0.99,"Spinal cord":0.98},"confidence":0.7}],"GFAP":[{"celltype":"Astrocyte","category":"Neural","role":"canonical","specificity":"high","tissue_context":{"Brain":0.99},"confidence":0.95}],"AQP4":[{"celltype":"Astrocyte","category":"Neural","role":"canonical","specificity":"high","tissue_context":{"Brain":0.99},"confidence":0.95}],"S100B":[{"celltype":"Astrocyte","category":"Neural","role":"canonical","specificity":"high","tissue_context":{"Brain":0.99},"confidence":0.95}],"ALDH1L1":[{"celltype":"Astrocyte","category":"Neural","role":"canonical","specificity":"high","tissue_context":{"Brain":0.99},"confidence":0.95}],"SLC1A3":[{"celltype":"Astrocyte","category":"Neural","role":"canonical","specificity":"high","tissue_context":{"Brain":0.99},"confidence":0.95}],"VIM":[{"celltype":"Astrocyte","category":"Neural","role":"supporting","specificity":"high","tissue_context":{"Brain":0.99},"confidence":0.7}],"GLUL":[{"celltype":"Astrocyte","category":"Neural","role":"supporting","specificity":"high","tissue_context":{"Brain":0.99},"confidence":0.7}],"GJA1":[{"celltype":"Astrocyte","category":"Neural","role":"supporting","specificity":"high","tissue_context":{"Brain":0.99},"confidence":0.7}],"MBP":[{"celltype":"Oligodendrocyte","category":"Neural","role":"canonical","specificity":"high","tissue_context":{"Brain":0.99,"Spinal cord":0.99},"confidence":0.95}],"MOG":[{"celltype":"Oligodendrocyte","category":"Neural","role":"canonical","specificity":"high","tissue_context":{"Brain":0.99,"Spinal cord":0.99},"confidence":0.95}],"PLP1":[{"celltype":"Oligodendrocyte","category":"Neural","role":"canonical","specificity":"high","tissue_context":{"Brain":0.99,"Spinal cord":0.99},"confidence":0.95}],"MAG":[{"celltype":"Oligodendrocyte","category":"Neural","role":"canonical","specificity":"high","tissue_context":{"Brain":0.99,"Spinal cord":0.99},"confidence":0.95}],"CLDN11":[{"celltype":"Oligodendrocyte","category":"Neural","role":"canonical","specificity":"high","tissue_context":{"Brain":0.99,"Spinal cord":0.99},"confidence":0.95}],"OLIG1":[{"celltype":"Oligodendrocyte","category":"Neural","role":"supporting","specificity":"high","tissue_context":{"Brain":0.99,"Spinal cord":0.99},"confidence":0.7}],"OLIG2":[{"celltype":"Oligodendrocyte","category":"Neural","role":"supporting","specificity":"high","tissue_context":{"Brain":0.99,"Spinal cord":0.99},"confidence":0.7},{"celltype":"Oligodendrocyte precursor cell","category":"Neural","role":"canonical","specificity":"high","tissue_context":{"Brain":0.99},"confidence":0.95}],"CNP":[{"celltype":"Oligodendrocyte","category":"Neural","role":"supporting","specificity":"high","tissue_context":{"Brain":0.99,"Spinal cord":0.99},"confidence":0.7}],"MOBP":[{"celltype":"Oligodendrocyte","category":"Neural","role":"supporting","specificity":"high","tissue_context":{"Brain":0.99,"Spinal cord":0.99},"confidence":0.7}],"SOX10":[{"celltype":"Oligodendrocyte","category":"Neural","role":"supporting","specificity":"high","tissue_context":{"Brain":0.99,"Spinal cord":0.99},"confidence":0.7},{"celltype":"Oligodendrocyte precursor cell","category":"Neural","role":"canonical","specificity":"high","tissue_context":{"Brain":0.99},"confidence":0.95}],"GPR17":[{"celltype":"Oligodendrocyte precursor cell","category":"Neural","role":"supporting","specificity":"high","tissue_context":{"Brain":0.99},"confidence":0.7}],"NEU4":[{"celltype":"Oligodendrocyte precursor cell","category":"Neural","role":"supporting","specificity":"high","tissue_context":{"Brain":0.99},"confidence":0.7}],"LHFPL3":[{"celltype":"Oligodendrocyte precursor cell","category":"Neural","role":"supporting","specificity":"high","tissue_context":{"Brain":0.99},"confidence":0.7}],"TNR":[{"celltype":"Oligodendrocyte precursor cell","category":"Neural","role":"supporting","specificity":"high","tissue_context":{"Brain":0.99},"confidence":0.7}],"CX3CR1":[{"celltype":"Microglia","category":"Neural","role":"canonical","specificity":"high","tissue_context":{"Brain":0.99},"confidence":0.95}],"P2RY12":[{"celltype":"Microglia","category":"Neural","role":"canonical","specificity":"high","tissue_context":{"Brain":0.99},"confidence":0.95}],"TMEM119":[{"celltype":"Microglia","category":"Neural","role":"canonical","specificity":"high","tissue_context":{"Brain":0.99},"confidence":0.95}],"HEXB":[{"celltype":"Microglia","category":"Neural","role":"canonical","specificity":"high","tissue_context":{"Brain":0.99},"confidence":0.95}],"SALL1":[{"celltype":"Microglia","category":"Neural","role":"supporting","specificity":"high","tissue_context":{"Brain":0.99},"confidence":0.7}],"FCRLS":[{"celltype":"Microglia","category":"Neural","role":"supporting","specificity":"high","tissue_context":{"Brain":0.99},"confidence":0.7}],"ITGAM":[{"celltype":"Microglia","category":"Neural","role":"supporting","specificity":"high","tissue_context":{"Brain":0.99},"confidence":0.7}],"IBA1":[{"celltype":"Microglia","category":"Neural","role":"supporting","specificity":"high","tissue_context":{"Brain":0.99},"confidence":0.7}],"LGR5":[{"celltype":"Intestinal stem cell","category":"Stem/Progenitor","role":"canonical","specificity":"high","tissue_context":{"Small intestine":0.99,"Colon":0.98},"confidence":0.95}],"OLFM4":[{"celltype":"Intestinal stem cell","category":"Stem/Progenitor","role":"canonical","specificity":"high","tissue_context":{"Small intestine":0.99,"Colon":0.98},"confidence":0.95}],"ASCL2":[{"celltype":"Intestinal stem cell","category":"Stem/Progenitor","role":"canonical","specificity":"high","tissue_context":{"Small intestine":0.99,"Colon":0.98},"confidence":0.95}],"SMOC2":[{"celltype":"Intestinal stem cell","category":"Stem/Progenitor","role":"canonical","specificity":"high","tissue_context":{"Small intestine":0.99,"Colon":0.98},"confidence":0.95}],"EPHB2":[{"celltype":"Intestinal stem cell","category":"Stem/Progenitor","role":"canonical","specificity":"high","tissue_context":{"Small intestine":0.99,"Colon":0.98},"confidence":0.95}],"AXIN2":[{"celltype":"Intestinal stem cell","category":"Stem/Progenitor","role":"supporting","specificity":"high","tissue_context":{"Small intestine":0.99,"Colon":0.98},"confidence":0.7}],"CD44":[{"celltype":"Intestinal stem cell","category":"Stem/Progenitor","role":"supporting","specificity":"high","tissue_context":{"Small intestine":0.99,"Colon":0.98},"confidence":0.7}],"LRIG1":[{"celltype":"Intestinal stem cell","category":"Stem/Progenitor","role":"supporting","specificity":"high","tissue_context":{"Small intestine":0.99,"Colon":0.98},"confidence":0.7}],"PROM1":[{"celltype":"Intestinal stem cell","category":"Stem/Progenitor","role":"supporting","specificity":"high","tissue_context":{"Small intestine":0.99,"Colon":0.98},"confidence":0.7},{"celltype":"Hematopoietic stem cell","category":"Stem/Progenitor","role":"canonical","specificity":"medium","tissue_context":{"Bone marrow":0.99,"Cord blood":0.97},"confidence":0.95}],"CD34":[{"celltype":"Hematopoietic stem cell","category":"Stem/Progenitor","role":"canonical","specificity":"medium","tissue_context":{"Bone marrow":0.99,"Cord blood":0.97},"confidence":0.95}],"MLLT3":[{"celltype":"Hematopoietic stem cell","category":"Stem/Progenitor","role":"canonical","specificity":"medium","tissue_context":{"Bone marrow":0.99,"Cord blood":0.97},"confidence":0.95}],"SPINK2":[{"celltype":"Hematopoietic stem cell","category":"Stem/Progenitor","role":"canonical","specificity":"medium","tissue_context":{"Bone marrow":0.99,"Cord blood":0.97},"confidence":0.95}],"AVP":[{"celltype":"Hematopoietic stem cell","category":"Stem/Progenitor","role":"supporting","specificity":"medium","tissue_context":{"Bone marrow":0.99,"Cord blood":0.97},"confidence":0.7}],"HLF":[{"celltype":"Hematopoietic stem cell","category":"Stem/Progenitor","role":"supporting","specificity":"medium","tissue_context":{"Bone marrow":0.99,"Cord blood":0.97},"confidence":0.7}],"MECOM":[{"celltype":"Hematopoietic stem cell","category":"Stem/Progenitor","role":"supporting","specificity":"medium","tissue_context":{"Bone marrow":0.99,"Cord blood":0.97},"confidence":0.7}],"CD38":[{"celltype":"Hematopoietic stem cell","category":"Stem/Progenitor","role":"supporting","specificity":"medium","tissue_context":{"Bone marrow":0.99,"Cord blood":0.97},"confidence":0.7}],"MMP11":[{"celltype":"Cancer-associated fibroblast","category":"Tumor microenvironment","role":"canonical","specificity":"medium","tissue_context":{"Tumor":0.95},"confidence":0.95}],"COL11A1":[{"celltype":"Cancer-associated fibroblast","category":"Tumor microenvironment","role":"supporting","specificity":"medium","tissue_context":{"Tumor":0.95},"confidence":0.7}],"FN1":[{"celltype":"Cancer-associated fibroblast","category":"Tumor microenvironment","role":"supporting","specificity":"medium","tissue_context":{"Tumor":0.95},"confidence":0.7}],"S100A4":[{"celltype":"Cancer-associated fibroblast","category":"Tumor microenvironment","role":"supporting","specificity":"medium","tissue_context":{"Tumor":0.95},"confidence":0.7}],"IL10":[{"celltype":"Tumor-associated macrophage","category":"Tumor microenvironment","role":"supporting","specificity":"medium","tissue_context":{"Tumor":0.95},"confidence":0.7}],"VEGFA":[{"celltype":"Tumor-associated macrophage","category":"Tumor microenvironment","role":"supporting","specificity":"medium","tissue_context":{"Tumor":0.95},"confidence":0.7}],"PDCD1":[{"celltype":"Exhausted T cell","category":"Tumor microenvironment","role":"canonical","specificity":"high","tissue_context":{"Tumor":0.97,"Chronic infection":0.95},"confidence":0.95}],"HAVCR2":[{"celltype":"Exhausted T cell","category":"Tumor microenvironment","role":"canonical","specificity":"high","tissue_context":{"Tumor":0.97,"Chronic infection":0.95},"confidence":0.95}],"LAG3":[{"celltype":"Exhausted T cell","category":"Tumor microenvironment","role":"canonical","specificity":"high","tissue_context":{"Tumor":0.97,"Chronic infection":0.95},"confidence":0.95}],"TOX":[{"celltype":"Exhausted T cell","category":"Tumor microenvironment","role":"supporting","specificity":"high","tissue_context":{"Tumor":0.97,"Chronic infection":0.95},"confidence":0.7}],"NR4A1":[{"celltype":"Exhausted T cell","category":"Tumor microenvironment","role":"supporting","specificity":"high","tissue_context":{"Tumor":0.97,"Chronic infection":0.95},"confidence":0.7}],"ENTPD1":[{"celltype":"Exhausted T cell","category":"Tumor microenvironment","role":"supporting","specificity":"high","tissue_context":{"Tumor":0.97,"Chronic infection":0.95},"confidence":0.7}],"CXCL13":[{"celltype":"Exhausted T cell","category":"Tumor microenvironment","role":"supporting","specificity":"high","tissue_context":{"Tumor":0.97,"Chronic infection":0.95},"confidence":0.7}],"VCAM1":[{"celltype":"Exhausted T cell","category":"Tumor microenvironment","role":"supporting","specificity":"high","tissue_context":{"Tumor":0.97,"Chronic infection":0.95},"confidence":0.7}],"HBB":[{"celltype":"Erythrocyte","category":"Hematopoietic","role":"canonical","specificity":"high","tissue_context":{"Blood":0.99,"Bone marrow":0.95},"confidence":0.95}],"HBA1":[{"celltype":"Erythrocyte","category":"Hematopoietic","role":"canonical","specificity":"high","tissue_context":{"Blood":0.99,"Bone marrow":0.95},"confidence":0.95}],"HBA2":[{"celltype":"Erythrocyte","category":"Hematopoietic","role":"canonical","specificity":"high","tissue_context":{"Blood":0.99,"Bone marrow":0.95},"confidence":0.95}],"GYPA":[{"celltype":"Erythrocyte","category":"Hematopoietic","role":"canonical","specificity":"high","tissue_context":{"Blood":0.99,"Bone marrow":0.95},"confidence":0.95}],"ALAS2":[{"celltype":"Erythrocyte","category":"Hematopoietic","role":"canonical","specificity":"high","tissue_context":{"Blood":0.99,"Bone marrow":0.95},"confidence":0.95}],"SLC4A1":[{"celltype":"Erythrocyte","category":"Hematopoietic","role":"supporting","specificity":"high","tissue_context":{"Blood":0.99,"Bone marrow":0.95},"confidence":0.7}],"CA1":[{"celltype":"Erythrocyte","category":"Hematopoietic","role":"supporting","specificity":"high","tissue_context":{"Blood":0.99,"Bone marrow":0.95},"confidence":0.7}],"CA2":[{"celltype":"Erythrocyte","category":"Hematopoietic","role":"supporting","specificity":"high","tissue_context":{"Blood":0.99,"Bone marrow":0.95},"confidence":0.7}],"BNIP3L":[{"celltype":"Erythrocyte","category":"Hematopoietic","role":"supporting","specificity":"high","tissue_context":{"Blood":0.99,"Bone marrow":0.95},"confidence":0.7}],"PF4":[{"celltype":"Megakaryocyte","category":"Hematopoietic","role":"canonical","specificity":"high","tissue_context":{"Blood":0.95,"Bone marrow":0.99},"confidence":0.95}],"PPBP":[{"celltype":"Megakaryocyte","category":"Hematopoietic","role":"canonical","specificity":"high","tissue_context":{"Blood":0.95,"Bone marrow":0.99},"confidence":0.95}],"GP1BA":[{"celltype":"Megakaryocyte","category":"Hematopoietic","role":"canonical","specificity":"high","tissue_context":{"Blood":0.95,"Bone marrow":0.99},"confidence":0.95}],"ITGA2B":[{"celltype":"Megakaryocyte","category":"Hematopoietic","role":"canonical","specificity":"high","tissue_context":{"Blood":0.95,"Bone marrow":0.99},"confidence":0.95}],"TUBB1":[{"celltype":"Megakaryocyte","category":"Hematopoietic","role":"supporting","specificity":"high","tissue_context":{"Blood":0.95,"Bone marrow":0.99},"confidence":0.7}],"NRGN":[{"celltype":"Megakaryocyte","category":"Hematopoietic","role":"supporting","specificity":"high","tissue_context":{"Blood":0.95,"Bone marrow":0.99},"confidence":0.7}],"CLEC1B":[{"celltype":"Megakaryocyte","category":"Hematopoietic","role":"supporting","specificity":"high","tissue_context":{"Blood":0.95,"Bone marrow":0.99},"confidence":0.7}],"TREML1":[{"celltype":"Megakaryocyte","category":"Hematopoietic","role":"supporting","specificity":"high","tissue_context":{"Blood":0.95,"Bone marrow":0.99},"confidence":0.7}]}};
+var GENE_EX = [
+  ['CD3E','pan-T cell'],['FOXP3','Treg'],['MBP','Oligodendrocyte'],
+  ['SFTPC','AT2 cell'],['SPP1','TAM'],['ACTA2','multi-type'],
+  ['TREM2','DAM/TAM'],['LGR5','intestinal stem'],['PDGFRB','pericyte'],['ALB','hepatocyte']
+];
 
-window.addEventListener('DOMContentLoaded', function(){
-  try{
-    DB = DB_DATA;
-    const nCT=Object.keys(DB.celltypes).length;
-    const nG=Object.keys(DB.gene_index).length;
-    document.getElementById('hdr-stats').textContent=nCT+' cell types · '+nG+' marker genes';
-    buildFilters();
-    renderBrowse();
-  }catch(e){
-    document.getElementById('hdr-stats').textContent='Error loading — check console';
-    console.error('MarkerAtlas load error:',e);
-  }
-});
+function cc(cat){ return CAT_COLORS[cat] || '#606060'; }
 
-function cc(cat){return CAT_COLORS[cat]||'#606060';}
+function init(){
+  // Build example chips
+  var ge = document.getElementById('gene-examples');
+  GENE_EX.forEach(function(pair){
+    var b = document.createElement('button');
+    b.className = 'ex';
+    b.innerHTML = pair[0] + ' <span style="color:var(--dim)">' + pair[1] + '</span>';
+    b.onclick = function(){ gex(pair[0]); };
+    ge.appendChild(b);
+  });
+  var ce = document.getElementById('cluster-examples');
+  [['cd8t','CD8+ T cell'],['mac','Macrophage'],['astro','Astrocyte'],
+   ['at2','Lung AT2'],['fibro','Fibroblast'],['mixed','Ambiguous']].forEach(function(pair){
+    var b = document.createElement('button');
+    b.className = 'ex';
+    b.textContent = pair[1];
+    b.onclick = function(){ clex(pair[0]); };
+    ce.appendChild(b);
+  });
+  // Load DB
+  fetch('marker_db.json')
+    .then(function(r){
+      if(!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json();
+    })
+    .then(function(data){
+      DB = data;
+      var nCT = Object.keys(DB.celltypes).length;
+      var nG  = Object.keys(DB.gene_index).length;
+      document.getElementById('hdr-stats').textContent = nCT + ' cell types · ' + nG + ' marker genes';
+      document.getElementById('loading-view').style.display = 'none';
+      buildFilters();
+      renderBrowse();
+      document.getElementById('browse-view').style.display = 'block';
+    })
+    .catch(function(err){
+      document.getElementById('loading-msg').textContent = 'Error loading database: ' + err.message;
+      console.error('MarkerAtlas fetch error:', err);
+    });
+}
 
 function buildFilters(){
-  const cats={};
-  Object.values(DB.celltypes).forEach(ct=>{cats[ct.category]=(cats[ct.category]||0)+1;});
-  const cl=document.getElementById('catlist');
-  cl.innerHTML='<button class="catbtn on" data-c="all" onclick="fcat('all',this)"><span class="cdot" style="background:var(--ink2)"></span>All<span class="ccount">'+Object.keys(DB.celltypes).length+'</span></button>';
-  Object.entries(cats).sort((a,b)=>b[1]-a[1]).forEach(([c,n])=>{
-    cl.innerHTML+='<button class="catbtn" data-c="'+c+'" onclick="fcat(''+c+'',this)"><span class="cdot" style="background:'+cc(c)+'"></span>'+c+'<span class="ccount">'+n+'</span></button>';
+  var cats = {};
+  Object.values(DB.celltypes).forEach(function(ct){ cats[ct.category] = (cats[ct.category]||0)+1; });
+  var cl = document.getElementById('catlist');
+  cl.innerHTML = '';
+  var allBtn = document.createElement('button');
+  allBtn.className = 'catbtn on'; allBtn.dataset.c = 'all';
+  allBtn.innerHTML = '<span class="cdot" style="background:var(--ink2)"></span>All<span class="ccount">' + Object.keys(DB.celltypes).length + '</span>';
+  allBtn.onclick = function(){ fcat('all', allBtn); };
+  cl.appendChild(allBtn);
+  Object.entries(cats).sort(function(a,b){return b[1]-a[1];}).forEach(function(entry){
+    var c = entry[0], n = entry[1];
+    var b = document.createElement('button');
+    b.className = 'catbtn'; b.dataset.c = c;
+    b.innerHTML = '<span class="cdot" style="background:'+cc(c)+'"></span>'+c+'<span class="ccount">'+n+'</span>';
+    b.onclick = function(){ fcat(c, b); };
+    cl.appendChild(b);
   });
-  const tissues=new Set();
-  Object.values(DB.celltypes).forEach(ct=>Object.keys(ct.tissue_context).forEach(t=>tissues.add(t)));
-  const tl=document.getElementById('tissuelist');
-  tl.innerHTML='<button class="tchip on" onclick="ftissue('all',this)">All</button>';
-  [...tissues].sort().forEach(t=>{tl.innerHTML+='<button class="tchip" onclick="ftissue(''+t+'',this)">'+t+'</button>';});
+  var tissues = new Set();
+  Object.values(DB.celltypes).forEach(function(ct){ Object.keys(ct.tissue_context).forEach(function(t){ tissues.add(t); }); });
+  var tl = document.getElementById('tissuelist');
+  tl.innerHTML = '';
+  var allT = document.createElement('button');
+  allT.className = 'tchip on'; allT.textContent = 'All';
+  allT.onclick = function(){ ftissue('all', allT); };
+  tl.appendChild(allT);
+  Array.from(tissues).sort().forEach(function(t){
+    var b = document.createElement('button');
+    b.className = 'tchip'; b.textContent = t;
+    b.onclick = function(){ ftissue(t, b); };
+    tl.appendChild(b);
+  });
 }
 
-function fcat(c,btn){selCat=c;document.querySelectorAll('.catbtn').forEach(b=>b.classList.toggle('on',b.dataset.c===c));renderBrowse();}
-function ftissue(t,btn){selTissue=t;document.querySelectorAll('.tchip').forEach(b=>b.classList.toggle('on',b.textContent===t||( t==='all'&&b.textContent==='All')));renderBrowse();}
-function onSearch(){q=document.getElementById('srch').value.trim();if(mode==='browse')renderBrowse();else if(mode==='gene')renderGene(q);}
-function setMode(m,btn){
-  mode=m;
-  document.querySelectorAll('.mbtn').forEach(b=>b.classList.toggle('on',b.dataset.m===m));
-  document.getElementById('browse-view').style.display=m==='browse'?'block':'none';
-  document.getElementById('gene-view').style.display=m==='gene'?'block':'none';
-  document.getElementById('cluster-view').style.display=m==='cluster'?'block':'none';
-  document.getElementById('catblock').style.display=m==='browse'?'block':'none';
-  document.getElementById('tissueblock').style.display=m==='browse'?'block':'none';
-  document.getElementById('srch').placeholder=m==='browse'?'Filter cell types…':m==='gene'?'Gene symbol (e.g. CD3E)…':'Use the panel →';
-  closeDetail();
-  if(m==='browse')renderBrowse();
-  if(m==='gene'&&q)renderGene(q);
+function fcat(c, btn){
+  selCat = c;
+  document.querySelectorAll('.catbtn').forEach(function(b){ b.classList.toggle('on', b.dataset.c===c); });
+  renderBrowse();
 }
+function ftissue(t, btn){
+  selTissue = t;
+  document.querySelectorAll('.tchip').forEach(function(b){ b.classList.toggle('on', b.textContent===t||(t==='all'&&b.textContent==='All')); });
+  renderBrowse();
+}
+function onSearch(){
+  q = document.getElementById('srch').value.trim();
+  if(mode==='browse') renderBrowse();
+  else if(mode==='gene') renderGene(q);
+}
+function setMode(m, btn){
+  mode = m;
+  document.querySelectorAll('.mbtn').forEach(function(b){ b.classList.toggle('on', b.dataset.m===m); });
+  document.getElementById('browse-view').style.display  = m==='browse'  ? 'block' : 'none';
+  document.getElementById('gene-view').style.display    = m==='gene'    ? 'block' : 'none';
+  document.getElementById('cluster-view').style.display = m==='cluster' ? 'block' : 'none';
+  document.getElementById('catblock').style.display    = m==='browse' ? 'block' : 'none';
+  document.getElementById('tissueblock').style.display = m==='browse' ? 'block' : 'none';
+  document.getElementById('srch').placeholder = m==='browse' ? 'Filter cell types…' : m==='gene' ? 'Gene symbol (e.g. CD3E)…' : 'Use the panel →';
+  closeDetail();
+  if(m==='browse') renderBrowse();
+  if(m==='gene' && q) renderGene(q);
+}
+
+function esc(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;'); }
 
 function renderBrowse(){
-  if(!DB)return;
-  const ql=q.toLowerCase();
-  let cts=Object.entries(DB.celltypes).filter(([n,ct])=>{
-    if(selCat!=='all'&&ct.category!==selCat)return false;
-    if(selTissue!=='all'&&!ct.tissue_context[selTissue])return false;
-    if(ql){const ms=[...ct.canonical_markers,...ct.supporting_markers].join(' ').toLowerCase();return n.toLowerCase().includes(ql)||ms.includes(ql)||ct.category.toLowerCase().includes(ql);}
+  if(!DB) return;
+  var ql = q.toLowerCase();
+  var cts = Object.entries(DB.celltypes).filter(function(entry){
+    var n = entry[0], ct = entry[1];
+    if(selCat!=='all' && ct.category!==selCat) return false;
+    if(selTissue!=='all' && !ct.tissue_context[selTissue]) return false;
+    if(ql){
+      var ms = ct.canonical_markers.concat(ct.supporting_markers).join(' ').toLowerCase();
+      return n.toLowerCase().includes(ql) || ms.includes(ql) || ct.category.toLowerCase().includes(ql);
+    }
     return true;
   });
-  document.getElementById('bcount').textContent=cts.length+' cell type'+(cts.length!==1?'s':'');
-  document.getElementById('btitle').textContent=selCat==='all'?'All cell types':selCat;
-  const grid=document.getElementById('ctgrid');
-  if(!cts.length){grid.innerHTML='<div class="nores">No cell types match the current filters</div>';return;}
-  grid.innerHTML=cts.map(([name,ct])=>{
-    const col=cc(ct.category);
-    const top=Object.entries(ct.tissue_context).sort((a,b)=>b[1]-a[1]).slice(0,3);
-    const ctags=ct.canonical_markers.slice(0,5).map(g=>'<span class="mt mtc" onclick="geneClick(''+g+'',event)">'+g+'</span>').join('');
-    const stags=ct.supporting_markers.slice(0,3).map(g=>'<span class="mt mts" onclick="geneClick(''+g+'',event)">'+g+'</span>').join('');
-    const ntags=ct.negative_markers.slice(0,2).map(g=>'<span class="mt mtn">'+g+'</span>').join('');
-    const tps=top.map(([t,s])=>'<span class="tpill">'+t+' '+Math.round(s*100)+'%</span>').join('');
-    return '<div class="ctcard" onclick="showDetail(''+name+'')">'+
-      '<div class="ctcard-h"><div class="ctbar" style="background:'+col+'"></div><div class="ctname">'+name+'</div>'+
-      '<span class="ctcat" style="background:'+col+'">'+ct.category+'</span>'+
-      '<span class="specbadge spec'+(ct.specificity==='high'?'h':'m')+'">'+ct.specificity+'</span></div>'+
-      '<div class="ctcard-b"><div class="mtags">'+ctags+stags+ntags+'</div><div class="tpills">'+tps+'</div></div></div>';
+  document.getElementById('bcount').textContent = cts.length + ' cell type' + (cts.length!==1?'s':'');
+  document.getElementById('btitle').textContent = selCat==='all' ? 'All cell types' : selCat;
+  var grid = document.getElementById('ctgrid');
+  if(!cts.length){ grid.innerHTML = '<div class="nores">No cell types match the current filters</div>'; return; }
+  grid.innerHTML = cts.map(function(entry){
+    var name = entry[0], ct = entry[1];
+    var col = cc(ct.category);
+    var top = Object.entries(ct.tissue_context).sort(function(a,b){return b[1]-a[1];}).slice(0,3);
+    var ctags = ct.canonical_markers.slice(0,5).map(function(g){
+      return '<span class="mt mtc" onclick="geneClick(''+esc(g)+'',event)">'+esc(g)+'</span>';
+    }).join('');
+    var stags = ct.supporting_markers.slice(0,3).map(function(g){
+      return '<span class="mt mts" onclick="geneClick(''+esc(g)+'',event)">'+esc(g)+'</span>';
+    }).join('');
+    var ntags = ct.negative_markers.slice(0,2).map(function(g){
+      return '<span class="mt mtn">'+esc(g)+'</span>';
+    }).join('');
+    var tps = top.map(function(e){ return '<span class="tpill">'+esc(e[0])+' '+Math.round(e[1]*100)+'%</span>'; }).join('');
+    return '<div class="ctcard" onclick="showDetail(''+esc(name)+'')">'
+      +'<div class="ctcard-h">'
+      +'<div class="ctbar" style="background:'+col+'"></div>'
+      +'<div class="ctname">'+esc(name)+'</div>'
+      +'<span class="ctcat" style="background:'+col+'">'+esc(ct.category)+'</span>'
+      +'<span class="specbadge spec'+(ct.specificity==='high'?'h':'m')+'">'+ct.specificity+'</span>'
+      +'</div>'
+      +'<div class="ctcard-b"><div class="mtags">'+ctags+stags+ntags+'</div><div class="tpills">'+tps+'</div></div>'
+      +'</div>';
   }).join('');
 }
 
-function geneClick(g,e){e.stopPropagation();document.getElementById('srch').value=g;q=g;setMode('gene',document.querySelector('[data-m="gene"]'));renderGene(g);}
-function gex(g){document.getElementById('srch').value=g;q=g;renderGene(g);}
-function clex(k){document.getElementById('clinput').value=CL_EX[k]||'';annotate();}
+function geneClick(g, e){ e.stopPropagation(); document.getElementById('srch').value=g; q=g; setMode('gene',document.querySelector('[data-m="gene"]')); renderGene(g); }
+function gex(g){ document.getElementById('srch').value=g; q=g; renderGene(g); }
+function clex(k){ document.getElementById('clinput').value=CL_EX[k]||''; annotate(); }
 
 function renderGene(qg){
-  const res=document.getElementById('gresults');
-  document.getElementById('gtitle').textContent=qg?'"'+qg.toUpperCase()+'"':'Gene lookup';
-  if(!qg){res.innerHTML='<div class="empty"><div class="empty-g">⌕</div><div class="empty-t">Enter a gene symbol</div><div class="empty-b">Type above or click an example chip.<br/>e.g. CD3E · MBP · SFTPC · FOXP3 · ACTA2</div></div>';return;}
-  const up=qg.toUpperCase();
-  const hits=DB.gene_index[up];
-  if(hits&&hits.length){res.innerHTML=buildGeneCard(up,hits);return;}
-  const partial=Object.entries(DB.gene_index).filter(([g])=>g.startsWith(up)||g.includes(up)).slice(0,5);
-  if(partial.length){res.innerHTML='<div class="nores" style="padding:0 0 10px;text-align:left">Exact match not found. Partial matches:</div>'+partial.map(([g,h])=>buildGeneCard(g,h)).join('');return;}
-  res.innerHTML='<div class="nores">"'+up+'" not found. Check the symbol is a current HGNC-approved name.</div>';
+  var res = document.getElementById('gresults');
+  document.getElementById('gtitle').textContent = qg ? '"'+qg.toUpperCase()+'"' : 'Gene lookup';
+  if(!qg){ res.innerHTML='<div class="empty"><div class="empty-g">&#x2315;</div><div class="empty-t">Enter a gene symbol</div><div class="empty-b">Type above or click an example.<br/>e.g. CD3E &middot; MBP &middot; SFTPC &middot; FOXP3 &middot; ACTA2</div></div>'; return; }
+  var up = qg.toUpperCase();
+  var hits = DB.gene_index[up];
+  if(hits && hits.length){ res.innerHTML = buildGeneCard(up, hits); return; }
+  var partial = Object.entries(DB.gene_index).filter(function(e){ return e[0].startsWith(up)||e[0].includes(up); }).slice(0,5);
+  if(partial.length){ res.innerHTML='<div class="nores" style="padding:0 0 10px;text-align:left">Exact match not found. Partial matches:</div>'+partial.map(function(e){ return buildGeneCard(e[0],e[1]); }).join(''); return; }
+  res.innerHTML='<div class="nores">"'+esc(up)+'" not found. Check the symbol is a current HGNC-approved name.</div>';
 }
 
-function buildGeneCard(gene,hits){
-  const rows=hits.sort((a,b)=>b.confidence-a.confidence).map(h=>{
-    const col=cc(h.category);
-    const ts=Object.entries(h.tissue_context).sort((a,b)=>b[1]-a[1]).slice(0,3).map(([t])=>'<span class="gtchip">'+t+'</span>').join('');
-    return '<div class="grow"><div class="growbar" style="background:'+col+'"></div>'+
-      '<div class="growname" onclick="showDetail(''+h.celltype+'')">'+h.celltype+'</div>'+
-      '<span class="grole '+(h.role==='canonical'?'rc':'rs')+'">'+h.role+'</span>'+
-      '<div class="growtissues">'+ts+'</div></div>';
+function buildGeneCard(gene, hits){
+  var rows = hits.slice().sort(function(a,b){return b.confidence-a.confidence;}).map(function(h){
+    var col = cc(h.category);
+    var ts = Object.entries(h.tissue_context).sort(function(a,b){return b[1]-a[1];}).slice(0,3).map(function(e){ return '<span class="gtchip">'+esc(e[0])+'</span>'; }).join('');
+    return '<div class="grow">'
+      +'<div class="growbar" style="background:'+col+'"></div>'
+      +'<div class="growname" onclick="showDetail(''+esc(h.celltype)+'')">'+esc(h.celltype)+'</div>'
+      +'<span class="grole '+(h.role==='canonical'?'rc':'rs')+'">'+h.role+'</span>'
+      +'<div class="growtissues">'+ts+'</div>'
+      +'</div>';
   }).join('');
-  return '<div class="gcard"><div class="gcard-h"><div class="gsym">'+gene+'</div><div class="gdesc">'+hits.length+' cell type association'+(hits.length!==1?'s':'')+'</div></div><div class="gcard-b">'+rows+'</div></div>';
+  return '<div class="gcard">'
+    +'<div class="gcard-h"><div class="gsym">'+esc(gene)+'</div><div class="gdesc">'+hits.length+' cell type association'+(hits.length!==1?'s':'')+'</div></div>'
+    +'<div class="gcard-b">'+rows+'</div></div>';
 }
 
 function annotate(){
-  const txt=document.getElementById('clinput').value.trim();
-  if(!txt){alert('Paste gene symbols first.');return;}
-  const genes=txt.split(/[\s,;\n]+/).map(g=>g.trim().toUpperCase()).filter(Boolean);
-  const scores={};
-  genes.forEach(g=>{
-    const hs=DB.gene_index[g];
-    if(!hs)return;
-    hs.forEach(h=>{
-      if(!scores[h.celltype])scores[h.celltype]={score:0,matched:[],cat:h.category};
-      scores[h.celltype].score+=(h.role==='canonical'?2:1);
+  var txt = document.getElementById('clinput').value.trim();
+  if(!txt){ alert('Paste gene symbols first.'); return; }
+  var genes = txt.split(/[\s,;
+]+/).map(function(g){ return g.trim().toUpperCase(); }).filter(Boolean);
+  var scores = {};
+  genes.forEach(function(g){
+    var hs = DB.gene_index[g];
+    if(!hs) return;
+    hs.forEach(function(h){
+      if(!scores[h.celltype]) scores[h.celltype]={score:0,matched:[],cat:h.category};
+      scores[h.celltype].score += (h.role==='canonical'?2:1);
       scores[h.celltype].matched.push(g);
     });
   });
-  const ranked=Object.entries(scores).sort((a,b)=>b[1].score-a[1].score).slice(0,8);
-  const res=document.getElementById('cresults');
-  if(!ranked.length){res.innerHTML='<div class="nores">No marker genes recognised. Check symbols are current HGNC-approved human gene names.</div>';return;}
-  const mx=ranked[0][1].score||1;
-  const unmatched=genes.filter(g=>!DB.gene_index[g]);
-  const ctTotalMarkers=ct=>(( DB.celltypes[ct]?.canonical_markers?.length||0)+(DB.celltypes[ct]?.supporting_markers?.length||0));
-  res.innerHTML=ranked.map(([ct,d],i)=>{
-    const col=cc(d.cat);
-    const pct=Math.round(d.score/mx*100);
-    const matched=d.matched.map(g=>'<span class="clm">'+g+'</span>').join('');
-    return '<div class="clcard">'+
-      '<div class="clcard-h">'+
-      '<span class="clrank" style="background:'+(i===0?col:'var(--muted)')+'">'+( i+1)+'</span>'+
-      '<span class="clname" style="color:'+(i===0?col:'var(--ink)')+'" onclick="showDetail(''+ct+'')">'+ct+'</span>'+
-      '<span class="clscore">'+d.matched.length+'/'+ctTotalMarkers(ct)+' markers · score '+d.score+'</span></div>'+
-      '<div class="clbar-wrap"><div class="clbar" style="width:'+pct+'%;background:'+col+'"></div></div>'+
-      '<div class="clgenes">'+matched+'</div></div>';
-  }).join('')+(unmatched.length?'<div style="font-family:var(--mono);font-size:0.64rem;color:var(--dim);margin-top:6px">Not in database: '+unmatched.join(', ')+'</div>':'');
+  var ranked = Object.entries(scores).sort(function(a,b){return b[1].score-a[1].score;}).slice(0,8);
+  var res = document.getElementById('cresults');
+  if(!ranked.length){ res.innerHTML='<div class="nores">No marker genes recognised. Check symbols are current HGNC-approved human gene names.</div>'; return; }
+  var mx = ranked[0][1].score || 1;
+  var unmatched = genes.filter(function(g){ return !DB.gene_index[g]; });
+  res.innerHTML = ranked.map(function(entry, i){
+    var ct = entry[0], d = entry[1];
+    var col = cc(d.cat);
+    var pct = Math.round(d.score/mx*100);
+    var ctData = DB.celltypes[ct];
+    var total = ctData ? (ctData.canonical_markers.length + ctData.supporting_markers.length) : '?';
+    var matched = d.matched.map(function(g){ return '<span class="clm">'+esc(g)+'</span>'; }).join('');
+    return '<div class="clcard">'
+      +'<div class="clcard-h">'
+      +'<span class="clrank" style="background:'+(i===0?col:'var(--muted)')+'">'+( i+1)+'</span>'
+      +'<span class="clname" style="color:'+(i===0?col:'var(--ink)')+'" onclick="showDetail(''+esc(ct)+'')">'+esc(ct)+'</span>'
+      +'<span class="clscore">'+d.matched.length+'/'+total+' markers &middot; score '+d.score+'</span>'
+      +'</div>'
+      +'<div class="clbar-wrap"><div class="clbar" style="width:'+pct+'%;background:'+col+'"></div></div>'
+      +'<div class="clgenes">'+matched+'</div>'
+      +'</div>';
+  }).join('') + (unmatched.length ? '<div style="font-family:var(--mono);font-size:0.64rem;color:var(--dim);margin-top:6px">Not in database: '+unmatched.map(esc).join(', ')+'</div>' : '');
 }
 
 function showDetail(ctName){
-  const ct=DB.celltypes[ctName];if(!ct)return;
-  const col=cc(ct.category);
-  document.getElementById('dname').textContent=ctName;
-  document.getElementById('dbadges').innerHTML=
-    '<span style="font-family:var(--mono);font-size:0.6rem;padding:2px 7px;background:'+col+';color:white">'+ct.category+'</span>'+
-    '<span style="font-family:var(--mono);font-size:0.6rem;padding:2px 7px;border:1px solid '+(ct.specificity==='high'?'var(--green)':'var(--ochre)')+';color:'+(ct.specificity==='high'?'var(--green)':'var(--ochre)')+'">'+ct.specificity+' specificity</span>';
-  document.getElementById('dcan').innerHTML=ct.canonical_markers.map(g=>'<span class="dm dmc" onclick="geneClick(''+g+'',{stopPropagation:()=>{}})">'+g+'</span>').join('');
-  document.getElementById('dsup').innerHTML=ct.supporting_markers.map(g=>'<span class="dm dms" onclick="geneClick(''+g+'',{stopPropagation:()=>{}})">'+g+'</span>').join('');
-  document.getElementById('dneg').innerHTML=ct.negative_markers.map(g=>'<span class="dm dmn">'+g+'</span>').join('');
-  document.getElementById('dnotes').textContent=ct.notes||'—';
-  document.getElementById('dtissues').innerHTML=Object.entries(ct.tissue_context).sort((a,b)=>b[1]-a[1]).map(([t,s])=>'<div class="tsrow"><span class="tsname">'+t+'</span><div class="tstrack"><div class="tsfill" style="width:'+( s*100)+'%"></div></div><span class="tsval">'+Math.round(s*100)+'%</span></div>').join('');
-  document.getElementById('dpmids').innerHTML=(ct.pmids||[]).map(id=>'<div class="pmidrow"><a class="pmida" href="https://pubmed.ncbi.nlm.nih.gov/'+id+'/" target="_blank">PMID '+id+' ↗</a></div>').join('');
-  document.getElementById('dsrcs').innerHTML=(ct.sources||[]).map(s=>'<span class="srcbadge">'+s+'</span>').join('');
+  var ct = DB.celltypes[ctName]; if(!ct) return;
+  var col = cc(ct.category);
+  document.getElementById('dname').textContent = ctName;
+  document.getElementById('dbadges').innerHTML =
+    '<span style="font-family:var(--mono);font-size:0.6rem;padding:2px 7px;background:'+col+';color:white">'+esc(ct.category)+'</span>'
+    +'<span style="font-family:var(--mono);font-size:0.6rem;padding:2px 7px;border:1px solid '+(ct.specificity==='high'?'var(--green)':'var(--ochre)')+';color:'+(ct.specificity==='high'?'var(--green)':'var(--ochre)')+'">'+ct.specificity+' specificity</span>';
+  document.getElementById('dcan').innerHTML = ct.canonical_markers.map(function(g){
+    return '<span class="dm dmc" onclick="geneClick(''+esc(g)+'',{stopPropagation:function(){}})">'+esc(g)+'</span>';
+  }).join('');
+  document.getElementById('dsup').innerHTML = ct.supporting_markers.map(function(g){
+    return '<span class="dm dms" onclick="geneClick(''+esc(g)+'',{stopPropagation:function(){}})">'+esc(g)+'</span>';
+  }).join('');
+  document.getElementById('dneg').innerHTML = ct.negative_markers.map(function(g){
+    return '<span class="dm dmn">'+esc(g)+'</span>';
+  }).join('');
+  document.getElementById('dnotes').textContent = ct.notes || '—';
+  document.getElementById('dtissues').innerHTML = Object.entries(ct.tissue_context).sort(function(a,b){return b[1]-a[1];}).map(function(e){
+    return '<div class="tsrow"><span class="tsname">'+esc(e[0])+'</span><div class="tstrack"><div class="tsfill" style="width:'+(e[1]*100)+'%"></div></div><span class="tsval">'+Math.round(e[1]*100)+'%</span></div>';
+  }).join('');
+  document.getElementById('dpmids').innerHTML = (ct.pmids||[]).map(function(id){
+    return '<div class="pmidrow"><a class="pmida" href="https://pubmed.ncbi.nlm.nih.gov/'+esc(id)+'/" target="_blank">PMID '+esc(id)+' &#x2197;</a></div>';
+  }).join('');
+  document.getElementById('dsrcs').innerHTML = (ct.sources||[]).map(function(s){
+    return '<span class="srcbadge">'+esc(s)+'</span>';
+  }).join('');
   document.getElementById('detail').classList.add('open');
 }
-function closeDetail(){document.getElementById('detail').classList.remove('open');}
+function closeDetail(){ document.getElementById('detail').classList.remove('open'); }
+
+window.addEventListener('load', init);
 </script>
 </body>
 </html>
