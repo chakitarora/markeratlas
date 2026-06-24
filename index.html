@@ -718,8 +718,14 @@ function renderBrowse(){
     var name = entry[0], ct = entry[1];
     var col = cc(ct.category);
     var top = Object.entries(ct.tissue_context).sort(function(a,b){return b[1]-a[1];}).slice(0,3);
-    var ctags = ct.canonical_markers.slice(0,5).map(function(g){ return '<span class="mt mtc" data-gene="'+esc(g)+'">'+esc(g)+'</span>'; }).join('');
-    var stags = ct.supporting_markers.slice(0,3).map(function(g){ return '<span class="mt mts" data-gene="'+esc(g)+'">'+esc(g)+'</span>'; }).join('');
+    var ctags = ct.canonical_markers.slice(0,5).map(function(g){
+      var hits = DB.gene_index[g]; var t = hits && hits[0] && hits[0].tier ? hits[0].tier : 'silver';
+      return '<span class="mt mtc" data-gene="'+esc(g)+'">'+esc(g)+'<span class="tier-badge tier-'+t+'">'+t[0].toUpperCase()+'</span></span>';
+    }).join('');
+    var stags = ct.supporting_markers.slice(0,3).map(function(g){
+      var hits = DB.gene_index[g]; var t = hits && hits[0] && hits[0].tier ? hits[0].tier : 'silver';
+      return '<span class="mt mts" data-gene="'+esc(g)+'">'+esc(g)+'<span class="tier-badge tier-'+t+'">'+t[0].toUpperCase()+'</span></span>';
+    }).join('');
     var ntags = ct.negative_markers.slice(0,2).map(function(g){ return '<span class="mt mtn">'+esc(g)+'</span>'; }).join('');
     var tps = top.map(function(e){ return '<span class="tpill">'+esc(e[0])+' '+Math.round(e[1]*100)+'%</span>'; }).join('');
     html += '<div class="ctcard" data-ct="'+esc(name)+'">'
@@ -778,9 +784,12 @@ function buildGeneCard(gene, hits){
   hits.slice().sort(function(a,b){return b.confidence-a.confidence;}).forEach(function(h){
     var col = cc(h.category);
     var ts = Object.entries(h.tissue_context).sort(function(a,b){return b[1]-a[1];}).slice(0,3).map(function(e){ return '<span class="gtchip">'+esc(e[0])+'</span>'; }).join('');
+    var tier = h.tier || 'silver';
+    var tb = '<span class="tier-badge tier-'+tier+'">'+tier[0].toUpperCase()+'</span>';
     rows += '<div class="grow"><div class="growbar" style="background:'+col+'"></div>'
       +'<div class="growname" data-ct="'+esc(h.celltype)+'">'+esc(h.celltype)+'</div>'
       +'<span class="grole '+(h.role==='canonical'?'rc':'rs')+'">'+h.role+'</span>'
+      +tb
       +'<div class="growtissues">'+ts+'</div></div>';
   });
   return '<div class="gcard"><div class="gcard-h"><div class="gsym">'+esc(gene)+'</div><div class="gdesc">'+hits.length+' cell type association'+(hits.length!==1?'s':'')+'</div></div><div class="gcard-b">'+rows+'</div></div>';
@@ -1084,11 +1093,17 @@ function showDetail(ctName){
   var canEl = document.getElementById('dcan'); canEl.innerHTML = '';
   ct.canonical_markers.forEach(function(g){
     var s = document.createElement('span'); s.className = 'dm dmc'; s.textContent = g;
+    var hits = DB.gene_index[g]; var t = hits && hits[0] && hits[0].tier ? hits[0].tier : 'silver';
+    var tb = document.createElement('span'); tb.className = 'tier-badge tier-'+t; tb.textContent = t[0].toUpperCase();
+    s.appendChild(tb);
     s.onclick = function(){ geneClick(g); closeDetail(); }; canEl.appendChild(s);
   });
   var supEl = document.getElementById('dsup'); supEl.innerHTML = '';
   ct.supporting_markers.forEach(function(g){
     var s = document.createElement('span'); s.className = 'dm dms'; s.textContent = g;
+    var hits = DB.gene_index[g]; var t = hits && hits[0] && hits[0].tier ? hits[0].tier : 'silver';
+    var tb = document.createElement('span'); tb.className = 'tier-badge tier-'+t; tb.textContent = t[0].toUpperCase();
+    s.appendChild(tb);
     s.onclick = function(){ geneClick(g); closeDetail(); }; supEl.appendChild(s);
   });
   document.getElementById('dneg').innerHTML = ct.negative_markers.map(function(g){ return '<span class="dm dmn">'+esc(g)+'</span>'; }).join('');
