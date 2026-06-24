@@ -1,340 +1,340 @@
-gene	celltype	category	role	specificity	tissues	confidence	sources	pmids
-CD3E	CD4+ T cell	Immune	canonical	high	Blood;Lymph node;Spleen;Tumor	0.95	CellMarker;PanglaoDB	30726726;28228279;32103181
-CD3E	CD8+ T cell	Immune	canonical	high	Blood;Tumor;Lymph node	0.95	CellMarker;PanglaoDB	30726726;33558698;32103181
-CD3E	Regulatory T cell	Immune	supporting	high	Blood;Tumor;Lymph node	0.7	CellMarker;PanglaoDB	30726726;28825704
-CD3D	CD4+ T cell	Immune	canonical	high	Blood;Lymph node;Spleen;Tumor	0.95	CellMarker;PanglaoDB	30726726;28228279;32103181
-CD3D	CD8+ T cell	Immune	canonical	high	Blood;Tumor;Lymph node	0.95	CellMarker;PanglaoDB	30726726;33558698;32103181
-CD3G	CD4+ T cell	Immune	canonical	high	Blood;Lymph node;Spleen;Tumor	0.95	CellMarker;PanglaoDB	30726726;28228279;32103181
-CD4	CD4+ T cell	Immune	canonical	high	Blood;Lymph node;Spleen;Tumor	0.95	CellMarker;PanglaoDB	30726726;28228279;32103181
-CD4	Regulatory T cell	Immune	supporting	high	Blood;Tumor;Lymph node	0.7	CellMarker;PanglaoDB	30726726;28825704
-TRAC	CD4+ T cell	Immune	canonical	high	Blood;Lymph node;Spleen;Tumor	0.95	CellMarker;PanglaoDB	30726726;28228279;32103181
-TRBC1	CD4+ T cell	Immune	canonical	high	Blood;Lymph node;Spleen;Tumor	0.95	CellMarker;PanglaoDB	30726726;28228279;32103181
-IL7R	CD4+ T cell	Immune	supporting	high	Blood;Lymph node;Spleen;Tumor	0.7	CellMarker;PanglaoDB	30726726;28228279;32103181
-TCF7	CD4+ T cell	Immune	supporting	high	Blood;Lymph node;Spleen;Tumor	0.7	CellMarker;PanglaoDB	30726726;28228279;32103181
-LEF1	CD4+ T cell	Immune	supporting	high	Blood;Lymph node;Spleen;Tumor	0.7	CellMarker;PanglaoDB	30726726;28228279;32103181
-CCR7	CD4+ T cell	Immune	supporting	high	Blood;Lymph node;Spleen;Tumor	0.7	CellMarker;PanglaoDB	30726726;28228279;32103181
-CD8A	CD8+ T cell	Immune	canonical	high	Blood;Tumor;Lymph node	0.95	CellMarker;PanglaoDB	30726726;33558698;32103181
-CD8B	CD8+ T cell	Immune	canonical	high	Blood;Tumor;Lymph node	0.95	CellMarker;PanglaoDB	30726726;33558698;32103181
-GZMK	CD8+ T cell	Immune	canonical	high	Blood;Tumor;Lymph node	0.95	CellMarker;PanglaoDB	30726726;33558698;32103181
-GZMB	CD8+ T cell	Immune	canonical	high	Blood;Tumor;Lymph node	0.95	CellMarker;PanglaoDB	30726726;33558698;32103181
-GZMB	NK cell	Immune	supporting	high	Blood;Liver;Tumor	0.7	CellMarker;PanglaoDB	30726726;31211237
-PRF1	CD8+ T cell	Immune	supporting	high	Blood;Tumor;Lymph node	0.7	CellMarker;PanglaoDB	30726726;33558698;32103181
-PRF1	NK cell	Immune	canonical	high	Blood;Liver;Tumor	0.95	CellMarker;PanglaoDB	30726726;31211237
-NKG7	CD8+ T cell	Immune	supporting	high	Blood;Tumor;Lymph node	0.7	CellMarker;PanglaoDB	30726726;33558698;32103181
-NKG7	NK cell	Immune	canonical	high	Blood;Liver;Tumor	0.95	CellMarker;PanglaoDB	30726726;31211237
-GNLY	CD8+ T cell	Immune	supporting	high	Blood;Tumor;Lymph node	0.7	CellMarker;PanglaoDB	30726726;33558698;32103181
-GNLY	NK cell	Immune	canonical	high	Blood;Liver;Tumor	0.95	CellMarker;PanglaoDB	30726726;31211237
-IFNG	CD8+ T cell	Immune	supporting	high	Blood;Tumor;Lymph node	0.7	CellMarker;PanglaoDB	30726726;33558698;32103181
-FOXP3	Regulatory T cell	Immune	canonical	high	Blood;Tumor;Lymph node	0.95	CellMarker;PanglaoDB	30726726;28825704
-IL2RA	Regulatory T cell	Immune	canonical	high	Blood;Tumor;Lymph node	0.95	CellMarker;PanglaoDB	30726726;28825704
-CTLA4	Regulatory T cell	Immune	canonical	high	Blood;Tumor;Lymph node	0.95	CellMarker;PanglaoDB	30726726;28825704
-CTLA4	Exhausted T cell	Tumor microenvironment	canonical	high	Tumor;Chronic infection	0.95	CellMarker;PanglaoDB	33558698;32810438
-IKZF2	Regulatory T cell	Immune	canonical	high	Blood;Tumor;Lymph node	0.95	CellMarker;PanglaoDB	30726726;28825704
-TNFRSF18	Regulatory T cell	Immune	supporting	high	Blood;Tumor;Lymph node	0.7	CellMarker;PanglaoDB	30726726;28825704
-TIGIT	Regulatory T cell	Immune	supporting	high	Blood;Tumor;Lymph node	0.7	CellMarker;PanglaoDB	30726726;28825704
-TIGIT	Exhausted T cell	Tumor microenvironment	canonical	high	Tumor;Chronic infection	0.95	CellMarker;PanglaoDB	33558698;32810438
-NCAM1	NK cell	Immune	canonical	high	Blood;Liver;Tumor	0.95	CellMarker;PanglaoDB	30726726;31211237
-KLRD1	NK cell	Immune	canonical	high	Blood;Liver;Tumor	0.95	CellMarker;PanglaoDB	30726726;31211237
-KLRB1	NK cell	Immune	supporting	high	Blood;Liver;Tumor	0.7	CellMarker;PanglaoDB	30726726;31211237
-KLRC1	NK cell	Immune	supporting	high	Blood;Liver;Tumor	0.7	CellMarker;PanglaoDB	30726726;31211237
-FCGR3A	NK cell	Immune	supporting	high	Blood;Liver;Tumor	0.7	CellMarker;PanglaoDB	30726726;31211237
-XCL1	NK cell	Immune	supporting	high	Blood;Liver;Tumor	0.7	CellMarker;PanglaoDB	30726726;31211237
-CD19	B cell	Immune	canonical	high	Blood;Lymph node;Spleen;Tumor	0.95	CellMarker;PanglaoDB	30726726;32103181
-MS4A1	B cell	Immune	canonical	high	Blood;Lymph node;Spleen;Tumor	0.95	CellMarker;PanglaoDB	30726726;32103181
-CD79A	B cell	Immune	canonical	high	Blood;Lymph node;Spleen;Tumor	0.95	CellMarker;PanglaoDB	30726726;32103181
-CD79B	B cell	Immune	canonical	high	Blood;Lymph node;Spleen;Tumor	0.95	CellMarker;PanglaoDB	30726726;32103181
-IGHM	B cell	Immune	canonical	high	Blood;Lymph node;Spleen;Tumor	0.95	CellMarker;PanglaoDB	30726726;32103181
-BANK1	B cell	Immune	supporting	high	Blood;Lymph node;Spleen;Tumor	0.7	CellMarker;PanglaoDB	30726726;32103181
-BLK	B cell	Immune	supporting	high	Blood;Lymph node;Spleen;Tumor	0.7	CellMarker;PanglaoDB	30726726;32103181
-FCRL1	B cell	Immune	supporting	high	Blood;Lymph node;Spleen;Tumor	0.7	CellMarker;PanglaoDB	30726726;32103181
-PAX5	B cell	Immune	supporting	high	Blood;Lymph node;Spleen;Tumor	0.7	CellMarker;PanglaoDB	30726726;32103181
-IGHG1	Plasma cell	Immune	canonical	high	Blood;Bone marrow;Tumor	0.95	CellMarker;PanglaoDB	30726726;32103181
-IGKC	Plasma cell	Immune	canonical	high	Blood;Bone marrow;Tumor	0.95	CellMarker;PanglaoDB	30726726;32103181
-MZB1	Plasma cell	Immune	canonical	high	Blood;Bone marrow;Tumor	0.95	CellMarker;PanglaoDB	30726726;32103181
-SDC1	Plasma cell	Immune	canonical	high	Blood;Bone marrow;Tumor	0.95	CellMarker;PanglaoDB	30726726;32103181
-PRDM1	Plasma cell	Immune	canonical	high	Blood;Bone marrow;Tumor	0.95	CellMarker;PanglaoDB	30726726;32103181
-XBP1	Plasma cell	Immune	supporting	high	Blood;Bone marrow;Tumor	0.7	CellMarker;PanglaoDB	30726726;32103181
-IRF4	Plasma cell	Immune	supporting	high	Blood;Bone marrow;Tumor	0.7	CellMarker;PanglaoDB	30726726;32103181
-IRF4	Dendritic cell	Immune	supporting	medium	Blood;Lymph node;Tumor	0.7	CellMarker;PanglaoDB	30726726;32103181
-JCHAIN	Plasma cell	Immune	supporting	high	Blood;Bone marrow;Tumor	0.7	CellMarker;PanglaoDB	30726726;32103181
-DERL3	Plasma cell	Immune	supporting	high	Blood;Bone marrow;Tumor	0.7	CellMarker;PanglaoDB	30726726;32103181
-CD14	Monocyte	Immune	canonical	high	Blood;Bone marrow	0.95	CellMarker;PanglaoDB	30726726;29942083
-LYZ	Monocyte	Immune	canonical	high	Blood;Bone marrow	0.95	CellMarker;PanglaoDB	30726726;29942083
-S100A8	Monocyte	Immune	canonical	high	Blood;Bone marrow	0.95	CellMarker;PanglaoDB	30726726;29942083
-S100A8	Neutrophil	Immune	canonical	high	Blood;Tumor;Lung	0.95	CellMarker;PanglaoDB	30726726;33558698
-S100A9	Monocyte	Immune	canonical	high	Blood;Bone marrow	0.95	CellMarker;PanglaoDB	30726726;29942083
-FCN1	Monocyte	Immune	canonical	high	Blood;Bone marrow	0.95	CellMarker;PanglaoDB	30726726;29942083
-VCAN	Monocyte	Immune	supporting	high	Blood;Bone marrow	0.7	CellMarker;PanglaoDB	30726726;29942083
-VCAN	Oligodendrocyte precursor cell	Neural	canonical	high	Brain	0.95	CellMarker;PanglaoDB	30726726;33558698
-CD68	Monocyte	Immune	supporting	high	Blood;Bone marrow	0.7	CellMarker;PanglaoDB	30726726;29942083
-CD68	Macrophage	Immune	canonical	medium	Lung;Liver;Tumor;Brain	0.95	CellMarker;PanglaoDB	30726726;32810438;33558698
-CD68	Microglia	Neural	supporting	high	Brain	0.7	CellMarker;PanglaoDB	30726726;33558698;32810438
-CD68	Tumor-associated macrophage	Tumor microenvironment	canonical	medium	Tumor	0.95	CellMarker;PanglaoDB	32810438;33558698;30726726
-CSF1R	Monocyte	Immune	supporting	high	Blood;Bone marrow	0.7	CellMarker;PanglaoDB	30726726;29942083
-TYROBP	Monocyte	Immune	supporting	high	Blood;Bone marrow	0.7	CellMarker;PanglaoDB	30726726;29942083
-MRC1	Macrophage	Immune	canonical	medium	Lung;Liver;Tumor;Brain	0.95	CellMarker;PanglaoDB	30726726;32810438;33558698
-MRC1	Tumor-associated macrophage	Tumor microenvironment	supporting	medium	Tumor	0.7	CellMarker;PanglaoDB	32810438;33558698;30726726
-MARCO	Macrophage	Immune	canonical	medium	Lung;Liver;Tumor;Brain	0.95	CellMarker;PanglaoDB	30726726;32810438;33558698
-MARCO	Tumor-associated macrophage	Tumor microenvironment	supporting	medium	Tumor	0.7	CellMarker;PanglaoDB	32810438;33558698;30726726
-C1QA	Macrophage	Immune	canonical	medium	Lung;Liver;Tumor;Brain	0.95	CellMarker;PanglaoDB	30726726;32810438;33558698
-C1QA	Tumor-associated macrophage	Tumor microenvironment	canonical	medium	Tumor	0.95	CellMarker;PanglaoDB	32810438;33558698;30726726
-C1QB	Macrophage	Immune	canonical	medium	Lung;Liver;Tumor;Brain	0.95	CellMarker;PanglaoDB	30726726;32810438;33558698
-APOE	Macrophage	Immune	supporting	medium	Lung;Liver;Tumor;Brain	0.7	CellMarker;PanglaoDB	30726726;32810438;33558698
-APOE	Hepatocyte	Epithelial	canonical	high	Liver	0.95	CellMarker;PanglaoDB	30726726;33558698
-APOE	Tumor-associated macrophage	Tumor microenvironment	canonical	medium	Tumor	0.95	CellMarker;PanglaoDB	32810438;33558698;30726726
-APOC1	Macrophage	Immune	supporting	medium	Lung;Liver;Tumor;Brain	0.7	CellMarker;PanglaoDB	30726726;32810438;33558698
-SPP1	Macrophage	Immune	supporting	medium	Lung;Liver;Tumor;Brain	0.7	CellMarker;PanglaoDB	30726726;32810438;33558698
-SPP1	Tumor-associated macrophage	Tumor microenvironment	canonical	medium	Tumor	0.95	CellMarker;PanglaoDB	32810438;33558698;30726726
-TREM2	Macrophage	Immune	supporting	medium	Lung;Liver;Tumor;Brain	0.7	CellMarker;PanglaoDB	30726726;32810438;33558698
-TREM2	Microglia	Neural	canonical	high	Brain	0.95	CellMarker;PanglaoDB	30726726;33558698;32810438
-TREM2	Tumor-associated macrophage	Tumor microenvironment	canonical	medium	Tumor	0.95	CellMarker;PanglaoDB	32810438;33558698;30726726
-CD163	Macrophage	Immune	supporting	medium	Lung;Liver;Tumor;Brain	0.7	CellMarker;PanglaoDB	30726726;32810438;33558698
-CD163	Tumor-associated macrophage	Tumor microenvironment	supporting	medium	Tumor	0.7	CellMarker;PanglaoDB	32810438;33558698;30726726
-ITGAX	Dendritic cell	Immune	canonical	medium	Blood;Lymph node;Tumor	0.95	CellMarker;PanglaoDB	30726726;32103181
-CLEC9A	Dendritic cell	Immune	canonical	medium	Blood;Lymph node;Tumor	0.95	CellMarker;PanglaoDB	30726726;32103181
-XCR1	Dendritic cell	Immune	canonical	medium	Blood;Lymph node;Tumor	0.95	CellMarker;PanglaoDB	30726726;32103181
-FCER1A	Dendritic cell	Immune	canonical	medium	Blood;Lymph node;Tumor	0.95	CellMarker;PanglaoDB	30726726;32103181
-CLEC10A	Dendritic cell	Immune	canonical	medium	Blood;Lymph node;Tumor	0.95	CellMarker;PanglaoDB	30726726;32103181
-HLA-DRA	Dendritic cell	Immune	supporting	medium	Blood;Lymph node;Tumor	0.7	CellMarker;PanglaoDB	30726726;32103181
-HLA-DRB1	Dendritic cell	Immune	supporting	medium	Blood;Lymph node;Tumor	0.7	CellMarker;PanglaoDB	30726726;32103181
-CD1C	Dendritic cell	Immune	supporting	medium	Blood;Lymph node;Tumor	0.7	CellMarker;PanglaoDB	30726726;32103181
-LILRA4	Dendritic cell	Immune	supporting	medium	Blood;Lymph node;Tumor	0.7	CellMarker;PanglaoDB	30726726;32103181
-TPSAB1	Mast cell	Immune	canonical	high	Skin;Lung;Gut;Tumor	0.95	CellMarker;PanglaoDB	30726726;33558698
-TPSB2	Mast cell	Immune	canonical	high	Skin;Lung;Gut;Tumor	0.95	CellMarker;PanglaoDB	30726726;33558698
-CPA3	Mast cell	Immune	canonical	high	Skin;Lung;Gut;Tumor	0.95	CellMarker;PanglaoDB	30726726;33558698
-KIT	Mast cell	Immune	canonical	high	Skin;Lung;Gut;Tumor	0.95	CellMarker;PanglaoDB	30726726;33558698
-HPGDS	Mast cell	Immune	canonical	high	Skin;Lung;Gut;Tumor	0.95	CellMarker;PanglaoDB	30726726;33558698
-MS4A2	Mast cell	Immune	supporting	high	Skin;Lung;Gut;Tumor	0.7	CellMarker;PanglaoDB	30726726;33558698
-GATA2	Mast cell	Immune	supporting	high	Skin;Lung;Gut;Tumor	0.7	CellMarker;PanglaoDB	30726726;33558698
-HDC	Mast cell	Immune	supporting	high	Skin;Lung;Gut;Tumor	0.7	CellMarker;PanglaoDB	30726726;33558698
-CLU	Mast cell	Immune	supporting	high	Skin;Lung;Gut;Tumor	0.7	CellMarker;PanglaoDB	30726726;33558698
-CLU	Astrocyte	Neural	supporting	high	Brain	0.7	CellMarker;PanglaoDB	30726726;33558698
-FCGR3B	Neutrophil	Immune	canonical	high	Blood;Tumor;Lung	0.95	CellMarker;PanglaoDB	30726726;33558698
-CXCR2	Neutrophil	Immune	canonical	high	Blood;Tumor;Lung	0.95	CellMarker;PanglaoDB	30726726;33558698
-CSF3R	Neutrophil	Immune	canonical	high	Blood;Tumor;Lung	0.95	CellMarker;PanglaoDB	30726726;33558698
-CEACAM8	Neutrophil	Immune	canonical	high	Blood;Tumor;Lung	0.95	CellMarker;PanglaoDB	30726726;33558698
-ELANE	Neutrophil	Immune	supporting	high	Blood;Tumor;Lung	0.7	CellMarker;PanglaoDB	30726726;33558698
-MPO	Neutrophil	Immune	supporting	high	Blood;Tumor;Lung	0.7	CellMarker;PanglaoDB	30726726;33558698
-LCN2	Neutrophil	Immune	supporting	high	Blood;Tumor;Lung	0.7	CellMarker;PanglaoDB	30726726;33558698
-SELL	Neutrophil	Immune	supporting	high	Blood;Tumor;Lung	0.7	CellMarker;PanglaoDB	30726726;33558698
-CXCR1	Neutrophil	Immune	supporting	high	Blood;Tumor;Lung	0.7	CellMarker;PanglaoDB	30726726;33558698
-EPCAM	Epithelial cell	Epithelial	canonical	high	Breast;Lung;Colon;Liver	0.95	CellMarker;PanglaoDB	30726726;32103181
-EPCAM	Cholangiocyte	Epithelial	canonical	high	Liver	0.95	CellMarker;PanglaoDB	33558698
-KRT8	Epithelial cell	Epithelial	canonical	high	Breast;Lung;Colon;Liver	0.95	CellMarker;PanglaoDB	30726726;32103181
-KRT18	Epithelial cell	Epithelial	canonical	high	Breast;Lung;Colon;Liver	0.95	CellMarker;PanglaoDB	30726726;32103181
-KRT19	Epithelial cell	Epithelial	canonical	high	Breast;Lung;Colon;Liver	0.95	CellMarker;PanglaoDB	30726726;32103181
-KRT19	Cholangiocyte	Epithelial	canonical	high	Liver	0.95	CellMarker;PanglaoDB	33558698
-CDH1	Epithelial cell	Epithelial	canonical	high	Breast;Lung;Colon;Liver	0.95	CellMarker;PanglaoDB	30726726;32103181
-KRT7	Epithelial cell	Epithelial	supporting	high	Breast;Lung;Colon;Liver	0.7	CellMarker;PanglaoDB	30726726;32103181
-KRT7	Cholangiocyte	Epithelial	canonical	high	Liver	0.95	CellMarker;PanglaoDB	33558698
-CLDN4	Epithelial cell	Epithelial	supporting	high	Breast;Lung;Colon;Liver	0.7	CellMarker;PanglaoDB	30726726;32103181
-MUC1	Epithelial cell	Epithelial	supporting	high	Breast;Lung;Colon;Liver	0.7	CellMarker;PanglaoDB	30726726;32103181
-TACSTD2	Epithelial cell	Epithelial	supporting	high	Breast;Lung;Colon;Liver	0.7	CellMarker;PanglaoDB	30726726;32103181
-SCGB1A1	Club cell	Epithelial	canonical	high	Lung	0.95	CellMarker;PanglaoDB	33558698;32103181
-SCGB3A1	Club cell	Epithelial	canonical	high	Lung	0.95	CellMarker;PanglaoDB	33558698;32103181
-CYP2B6	Club cell	Epithelial	canonical	high	Lung	0.95	CellMarker;PanglaoDB	33558698;32103181
-CCKAR	Club cell	Epithelial	canonical	high	Lung	0.95	CellMarker;PanglaoDB	33558698;32103181
-SCGB3A2	Club cell	Epithelial	supporting	high	Lung	0.7	CellMarker;PanglaoDB	33558698;32103181
-SFTPB	Club cell	Epithelial	supporting	high	Lung	0.7	CellMarker;PanglaoDB	33558698;32103181
-SFTPB	Alveolar type II cell	Epithelial	canonical	high	Lung	0.95	CellMarker;PanglaoDB	33558698;32103181
-ALDH1A1	Club cell	Epithelial	supporting	high	Lung	0.7	CellMarker;PanglaoDB	33558698;32103181
-AGER	Alveolar type I cell	Epithelial	canonical	high	Lung	0.95	CellMarker;PanglaoDB	33558698
-PDPN	Alveolar type I cell	Epithelial	canonical	high	Lung	0.95	CellMarker;PanglaoDB	33558698
-PDPN	Cancer-associated fibroblast	Tumor microenvironment	canonical	medium	Tumor	0.95	CellMarker;PanglaoDB	32810438;33558698
-CAV1	Alveolar type I cell	Epithelial	canonical	high	Lung	0.95	CellMarker;PanglaoDB	33558698
-AQP5	Alveolar type I cell	Epithelial	canonical	high	Lung	0.95	CellMarker;PanglaoDB	33558698
-HOPX	Alveolar type I cell	Epithelial	canonical	high	Lung	0.95	CellMarker;PanglaoDB	33558698
-HOPX	Hematopoietic stem cell	Stem/Progenitor	supporting	medium	Bone marrow;Cord blood	0.7	CellMarker;PanglaoDB	30726726;33558698
-CLIC5	Alveolar type I cell	Epithelial	supporting	high	Lung	0.7	CellMarker;PanglaoDB	33558698
-RTKN2	Alveolar type I cell	Epithelial	supporting	high	Lung	0.7	CellMarker;PanglaoDB	33558698
-GPRC5A	Alveolar type I cell	Epithelial	supporting	high	Lung	0.7	CellMarker;PanglaoDB	33558698
-SFTPC	Alveolar type II cell	Epithelial	canonical	high	Lung	0.95	CellMarker;PanglaoDB	33558698;32103181
-SFTPD	Alveolar type II cell	Epithelial	canonical	high	Lung	0.95	CellMarker;PanglaoDB	33558698;32103181
-ABCA3	Alveolar type II cell	Epithelial	canonical	high	Lung	0.95	CellMarker;PanglaoDB	33558698;32103181
-ETV5	Alveolar type II cell	Epithelial	canonical	high	Lung	0.95	CellMarker;PanglaoDB	33558698;32103181
-LAMP3	Alveolar type II cell	Epithelial	supporting	high	Lung	0.7	CellMarker;PanglaoDB	33558698;32103181
-SLC34A2	Alveolar type II cell	Epithelial	supporting	high	Lung	0.7	CellMarker;PanglaoDB	33558698;32103181
-NAPSA	Alveolar type II cell	Epithelial	supporting	high	Lung	0.7	CellMarker;PanglaoDB	33558698;32103181
-PGC	Alveolar type II cell	Epithelial	supporting	high	Lung	0.7	CellMarker;PanglaoDB	33558698;32103181
-ALB	Hepatocyte	Epithelial	canonical	high	Liver	0.95	CellMarker;PanglaoDB	30726726;33558698
-APOB	Hepatocyte	Epithelial	canonical	high	Liver	0.95	CellMarker;PanglaoDB	30726726;33558698
-TTR	Hepatocyte	Epithelial	canonical	high	Liver	0.95	CellMarker;PanglaoDB	30726726;33558698
-FGB	Hepatocyte	Epithelial	canonical	high	Liver	0.95	CellMarker;PanglaoDB	30726726;33558698
-CYP3A4	Hepatocyte	Epithelial	supporting	high	Liver	0.7	CellMarker;PanglaoDB	30726726;33558698
-CYP2E1	Hepatocyte	Epithelial	supporting	high	Liver	0.7	CellMarker;PanglaoDB	30726726;33558698
-ASGR1	Hepatocyte	Epithelial	supporting	high	Liver	0.7	CellMarker;PanglaoDB	30726726;33558698
-HNF4A	Hepatocyte	Epithelial	supporting	high	Liver	0.7	CellMarker;PanglaoDB	30726726;33558698
-PCK1	Hepatocyte	Epithelial	supporting	high	Liver	0.7	CellMarker;PanglaoDB	30726726;33558698
-CFTR	Cholangiocyte	Epithelial	canonical	high	Liver	0.95	CellMarker;PanglaoDB	33558698
-SLC4A2	Cholangiocyte	Epithelial	canonical	high	Liver	0.95	CellMarker;PanglaoDB	33558698
-SOX9	Cholangiocyte	Epithelial	supporting	high	Liver	0.7	CellMarker;PanglaoDB	33558698
-SOX9	Astrocyte	Neural	supporting	high	Brain	0.7	CellMarker;PanglaoDB	30726726;33558698
-SOX9	Intestinal stem cell	Stem/Progenitor	supporting	high	Small intestine;Colon	0.7	CellMarker;PanglaoDB	30726726;33558698
-HNF1B	Cholangiocyte	Epithelial	supporting	high	Liver	0.7	CellMarker;PanglaoDB	33558698
-ANXA4	Cholangiocyte	Epithelial	supporting	high	Liver	0.7	CellMarker;PanglaoDB	33558698
-TFF2	Cholangiocyte	Epithelial	supporting	high	Liver	0.7	CellMarker;PanglaoDB	33558698
-FABP1	Enterocyte	Epithelial	canonical	high	Small intestine;Colon	0.95	CellMarker;PanglaoDB	30726726;33558698
-FABP2	Enterocyte	Epithelial	canonical	high	Small intestine;Colon	0.95	CellMarker;PanglaoDB	30726726;33558698
-SLC5A1	Enterocyte	Epithelial	canonical	high	Small intestine;Colon	0.95	CellMarker;PanglaoDB	30726726;33558698
-APOA1	Enterocyte	Epithelial	canonical	high	Small intestine;Colon	0.95	CellMarker;PanglaoDB	30726726;33558698
-APOA4	Enterocyte	Epithelial	canonical	high	Small intestine;Colon	0.95	CellMarker;PanglaoDB	30726726;33558698
-VIL1	Enterocyte	Epithelial	supporting	high	Small intestine;Colon	0.7	CellMarker;PanglaoDB	30726726;33558698
-LCT	Enterocyte	Epithelial	supporting	high	Small intestine;Colon	0.7	CellMarker;PanglaoDB	30726726;33558698
-SI	Enterocyte	Epithelial	supporting	high	Small intestine;Colon	0.7	CellMarker;PanglaoDB	30726726;33558698
-ALDOB	Enterocyte	Epithelial	supporting	high	Small intestine;Colon	0.7	CellMarker;PanglaoDB	30726726;33558698
-ANPEP	Enterocyte	Epithelial	supporting	high	Small intestine;Colon	0.7	CellMarker;PanglaoDB	30726726;33558698
-MUC2	Goblet cell	Epithelial	canonical	high	Colon;Small intestine;Lung	0.95	CellMarker;PanglaoDB	30726726;33558698
-TFF3	Goblet cell	Epithelial	canonical	high	Colon;Small intestine;Lung	0.95	CellMarker;PanglaoDB	30726726;33558698
-SPDEF	Goblet cell	Epithelial	canonical	high	Colon;Small intestine;Lung	0.95	CellMarker;PanglaoDB	30726726;33558698
-FCGBP	Goblet cell	Epithelial	canonical	high	Colon;Small intestine;Lung	0.95	CellMarker;PanglaoDB	30726726;33558698
-CLCA1	Goblet cell	Epithelial	canonical	high	Colon;Small intestine;Lung	0.95	CellMarker;PanglaoDB	30726726;33558698
-ATOH1	Goblet cell	Epithelial	supporting	high	Colon;Small intestine;Lung	0.7	CellMarker;PanglaoDB	30726726;33558698
-KLF4	Goblet cell	Epithelial	supporting	high	Colon;Small intestine;Lung	0.7	CellMarker;PanglaoDB	30726726;33558698
-AGR2	Goblet cell	Epithelial	supporting	high	Colon;Small intestine;Lung	0.7	CellMarker;PanglaoDB	30726726;33558698
-ZG16	Goblet cell	Epithelial	supporting	high	Colon;Small intestine;Lung	0.7	CellMarker;PanglaoDB	30726726;33558698
-COL1A1	Fibroblast	Stromal	canonical	medium	Tumor;Skin;Lung;Breast	0.95	CellMarker;PanglaoDB	30726726;32810438
-COL1A2	Fibroblast	Stromal	canonical	medium	Tumor;Skin;Lung;Breast	0.95	CellMarker;PanglaoDB	30726726;32810438
-COL3A1	Fibroblast	Stromal	canonical	medium	Tumor;Skin;Lung;Breast	0.95	CellMarker;PanglaoDB	30726726;32810438
-DCN	Fibroblast	Stromal	canonical	medium	Tumor;Skin;Lung;Breast	0.95	CellMarker;PanglaoDB	30726726;32810438
-LUM	Fibroblast	Stromal	canonical	medium	Tumor;Skin;Lung;Breast	0.95	CellMarker;PanglaoDB	30726726;32810438
-PDGFRA	Fibroblast	Stromal	supporting	medium	Tumor;Skin;Lung;Breast	0.7	CellMarker;PanglaoDB	30726726;32810438
-PDGFRA	Oligodendrocyte precursor cell	Neural	canonical	high	Brain	0.95	CellMarker;PanglaoDB	30726726;33558698
-FAP	Fibroblast	Stromal	supporting	medium	Tumor;Skin;Lung;Breast	0.7	CellMarker;PanglaoDB	30726726;32810438
-FAP	Cancer-associated fibroblast	Tumor microenvironment	canonical	medium	Tumor	0.95	CellMarker;PanglaoDB	32810438;33558698
-ACTA2	Fibroblast	Stromal	supporting	medium	Tumor;Skin;Lung;Breast	0.7	CellMarker;PanglaoDB	30726726;32810438
-ACTA2	Pericyte	Stromal	canonical	medium	Brain;Tumor;Kidney	0.95	CellMarker;PanglaoDB	30726726;33558698
-ACTA2	Smooth muscle cell	Stromal	canonical	medium	Vasculature;Gut;Bladder	0.95	CellMarker;PanglaoDB	30726726;32103181
-ACTA2	Cancer-associated fibroblast	Tumor microenvironment	canonical	medium	Tumor	0.95	CellMarker;PanglaoDB	32810438;33558698
-POSTN	Fibroblast	Stromal	supporting	medium	Tumor;Skin;Lung;Breast	0.7	CellMarker;PanglaoDB	30726726;32810438
-POSTN	Cancer-associated fibroblast	Tumor microenvironment	canonical	medium	Tumor	0.95	CellMarker;PanglaoDB	32810438;33558698
-THY1	Fibroblast	Stromal	supporting	medium	Tumor;Skin;Lung;Breast	0.7	CellMarker;PanglaoDB	30726726;32810438
-THY1	Hematopoietic stem cell	Stem/Progenitor	canonical	medium	Bone marrow;Cord blood	0.95	CellMarker;PanglaoDB	30726726;33558698
-THY1	Cancer-associated fibroblast	Tumor microenvironment	supporting	medium	Tumor	0.7	CellMarker;PanglaoDB	32810438;33558698
-PECAM1	Endothelial cell	Stromal	canonical	high	All tissues;Tumor	0.95	CellMarker;PanglaoDB	30726726;32103181
-CDH5	Endothelial cell	Stromal	canonical	high	All tissues;Tumor	0.95	CellMarker;PanglaoDB	30726726;32103181
-VWF	Endothelial cell	Stromal	canonical	high	All tissues;Tumor	0.95	CellMarker;PanglaoDB	30726726;32103181
-VWF	Megakaryocyte	Hematopoietic	canonical	high	Blood;Bone marrow	0.95	CellMarker;PanglaoDB	30726726
-CLDN5	Endothelial cell	Stromal	canonical	high	All tissues;Tumor	0.95	CellMarker;PanglaoDB	30726726;32103181
-FLT1	Endothelial cell	Stromal	canonical	high	All tissues;Tumor	0.95	CellMarker;PanglaoDB	30726726;32103181
-PLVAP	Endothelial cell	Stromal	supporting	high	All tissues;Tumor	0.7	CellMarker;PanglaoDB	30726726;32103181
-MCAM	Endothelial cell	Stromal	supporting	high	All tissues;Tumor	0.7	CellMarker;PanglaoDB	30726726;32103181
-MCAM	Pericyte	Stromal	supporting	medium	Brain;Tumor;Kidney	0.7	CellMarker;PanglaoDB	30726726;33558698
-ENG	Endothelial cell	Stromal	supporting	high	All tissues;Tumor	0.7	CellMarker;PanglaoDB	30726726;32103181
-ESAM	Endothelial cell	Stromal	supporting	high	All tissues;Tumor	0.7	CellMarker;PanglaoDB	30726726;32103181
-TIE1	Endothelial cell	Stromal	supporting	high	All tissues;Tumor	0.7	CellMarker;PanglaoDB	30726726;32103181
-PDGFRB	Pericyte	Stromal	canonical	medium	Brain;Tumor;Kidney	0.95	CellMarker;PanglaoDB	30726726;33558698
-PDGFRB	Cancer-associated fibroblast	Tumor microenvironment	supporting	medium	Tumor	0.7	CellMarker;PanglaoDB	32810438;33558698
-RGS5	Pericyte	Stromal	canonical	medium	Brain;Tumor;Kidney	0.95	CellMarker;PanglaoDB	30726726;33558698
-NOTCH3	Pericyte	Stromal	canonical	medium	Brain;Tumor;Kidney	0.95	CellMarker;PanglaoDB	30726726;33558698
-CSPG4	Pericyte	Stromal	canonical	medium	Brain;Tumor;Kidney	0.95	CellMarker;PanglaoDB	30726726;33558698
-CSPG4	Oligodendrocyte precursor cell	Neural	canonical	high	Brain	0.95	CellMarker;PanglaoDB	30726726;33558698
-ABCC9	Pericyte	Stromal	supporting	medium	Brain;Tumor;Kidney	0.7	CellMarker;PanglaoDB	30726726;33558698
-KCNJ8	Pericyte	Stromal	supporting	medium	Brain;Tumor;Kidney	0.7	CellMarker;PanglaoDB	30726726;33558698
-DES	Pericyte	Stromal	supporting	medium	Brain;Tumor;Kidney	0.7	CellMarker;PanglaoDB	30726726;33558698
-DES	Smooth muscle cell	Stromal	canonical	medium	Vasculature;Gut;Bladder	0.95	CellMarker;PanglaoDB	30726726;32103181
-MYH11	Smooth muscle cell	Stromal	canonical	medium	Vasculature;Gut;Bladder	0.95	CellMarker;PanglaoDB	30726726;32103181
-TAGLN	Smooth muscle cell	Stromal	canonical	medium	Vasculature;Gut;Bladder	0.95	CellMarker;PanglaoDB	30726726;32103181
-CNN1	Smooth muscle cell	Stromal	canonical	medium	Vasculature;Gut;Bladder	0.95	CellMarker;PanglaoDB	30726726;32103181
-MYLK	Smooth muscle cell	Stromal	supporting	medium	Vasculature;Gut;Bladder	0.7	CellMarker;PanglaoDB	30726726;32103181
-SMTN	Smooth muscle cell	Stromal	supporting	medium	Vasculature;Gut;Bladder	0.7	CellMarker;PanglaoDB	30726726;32103181
-TPM2	Smooth muscle cell	Stromal	supporting	medium	Vasculature;Gut;Bladder	0.7	CellMarker;PanglaoDB	30726726;32103181
-ACTG2	Smooth muscle cell	Stromal	supporting	medium	Vasculature;Gut;Bladder	0.7	CellMarker;PanglaoDB	30726726;32103181
-ADIPOQ	Adipocyte	Stromal	canonical	high	Adipose;Breast	0.95	CellMarker;PanglaoDB	30726726;33558698
-LEP	Adipocyte	Stromal	canonical	high	Adipose;Breast	0.95	CellMarker;PanglaoDB	30726726;33558698
-PLIN1	Adipocyte	Stromal	canonical	high	Adipose;Breast	0.95	CellMarker;PanglaoDB	30726726;33558698
-FABP4	Adipocyte	Stromal	canonical	high	Adipose;Breast	0.95	CellMarker;PanglaoDB	30726726;33558698
-PPARG	Adipocyte	Stromal	canonical	high	Adipose;Breast	0.95	CellMarker;PanglaoDB	30726726;33558698
-LPL	Adipocyte	Stromal	supporting	high	Adipose;Breast	0.7	CellMarker;PanglaoDB	30726726;33558698
-CIDEC	Adipocyte	Stromal	supporting	high	Adipose;Breast	0.7	CellMarker;PanglaoDB	30726726;33558698
-DGAT2	Adipocyte	Stromal	supporting	high	Adipose;Breast	0.7	CellMarker;PanglaoDB	30726726;33558698
-FASN	Adipocyte	Stromal	supporting	high	Adipose;Breast	0.7	CellMarker;PanglaoDB	30726726;33558698
-RBFOX3	Neuron	Neural	canonical	high	Brain;Spinal cord	0.95	CellMarker;PanglaoDB	30726726;33558698
-SYP	Neuron	Neural	canonical	high	Brain;Spinal cord	0.95	CellMarker;PanglaoDB	30726726;33558698
-SYT1	Neuron	Neural	canonical	high	Brain;Spinal cord	0.95	CellMarker;PanglaoDB	30726726;33558698
-SNAP25	Neuron	Neural	canonical	high	Brain;Spinal cord	0.95	CellMarker;PanglaoDB	30726726;33558698
-MAP2	Neuron	Neural	canonical	high	Brain;Spinal cord	0.95	CellMarker;PanglaoDB	30726726;33558698
-NEFL	Neuron	Neural	supporting	high	Brain;Spinal cord	0.7	CellMarker;PanglaoDB	30726726;33558698
-NEFM	Neuron	Neural	supporting	high	Brain;Spinal cord	0.7	CellMarker;PanglaoDB	30726726;33558698
-STMN2	Neuron	Neural	supporting	high	Brain;Spinal cord	0.7	CellMarker;PanglaoDB	30726726;33558698
-GAP43	Neuron	Neural	supporting	high	Brain;Spinal cord	0.7	CellMarker;PanglaoDB	30726726;33558698
-DCX	Neuron	Neural	supporting	high	Brain;Spinal cord	0.7	CellMarker;PanglaoDB	30726726;33558698
-GFAP	Astrocyte	Neural	canonical	high	Brain	0.95	CellMarker;PanglaoDB	30726726;33558698
-AQP4	Astrocyte	Neural	canonical	high	Brain	0.95	CellMarker;PanglaoDB	30726726;33558698
-S100B	Astrocyte	Neural	canonical	high	Brain	0.95	CellMarker;PanglaoDB	30726726;33558698
-ALDH1L1	Astrocyte	Neural	canonical	high	Brain	0.95	CellMarker;PanglaoDB	30726726;33558698
-SLC1A3	Astrocyte	Neural	canonical	high	Brain	0.95	CellMarker;PanglaoDB	30726726;33558698
-VIM	Astrocyte	Neural	supporting	high	Brain	0.7	CellMarker;PanglaoDB	30726726;33558698
-GLUL	Astrocyte	Neural	supporting	high	Brain	0.7	CellMarker;PanglaoDB	30726726;33558698
-GJA1	Astrocyte	Neural	supporting	high	Brain	0.7	CellMarker;PanglaoDB	30726726;33558698
-MBP	Oligodendrocyte	Neural	canonical	high	Brain;Spinal cord	0.95	CellMarker;PanglaoDB	30726726;33558698
-MOG	Oligodendrocyte	Neural	canonical	high	Brain;Spinal cord	0.95	CellMarker;PanglaoDB	30726726;33558698
-PLP1	Oligodendrocyte	Neural	canonical	high	Brain;Spinal cord	0.95	CellMarker;PanglaoDB	30726726;33558698
-MAG	Oligodendrocyte	Neural	canonical	high	Brain;Spinal cord	0.95	CellMarker;PanglaoDB	30726726;33558698
-CLDN11	Oligodendrocyte	Neural	canonical	high	Brain;Spinal cord	0.95	CellMarker;PanglaoDB	30726726;33558698
-OLIG1	Oligodendrocyte	Neural	supporting	high	Brain;Spinal cord	0.7	CellMarker;PanglaoDB	30726726;33558698
-OLIG2	Oligodendrocyte	Neural	supporting	high	Brain;Spinal cord	0.7	CellMarker;PanglaoDB	30726726;33558698
-OLIG2	Oligodendrocyte precursor cell	Neural	canonical	high	Brain	0.95	CellMarker;PanglaoDB	30726726;33558698
-CNP	Oligodendrocyte	Neural	supporting	high	Brain;Spinal cord	0.7	CellMarker;PanglaoDB	30726726;33558698
-MOBP	Oligodendrocyte	Neural	supporting	high	Brain;Spinal cord	0.7	CellMarker;PanglaoDB	30726726;33558698
-SOX10	Oligodendrocyte	Neural	supporting	high	Brain;Spinal cord	0.7	CellMarker;PanglaoDB	30726726;33558698
-SOX10	Oligodendrocyte precursor cell	Neural	canonical	high	Brain	0.95	CellMarker;PanglaoDB	30726726;33558698
-GPR17	Oligodendrocyte precursor cell	Neural	supporting	high	Brain	0.7	CellMarker;PanglaoDB	30726726;33558698
-NEU4	Oligodendrocyte precursor cell	Neural	supporting	high	Brain	0.7	CellMarker;PanglaoDB	30726726;33558698
-LHFPL3	Oligodendrocyte precursor cell	Neural	supporting	high	Brain	0.7	CellMarker;PanglaoDB	30726726;33558698
-TNR	Oligodendrocyte precursor cell	Neural	supporting	high	Brain	0.7	CellMarker;PanglaoDB	30726726;33558698
-CX3CR1	Microglia	Neural	canonical	high	Brain	0.95	CellMarker;PanglaoDB	30726726;33558698;32810438
-P2RY12	Microglia	Neural	canonical	high	Brain	0.95	CellMarker;PanglaoDB	30726726;33558698;32810438
-TMEM119	Microglia	Neural	canonical	high	Brain	0.95	CellMarker;PanglaoDB	30726726;33558698;32810438
-HEXB	Microglia	Neural	canonical	high	Brain	0.95	CellMarker;PanglaoDB	30726726;33558698;32810438
-SALL1	Microglia	Neural	supporting	high	Brain	0.7	CellMarker;PanglaoDB	30726726;33558698;32810438
-FCRLS	Microglia	Neural	supporting	high	Brain	0.7	CellMarker;PanglaoDB	30726726;33558698;32810438
-ITGAM	Microglia	Neural	supporting	high	Brain	0.7	CellMarker;PanglaoDB	30726726;33558698;32810438
-IBA1	Microglia	Neural	supporting	high	Brain	0.7	CellMarker;PanglaoDB	30726726;33558698;32810438
-LGR5	Intestinal stem cell	Stem/Progenitor	canonical	high	Small intestine;Colon	0.95	CellMarker;PanglaoDB	30726726;33558698
-OLFM4	Intestinal stem cell	Stem/Progenitor	canonical	high	Small intestine;Colon	0.95	CellMarker;PanglaoDB	30726726;33558698
-ASCL2	Intestinal stem cell	Stem/Progenitor	canonical	high	Small intestine;Colon	0.95	CellMarker;PanglaoDB	30726726;33558698
-SMOC2	Intestinal stem cell	Stem/Progenitor	canonical	high	Small intestine;Colon	0.95	CellMarker;PanglaoDB	30726726;33558698
-EPHB2	Intestinal stem cell	Stem/Progenitor	canonical	high	Small intestine;Colon	0.95	CellMarker;PanglaoDB	30726726;33558698
-AXIN2	Intestinal stem cell	Stem/Progenitor	supporting	high	Small intestine;Colon	0.7	CellMarker;PanglaoDB	30726726;33558698
-CD44	Intestinal stem cell	Stem/Progenitor	supporting	high	Small intestine;Colon	0.7	CellMarker;PanglaoDB	30726726;33558698
-LRIG1	Intestinal stem cell	Stem/Progenitor	supporting	high	Small intestine;Colon	0.7	CellMarker;PanglaoDB	30726726;33558698
-PROM1	Intestinal stem cell	Stem/Progenitor	supporting	high	Small intestine;Colon	0.7	CellMarker;PanglaoDB	30726726;33558698
-PROM1	Hematopoietic stem cell	Stem/Progenitor	canonical	medium	Bone marrow;Cord blood	0.95	CellMarker;PanglaoDB	30726726;33558698
-CD34	Hematopoietic stem cell	Stem/Progenitor	canonical	medium	Bone marrow;Cord blood	0.95	CellMarker;PanglaoDB	30726726;33558698
-MLLT3	Hematopoietic stem cell	Stem/Progenitor	canonical	medium	Bone marrow;Cord blood	0.95	CellMarker;PanglaoDB	30726726;33558698
-SPINK2	Hematopoietic stem cell	Stem/Progenitor	canonical	medium	Bone marrow;Cord blood	0.95	CellMarker;PanglaoDB	30726726;33558698
-AVP	Hematopoietic stem cell	Stem/Progenitor	supporting	medium	Bone marrow;Cord blood	0.7	CellMarker;PanglaoDB	30726726;33558698
-HLF	Hematopoietic stem cell	Stem/Progenitor	supporting	medium	Bone marrow;Cord blood	0.7	CellMarker;PanglaoDB	30726726;33558698
-MECOM	Hematopoietic stem cell	Stem/Progenitor	supporting	medium	Bone marrow;Cord blood	0.7	CellMarker;PanglaoDB	30726726;33558698
-CD38	Hematopoietic stem cell	Stem/Progenitor	supporting	medium	Bone marrow;Cord blood	0.7	CellMarker;PanglaoDB	30726726;33558698
-MMP11	Cancer-associated fibroblast	Tumor microenvironment	canonical	medium	Tumor	0.95	CellMarker;PanglaoDB	32810438;33558698
-COL11A1	Cancer-associated fibroblast	Tumor microenvironment	supporting	medium	Tumor	0.7	CellMarker;PanglaoDB	32810438;33558698
-FN1	Cancer-associated fibroblast	Tumor microenvironment	supporting	medium	Tumor	0.7	CellMarker;PanglaoDB	32810438;33558698
-S100A4	Cancer-associated fibroblast	Tumor microenvironment	supporting	medium	Tumor	0.7	CellMarker;PanglaoDB	32810438;33558698
-IL10	Tumor-associated macrophage	Tumor microenvironment	supporting	medium	Tumor	0.7	CellMarker;PanglaoDB	32810438;33558698;30726726
-VEGFA	Tumor-associated macrophage	Tumor microenvironment	supporting	medium	Tumor	0.7	CellMarker;PanglaoDB	32810438;33558698;30726726
-PDCD1	Exhausted T cell	Tumor microenvironment	canonical	high	Tumor;Chronic infection	0.95	CellMarker;PanglaoDB	33558698;32810438
-HAVCR2	Exhausted T cell	Tumor microenvironment	canonical	high	Tumor;Chronic infection	0.95	CellMarker;PanglaoDB	33558698;32810438
-LAG3	Exhausted T cell	Tumor microenvironment	canonical	high	Tumor;Chronic infection	0.95	CellMarker;PanglaoDB	33558698;32810438
-TOX	Exhausted T cell	Tumor microenvironment	supporting	high	Tumor;Chronic infection	0.7	CellMarker;PanglaoDB	33558698;32810438
-NR4A1	Exhausted T cell	Tumor microenvironment	supporting	high	Tumor;Chronic infection	0.7	CellMarker;PanglaoDB	33558698;32810438
-ENTPD1	Exhausted T cell	Tumor microenvironment	supporting	high	Tumor;Chronic infection	0.7	CellMarker;PanglaoDB	33558698;32810438
-CXCL13	Exhausted T cell	Tumor microenvironment	supporting	high	Tumor;Chronic infection	0.7	CellMarker;PanglaoDB	33558698;32810438
-VCAM1	Exhausted T cell	Tumor microenvironment	supporting	high	Tumor;Chronic infection	0.7	CellMarker;PanglaoDB	33558698;32810438
-HBB	Erythrocyte	Hematopoietic	canonical	high	Blood;Bone marrow	0.95	CellMarker;PanglaoDB	30726726
-HBA1	Erythrocyte	Hematopoietic	canonical	high	Blood;Bone marrow	0.95	CellMarker;PanglaoDB	30726726
-HBA2	Erythrocyte	Hematopoietic	canonical	high	Blood;Bone marrow	0.95	CellMarker;PanglaoDB	30726726
-GYPA	Erythrocyte	Hematopoietic	canonical	high	Blood;Bone marrow	0.95	CellMarker;PanglaoDB	30726726
-ALAS2	Erythrocyte	Hematopoietic	canonical	high	Blood;Bone marrow	0.95	CellMarker;PanglaoDB	30726726
-SLC4A1	Erythrocyte	Hematopoietic	supporting	high	Blood;Bone marrow	0.7	CellMarker;PanglaoDB	30726726
-CA1	Erythrocyte	Hematopoietic	supporting	high	Blood;Bone marrow	0.7	CellMarker;PanglaoDB	30726726
-CA2	Erythrocyte	Hematopoietic	supporting	high	Blood;Bone marrow	0.7	CellMarker;PanglaoDB	30726726
-BNIP3L	Erythrocyte	Hematopoietic	supporting	high	Blood;Bone marrow	0.7	CellMarker;PanglaoDB	30726726
-PF4	Megakaryocyte	Hematopoietic	canonical	high	Blood;Bone marrow	0.95	CellMarker;PanglaoDB	30726726
-PPBP	Megakaryocyte	Hematopoietic	canonical	high	Blood;Bone marrow	0.95	CellMarker;PanglaoDB	30726726
-GP1BA	Megakaryocyte	Hematopoietic	canonical	high	Blood;Bone marrow	0.95	CellMarker;PanglaoDB	30726726
-ITGA2B	Megakaryocyte	Hematopoietic	canonical	high	Blood;Bone marrow	0.95	CellMarker;PanglaoDB	30726726
-TUBB1	Megakaryocyte	Hematopoietic	supporting	high	Blood;Bone marrow	0.7	CellMarker;PanglaoDB	30726726
-NRGN	Megakaryocyte	Hematopoietic	supporting	high	Blood;Bone marrow	0.7	CellMarker;PanglaoDB	30726726
-CLEC1B	Megakaryocyte	Hematopoietic	supporting	high	Blood;Bone marrow	0.7	CellMarker;PanglaoDB	30726726
-TREML1	Megakaryocyte	Hematopoietic	supporting	high	Blood;Bone marrow	0.7	CellMarker;PanglaoDB	30726726
+gene	celltype	category	role	specificity	tissues	confidence	tier	sources	pmids
+CD3E	CD4+ T cell	Immune	canonical	high	Blood;Lymph node;Spleen;Tumor	0.95	gold	CellMarker;PanglaoDB	30726726;28228279;32103181
+CD3E	CD8+ T cell	Immune	canonical	high	Blood;Tumor;Lymph node	0.95	gold	CellMarker;PanglaoDB	30726726;33558698;32103181
+CD3E	Regulatory T cell	Immune	supporting	high	Blood;Tumor;Lymph node	0.7	gold	CellMarker;PanglaoDB	30726726;28825704
+CD3D	CD4+ T cell	Immune	canonical	high	Blood;Lymph node;Spleen;Tumor	0.95	gold	CellMarker;PanglaoDB	30726726;28228279;32103181
+CD3D	CD8+ T cell	Immune	canonical	high	Blood;Tumor;Lymph node	0.95	gold	CellMarker;PanglaoDB	30726726;33558698;32103181
+CD3G	CD4+ T cell	Immune	canonical	high	Blood;Lymph node;Spleen;Tumor	0.95	gold	CellMarker;PanglaoDB	30726726;28228279;32103181
+CD4	CD4+ T cell	Immune	canonical	high	Blood;Lymph node;Spleen;Tumor	0.95	gold	CellMarker;PanglaoDB	30726726;28228279;32103181
+CD4	Regulatory T cell	Immune	supporting	high	Blood;Tumor;Lymph node	0.7	gold	CellMarker;PanglaoDB	30726726;28825704
+TRAC	CD4+ T cell	Immune	canonical	high	Blood;Lymph node;Spleen;Tumor	0.95	silver	CellMarker;PanglaoDB	30726726;28228279;32103181
+TRBC1	CD4+ T cell	Immune	canonical	high	Blood;Lymph node;Spleen;Tumor	0.95	silver	CellMarker;PanglaoDB	30726726;28228279;32103181
+IL7R	CD4+ T cell	Immune	supporting	high	Blood;Lymph node;Spleen;Tumor	0.7	silver	CellMarker;PanglaoDB	30726726;28228279;32103181
+TCF7	CD4+ T cell	Immune	supporting	high	Blood;Lymph node;Spleen;Tumor	0.7	silver	CellMarker;PanglaoDB	30726726;28228279;32103181
+LEF1	CD4+ T cell	Immune	supporting	high	Blood;Lymph node;Spleen;Tumor	0.7	silver	CellMarker;PanglaoDB	30726726;28228279;32103181
+CCR7	CD4+ T cell	Immune	supporting	high	Blood;Lymph node;Spleen;Tumor	0.7	silver	CellMarker;PanglaoDB	30726726;28228279;32103181
+CD8A	CD8+ T cell	Immune	canonical	high	Blood;Tumor;Lymph node	0.95	gold	CellMarker;PanglaoDB	30726726;33558698;32103181
+CD8B	CD8+ T cell	Immune	canonical	high	Blood;Tumor;Lymph node	0.95	silver	CellMarker;PanglaoDB	30726726;33558698;32103181
+GZMK	CD8+ T cell	Immune	canonical	high	Blood;Tumor;Lymph node	0.95	silver	CellMarker;PanglaoDB	30726726;33558698;32103181
+GZMB	CD8+ T cell	Immune	canonical	high	Blood;Tumor;Lymph node	0.95	silver	CellMarker;PanglaoDB	30726726;33558698;32103181
+GZMB	NK cell	Immune	supporting	high	Blood;Liver;Tumor	0.7	silver	CellMarker;PanglaoDB	30726726;31211237
+PRF1	CD8+ T cell	Immune	supporting	high	Blood;Tumor;Lymph node	0.7	silver	CellMarker;PanglaoDB	30726726;33558698;32103181
+PRF1	NK cell	Immune	canonical	high	Blood;Liver;Tumor	0.95	silver	CellMarker;PanglaoDB	30726726;31211237
+NKG7	CD8+ T cell	Immune	supporting	high	Blood;Tumor;Lymph node	0.7	silver	CellMarker;PanglaoDB	30726726;33558698;32103181
+NKG7	NK cell	Immune	canonical	high	Blood;Liver;Tumor	0.95	silver	CellMarker;PanglaoDB	30726726;31211237
+GNLY	CD8+ T cell	Immune	supporting	high	Blood;Tumor;Lymph node	0.7	silver	CellMarker;PanglaoDB	30726726;33558698;32103181
+GNLY	NK cell	Immune	canonical	high	Blood;Liver;Tumor	0.95	silver	CellMarker;PanglaoDB	30726726;31211237
+IFNG	CD8+ T cell	Immune	supporting	high	Blood;Tumor;Lymph node	0.7	silver	CellMarker;PanglaoDB	30726726;33558698;32103181
+FOXP3	Regulatory T cell	Immune	canonical	high	Blood;Tumor;Lymph node	0.95	gold	CellMarker;PanglaoDB	30726726;28825704
+IL2RA	Regulatory T cell	Immune	canonical	high	Blood;Tumor;Lymph node	0.95	silver	CellMarker;PanglaoDB	30726726;28825704
+CTLA4	Regulatory T cell	Immune	canonical	high	Blood;Tumor;Lymph node	0.95	silver	CellMarker;PanglaoDB	30726726;28825704
+CTLA4	Exhausted T cell	Tumor microenvironment	canonical	high	Tumor;Chronic infection	0.95	silver	CellMarker;PanglaoDB	33558698;32810438
+IKZF2	Regulatory T cell	Immune	canonical	high	Blood;Tumor;Lymph node	0.95	bronze	CellMarker;PanglaoDB	30726726;28825704
+TNFRSF18	Regulatory T cell	Immune	supporting	high	Blood;Tumor;Lymph node	0.7	silver	CellMarker;PanglaoDB	30726726;28825704
+TIGIT	Regulatory T cell	Immune	supporting	high	Blood;Tumor;Lymph node	0.7	silver	CellMarker;PanglaoDB	30726726;28825704
+TIGIT	Exhausted T cell	Tumor microenvironment	canonical	high	Tumor;Chronic infection	0.95	silver	CellMarker;PanglaoDB	33558698;32810438
+NCAM1	NK cell	Immune	canonical	high	Blood;Liver;Tumor	0.95	gold	CellMarker;PanglaoDB	30726726;31211237
+KLRD1	NK cell	Immune	canonical	high	Blood;Liver;Tumor	0.95	silver	CellMarker;PanglaoDB	30726726;31211237
+KLRB1	NK cell	Immune	supporting	high	Blood;Liver;Tumor	0.7	silver	CellMarker;PanglaoDB	30726726;31211237
+KLRC1	NK cell	Immune	supporting	high	Blood;Liver;Tumor	0.7	silver	CellMarker;PanglaoDB	30726726;31211237
+FCGR3A	NK cell	Immune	supporting	high	Blood;Liver;Tumor	0.7	silver	CellMarker;PanglaoDB	30726726;31211237
+XCL1	NK cell	Immune	supporting	high	Blood;Liver;Tumor	0.7	silver	CellMarker;PanglaoDB	30726726;31211237
+CD19	B cell	Immune	canonical	high	Blood;Lymph node;Spleen;Tumor	0.95	gold	CellMarker;PanglaoDB	30726726;32103181
+MS4A1	B cell	Immune	canonical	high	Blood;Lymph node;Spleen;Tumor	0.95	gold	CellMarker;PanglaoDB	30726726;32103181
+CD79A	B cell	Immune	canonical	high	Blood;Lymph node;Spleen;Tumor	0.95	gold	CellMarker;PanglaoDB	30726726;32103181
+CD79B	B cell	Immune	canonical	high	Blood;Lymph node;Spleen;Tumor	0.95	silver	CellMarker;PanglaoDB	30726726;32103181
+IGHM	B cell	Immune	canonical	high	Blood;Lymph node;Spleen;Tumor	0.95	silver	CellMarker;PanglaoDB	30726726;32103181
+BANK1	B cell	Immune	supporting	high	Blood;Lymph node;Spleen;Tumor	0.7	silver	CellMarker;PanglaoDB	30726726;32103181
+BLK	B cell	Immune	supporting	high	Blood;Lymph node;Spleen;Tumor	0.7	silver	CellMarker;PanglaoDB	30726726;32103181
+FCRL1	B cell	Immune	supporting	high	Blood;Lymph node;Spleen;Tumor	0.7	silver	CellMarker;PanglaoDB	30726726;32103181
+PAX5	B cell	Immune	supporting	high	Blood;Lymph node;Spleen;Tumor	0.7	silver	CellMarker;PanglaoDB	30726726;32103181
+IGHG1	Plasma cell	Immune	canonical	high	Blood;Bone marrow;Tumor	0.95	silver	CellMarker;PanglaoDB	30726726;32103181
+IGKC	Plasma cell	Immune	canonical	high	Blood;Bone marrow;Tumor	0.95	silver	CellMarker;PanglaoDB	30726726;32103181
+MZB1	Plasma cell	Immune	canonical	high	Blood;Bone marrow;Tumor	0.95	silver	CellMarker;PanglaoDB	30726726;32103181
+SDC1	Plasma cell	Immune	canonical	high	Blood;Bone marrow;Tumor	0.95	silver	CellMarker;PanglaoDB	30726726;32103181
+PRDM1	Plasma cell	Immune	canonical	high	Blood;Bone marrow;Tumor	0.95	silver	CellMarker;PanglaoDB	30726726;32103181
+XBP1	Plasma cell	Immune	supporting	high	Blood;Bone marrow;Tumor	0.7	silver	CellMarker;PanglaoDB	30726726;32103181
+IRF4	Plasma cell	Immune	supporting	high	Blood;Bone marrow;Tumor	0.7	silver	CellMarker;PanglaoDB	30726726;32103181
+IRF4	Dendritic cell	Immune	supporting	medium	Blood;Lymph node;Tumor	0.7	silver	CellMarker;PanglaoDB	30726726;32103181
+JCHAIN	Plasma cell	Immune	supporting	high	Blood;Bone marrow;Tumor	0.7	silver	CellMarker;PanglaoDB	30726726;32103181
+DERL3	Plasma cell	Immune	supporting	high	Blood;Bone marrow;Tumor	0.7	silver	CellMarker;PanglaoDB	30726726;32103181
+CD14	Monocyte	Immune	canonical	high	Blood;Bone marrow	0.95	gold	CellMarker;PanglaoDB	30726726;29942083
+LYZ	Monocyte	Immune	canonical	high	Blood;Bone marrow	0.95	gold	CellMarker;PanglaoDB	30726726;29942083
+S100A8	Monocyte	Immune	canonical	high	Blood;Bone marrow	0.95	silver	CellMarker;PanglaoDB	30726726;29942083
+S100A8	Neutrophil	Immune	canonical	high	Blood;Tumor;Lung	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+S100A9	Monocyte	Immune	canonical	high	Blood;Bone marrow	0.95	silver	CellMarker;PanglaoDB	30726726;29942083
+FCN1	Monocyte	Immune	canonical	high	Blood;Bone marrow	0.95	silver	CellMarker;PanglaoDB	30726726;29942083
+VCAN	Monocyte	Immune	supporting	high	Blood;Bone marrow	0.7	silver	CellMarker;PanglaoDB	30726726;29942083
+VCAN	Oligodendrocyte precursor cell	Neural	canonical	high	Brain	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+CD68	Monocyte	Immune	supporting	high	Blood;Bone marrow	0.7	gold	CellMarker;PanglaoDB	30726726;29942083
+CD68	Macrophage	Immune	canonical	medium	Lung;Liver;Tumor;Brain	0.95	gold	CellMarker;PanglaoDB	30726726;32810438;33558698
+CD68	Microglia	Neural	supporting	high	Brain	0.7	gold	CellMarker;PanglaoDB	30726726;33558698;32810438
+CD68	Tumor-associated macrophage	Tumor microenvironment	canonical	medium	Tumor	0.95	gold	CellMarker;PanglaoDB	32810438;33558698;30726726
+CSF1R	Monocyte	Immune	supporting	high	Blood;Bone marrow	0.7	silver	CellMarker;PanglaoDB	30726726;29942083
+TYROBP	Monocyte	Immune	supporting	high	Blood;Bone marrow	0.7	silver	CellMarker;PanglaoDB	30726726;29942083
+MRC1	Macrophage	Immune	canonical	medium	Lung;Liver;Tumor;Brain	0.95	silver	CellMarker;PanglaoDB	30726726;32810438;33558698
+MRC1	Tumor-associated macrophage	Tumor microenvironment	supporting	medium	Tumor	0.7	silver	CellMarker;PanglaoDB	32810438;33558698;30726726
+MARCO	Macrophage	Immune	canonical	medium	Lung;Liver;Tumor;Brain	0.95	silver	CellMarker;PanglaoDB	30726726;32810438;33558698
+MARCO	Tumor-associated macrophage	Tumor microenvironment	supporting	medium	Tumor	0.7	silver	CellMarker;PanglaoDB	32810438;33558698;30726726
+C1QA	Macrophage	Immune	canonical	medium	Lung;Liver;Tumor;Brain	0.95	silver	CellMarker;PanglaoDB	30726726;32810438;33558698
+C1QA	Tumor-associated macrophage	Tumor microenvironment	canonical	medium	Tumor	0.95	silver	CellMarker;PanglaoDB	32810438;33558698;30726726
+C1QB	Macrophage	Immune	canonical	medium	Lung;Liver;Tumor;Brain	0.95	silver	CellMarker;PanglaoDB	30726726;32810438;33558698
+APOE	Macrophage	Immune	supporting	medium	Lung;Liver;Tumor;Brain	0.7	silver	CellMarker;PanglaoDB	30726726;32810438;33558698
+APOE	Hepatocyte	Epithelial	canonical	high	Liver	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+APOE	Tumor-associated macrophage	Tumor microenvironment	canonical	medium	Tumor	0.95	silver	CellMarker;PanglaoDB	32810438;33558698;30726726
+APOC1	Macrophage	Immune	supporting	medium	Lung;Liver;Tumor;Brain	0.7	silver	CellMarker;PanglaoDB	30726726;32810438;33558698
+SPP1	Macrophage	Immune	supporting	medium	Lung;Liver;Tumor;Brain	0.7	bronze	CellMarker;PanglaoDB	30726726;32810438;33558698
+SPP1	Tumor-associated macrophage	Tumor microenvironment	canonical	medium	Tumor	0.95	bronze	CellMarker;PanglaoDB	32810438;33558698;30726726
+TREM2	Macrophage	Immune	supporting	medium	Lung;Liver;Tumor;Brain	0.7	bronze	CellMarker;PanglaoDB	30726726;32810438;33558698
+TREM2	Microglia	Neural	canonical	high	Brain	0.95	bronze	CellMarker;PanglaoDB	30726726;33558698;32810438
+TREM2	Tumor-associated macrophage	Tumor microenvironment	canonical	medium	Tumor	0.95	bronze	CellMarker;PanglaoDB	32810438;33558698;30726726
+CD163	Macrophage	Immune	supporting	medium	Lung;Liver;Tumor;Brain	0.7	silver	CellMarker;PanglaoDB	30726726;32810438;33558698
+CD163	Tumor-associated macrophage	Tumor microenvironment	supporting	medium	Tumor	0.7	silver	CellMarker;PanglaoDB	32810438;33558698;30726726
+ITGAX	Dendritic cell	Immune	canonical	medium	Blood;Lymph node;Tumor	0.95	silver	CellMarker;PanglaoDB	30726726;32103181
+CLEC9A	Dendritic cell	Immune	canonical	medium	Blood;Lymph node;Tumor	0.95	silver	CellMarker;PanglaoDB	30726726;32103181
+XCR1	Dendritic cell	Immune	canonical	medium	Blood;Lymph node;Tumor	0.95	silver	CellMarker;PanglaoDB	30726726;32103181
+FCER1A	Dendritic cell	Immune	canonical	medium	Blood;Lymph node;Tumor	0.95	silver	CellMarker;PanglaoDB	30726726;32103181
+CLEC10A	Dendritic cell	Immune	canonical	medium	Blood;Lymph node;Tumor	0.95	silver	CellMarker;PanglaoDB	30726726;32103181
+HLA-DRA	Dendritic cell	Immune	supporting	medium	Blood;Lymph node;Tumor	0.7	silver	CellMarker;PanglaoDB	30726726;32103181
+HLA-DRB1	Dendritic cell	Immune	supporting	medium	Blood;Lymph node;Tumor	0.7	silver	CellMarker;PanglaoDB	30726726;32103181
+CD1C	Dendritic cell	Immune	supporting	medium	Blood;Lymph node;Tumor	0.7	silver	CellMarker;PanglaoDB	30726726;32103181
+LILRA4	Dendritic cell	Immune	supporting	medium	Blood;Lymph node;Tumor	0.7	silver	CellMarker;PanglaoDB	30726726;32103181
+TPSAB1	Mast cell	Immune	canonical	high	Skin;Lung;Gut;Tumor	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+TPSB2	Mast cell	Immune	canonical	high	Skin;Lung;Gut;Tumor	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+CPA3	Mast cell	Immune	canonical	high	Skin;Lung;Gut;Tumor	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+KIT	Mast cell	Immune	canonical	high	Skin;Lung;Gut;Tumor	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+HPGDS	Mast cell	Immune	canonical	high	Skin;Lung;Gut;Tumor	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+MS4A2	Mast cell	Immune	supporting	high	Skin;Lung;Gut;Tumor	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+GATA2	Mast cell	Immune	supporting	high	Skin;Lung;Gut;Tumor	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+HDC	Mast cell	Immune	supporting	high	Skin;Lung;Gut;Tumor	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+CLU	Mast cell	Immune	supporting	high	Skin;Lung;Gut;Tumor	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+CLU	Astrocyte	Neural	supporting	high	Brain	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+FCGR3B	Neutrophil	Immune	canonical	high	Blood;Tumor;Lung	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+CXCR2	Neutrophil	Immune	canonical	high	Blood;Tumor;Lung	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+CSF3R	Neutrophil	Immune	canonical	high	Blood;Tumor;Lung	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+CEACAM8	Neutrophil	Immune	canonical	high	Blood;Tumor;Lung	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+ELANE	Neutrophil	Immune	supporting	high	Blood;Tumor;Lung	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+MPO	Neutrophil	Immune	supporting	high	Blood;Tumor;Lung	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+LCN2	Neutrophil	Immune	supporting	high	Blood;Tumor;Lung	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+SELL	Neutrophil	Immune	supporting	high	Blood;Tumor;Lung	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+CXCR1	Neutrophil	Immune	supporting	high	Blood;Tumor;Lung	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+EPCAM	Epithelial cell	Epithelial	canonical	high	Breast;Lung;Colon;Liver	0.95	gold	CellMarker;PanglaoDB	30726726;32103181
+EPCAM	Cholangiocyte	Epithelial	canonical	high	Liver	0.95	gold	CellMarker;PanglaoDB	33558698
+KRT8	Epithelial cell	Epithelial	canonical	high	Breast;Lung;Colon;Liver	0.95	silver	CellMarker;PanglaoDB	30726726;32103181
+KRT18	Epithelial cell	Epithelial	canonical	high	Breast;Lung;Colon;Liver	0.95	gold	CellMarker;PanglaoDB	30726726;32103181
+KRT19	Epithelial cell	Epithelial	canonical	high	Breast;Lung;Colon;Liver	0.95	gold	CellMarker;PanglaoDB	30726726;32103181
+KRT19	Cholangiocyte	Epithelial	canonical	high	Liver	0.95	gold	CellMarker;PanglaoDB	33558698
+CDH1	Epithelial cell	Epithelial	canonical	high	Breast;Lung;Colon;Liver	0.95	silver	CellMarker;PanglaoDB	30726726;32103181
+KRT7	Epithelial cell	Epithelial	supporting	high	Breast;Lung;Colon;Liver	0.7	silver	CellMarker;PanglaoDB	30726726;32103181
+KRT7	Cholangiocyte	Epithelial	canonical	high	Liver	0.95	silver	CellMarker;PanglaoDB	33558698
+CLDN4	Epithelial cell	Epithelial	supporting	high	Breast;Lung;Colon;Liver	0.7	silver	CellMarker;PanglaoDB	30726726;32103181
+MUC1	Epithelial cell	Epithelial	supporting	high	Breast;Lung;Colon;Liver	0.7	silver	CellMarker;PanglaoDB	30726726;32103181
+TACSTD2	Epithelial cell	Epithelial	supporting	high	Breast;Lung;Colon;Liver	0.7	silver	CellMarker;PanglaoDB	30726726;32103181
+SCGB1A1	Club cell	Epithelial	canonical	high	Lung	0.95	silver	CellMarker;PanglaoDB	33558698;32103181
+SCGB3A1	Club cell	Epithelial	canonical	high	Lung	0.95	silver	CellMarker;PanglaoDB	33558698;32103181
+CYP2B6	Club cell	Epithelial	canonical	high	Lung	0.95	silver	CellMarker;PanglaoDB	33558698;32103181
+CCKAR	Club cell	Epithelial	canonical	high	Lung	0.95	silver	CellMarker;PanglaoDB	33558698;32103181
+SCGB3A2	Club cell	Epithelial	supporting	high	Lung	0.7	silver	CellMarker;PanglaoDB	33558698;32103181
+SFTPB	Club cell	Epithelial	supporting	high	Lung	0.7	gold	CellMarker;PanglaoDB	33558698;32103181
+SFTPB	Alveolar type II cell	Epithelial	canonical	high	Lung	0.95	gold	CellMarker;PanglaoDB	33558698;32103181
+ALDH1A1	Club cell	Epithelial	supporting	high	Lung	0.7	silver	CellMarker;PanglaoDB	33558698;32103181
+AGER	Alveolar type I cell	Epithelial	canonical	high	Lung	0.95	silver	CellMarker;PanglaoDB	33558698
+PDPN	Alveolar type I cell	Epithelial	canonical	high	Lung	0.95	silver	CellMarker;PanglaoDB	33558698
+PDPN	Cancer-associated fibroblast	Tumor microenvironment	canonical	medium	Tumor	0.95	silver	CellMarker;PanglaoDB	32810438;33558698
+CAV1	Alveolar type I cell	Epithelial	canonical	high	Lung	0.95	silver	CellMarker;PanglaoDB	33558698
+AQP5	Alveolar type I cell	Epithelial	canonical	high	Lung	0.95	silver	CellMarker;PanglaoDB	33558698
+HOPX	Alveolar type I cell	Epithelial	canonical	high	Lung	0.95	silver	CellMarker;PanglaoDB	33558698
+HOPX	Hematopoietic stem cell	Stem/Progenitor	supporting	medium	Bone marrow;Cord blood	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+CLIC5	Alveolar type I cell	Epithelial	supporting	high	Lung	0.7	silver	CellMarker;PanglaoDB	33558698
+RTKN2	Alveolar type I cell	Epithelial	supporting	high	Lung	0.7	silver	CellMarker;PanglaoDB	33558698
+GPRC5A	Alveolar type I cell	Epithelial	supporting	high	Lung	0.7	silver	CellMarker;PanglaoDB	33558698
+SFTPC	Alveolar type II cell	Epithelial	canonical	high	Lung	0.95	gold	CellMarker;PanglaoDB	33558698;32103181
+SFTPD	Alveolar type II cell	Epithelial	canonical	high	Lung	0.95	silver	CellMarker;PanglaoDB	33558698;32103181
+ABCA3	Alveolar type II cell	Epithelial	canonical	high	Lung	0.95	silver	CellMarker;PanglaoDB	33558698;32103181
+ETV5	Alveolar type II cell	Epithelial	canonical	high	Lung	0.95	silver	CellMarker;PanglaoDB	33558698;32103181
+LAMP3	Alveolar type II cell	Epithelial	supporting	high	Lung	0.7	silver	CellMarker;PanglaoDB	33558698;32103181
+SLC34A2	Alveolar type II cell	Epithelial	supporting	high	Lung	0.7	silver	CellMarker;PanglaoDB	33558698;32103181
+NAPSA	Alveolar type II cell	Epithelial	supporting	high	Lung	0.7	silver	CellMarker;PanglaoDB	33558698;32103181
+PGC	Alveolar type II cell	Epithelial	supporting	high	Lung	0.7	silver	CellMarker;PanglaoDB	33558698;32103181
+ALB	Hepatocyte	Epithelial	canonical	high	Liver	0.95	gold	CellMarker;PanglaoDB	30726726;33558698
+APOB	Hepatocyte	Epithelial	canonical	high	Liver	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+TTR	Hepatocyte	Epithelial	canonical	high	Liver	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+FGB	Hepatocyte	Epithelial	canonical	high	Liver	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+CYP3A4	Hepatocyte	Epithelial	supporting	high	Liver	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+CYP2E1	Hepatocyte	Epithelial	supporting	high	Liver	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+ASGR1	Hepatocyte	Epithelial	supporting	high	Liver	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+HNF4A	Hepatocyte	Epithelial	supporting	high	Liver	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+PCK1	Hepatocyte	Epithelial	supporting	high	Liver	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+CFTR	Cholangiocyte	Epithelial	canonical	high	Liver	0.95	silver	CellMarker;PanglaoDB	33558698
+SLC4A2	Cholangiocyte	Epithelial	canonical	high	Liver	0.95	silver	CellMarker;PanglaoDB	33558698
+SOX9	Cholangiocyte	Epithelial	supporting	high	Liver	0.7	silver	CellMarker;PanglaoDB	33558698
+SOX9	Astrocyte	Neural	supporting	high	Brain	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+SOX9	Intestinal stem cell	Stem/Progenitor	supporting	high	Small intestine;Colon	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+HNF1B	Cholangiocyte	Epithelial	supporting	high	Liver	0.7	silver	CellMarker;PanglaoDB	33558698
+ANXA4	Cholangiocyte	Epithelial	supporting	high	Liver	0.7	silver	CellMarker;PanglaoDB	33558698
+TFF2	Cholangiocyte	Epithelial	supporting	high	Liver	0.7	silver	CellMarker;PanglaoDB	33558698
+FABP1	Enterocyte	Epithelial	canonical	high	Small intestine;Colon	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+FABP2	Enterocyte	Epithelial	canonical	high	Small intestine;Colon	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+SLC5A1	Enterocyte	Epithelial	canonical	high	Small intestine;Colon	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+APOA1	Enterocyte	Epithelial	canonical	high	Small intestine;Colon	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+APOA4	Enterocyte	Epithelial	canonical	high	Small intestine;Colon	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+VIL1	Enterocyte	Epithelial	supporting	high	Small intestine;Colon	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+LCT	Enterocyte	Epithelial	supporting	high	Small intestine;Colon	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+SI	Enterocyte	Epithelial	supporting	high	Small intestine;Colon	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+ALDOB	Enterocyte	Epithelial	supporting	high	Small intestine;Colon	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+ANPEP	Enterocyte	Epithelial	supporting	high	Small intestine;Colon	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+MUC2	Goblet cell	Epithelial	canonical	high	Colon;Small intestine;Lung	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+TFF3	Goblet cell	Epithelial	canonical	high	Colon;Small intestine;Lung	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+SPDEF	Goblet cell	Epithelial	canonical	high	Colon;Small intestine;Lung	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+FCGBP	Goblet cell	Epithelial	canonical	high	Colon;Small intestine;Lung	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+CLCA1	Goblet cell	Epithelial	canonical	high	Colon;Small intestine;Lung	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+ATOH1	Goblet cell	Epithelial	supporting	high	Colon;Small intestine;Lung	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+KLF4	Goblet cell	Epithelial	supporting	high	Colon;Small intestine;Lung	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+AGR2	Goblet cell	Epithelial	supporting	high	Colon;Small intestine;Lung	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+ZG16	Goblet cell	Epithelial	supporting	high	Colon;Small intestine;Lung	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+COL1A1	Fibroblast	Stromal	canonical	medium	Tumor;Skin;Lung;Breast	0.95	gold	CellMarker;PanglaoDB	30726726;32810438
+COL1A2	Fibroblast	Stromal	canonical	medium	Tumor;Skin;Lung;Breast	0.95	gold	CellMarker;PanglaoDB	30726726;32810438
+COL3A1	Fibroblast	Stromal	canonical	medium	Tumor;Skin;Lung;Breast	0.95	silver	CellMarker;PanglaoDB	30726726;32810438
+DCN	Fibroblast	Stromal	canonical	medium	Tumor;Skin;Lung;Breast	0.95	silver	CellMarker;PanglaoDB	30726726;32810438
+LUM	Fibroblast	Stromal	canonical	medium	Tumor;Skin;Lung;Breast	0.95	silver	CellMarker;PanglaoDB	30726726;32810438
+PDGFRA	Fibroblast	Stromal	supporting	medium	Tumor;Skin;Lung;Breast	0.7	silver	CellMarker;PanglaoDB	30726726;32810438
+PDGFRA	Oligodendrocyte precursor cell	Neural	canonical	high	Brain	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+FAP	Fibroblast	Stromal	supporting	medium	Tumor;Skin;Lung;Breast	0.7	bronze	CellMarker;PanglaoDB	30726726;32810438
+FAP	Cancer-associated fibroblast	Tumor microenvironment	canonical	medium	Tumor	0.95	bronze	CellMarker;PanglaoDB	32810438;33558698
+ACTA2	Fibroblast	Stromal	supporting	medium	Tumor;Skin;Lung;Breast	0.7	silver	CellMarker;PanglaoDB	30726726;32810438
+ACTA2	Pericyte	Stromal	canonical	medium	Brain;Tumor;Kidney	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+ACTA2	Smooth muscle cell	Stromal	canonical	medium	Vasculature;Gut;Bladder	0.95	silver	CellMarker;PanglaoDB	30726726;32103181
+ACTA2	Cancer-associated fibroblast	Tumor microenvironment	canonical	medium	Tumor	0.95	silver	CellMarker;PanglaoDB	32810438;33558698
+POSTN	Fibroblast	Stromal	supporting	medium	Tumor;Skin;Lung;Breast	0.7	silver	CellMarker;PanglaoDB	30726726;32810438
+POSTN	Cancer-associated fibroblast	Tumor microenvironment	canonical	medium	Tumor	0.95	silver	CellMarker;PanglaoDB	32810438;33558698
+THY1	Fibroblast	Stromal	supporting	medium	Tumor;Skin;Lung;Breast	0.7	silver	CellMarker;PanglaoDB	30726726;32810438
+THY1	Hematopoietic stem cell	Stem/Progenitor	canonical	medium	Bone marrow;Cord blood	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+THY1	Cancer-associated fibroblast	Tumor microenvironment	supporting	medium	Tumor	0.7	silver	CellMarker;PanglaoDB	32810438;33558698
+PECAM1	Endothelial cell	Stromal	canonical	high	All tissues;Tumor	0.95	gold	CellMarker;PanglaoDB	30726726;32103181
+CDH5	Endothelial cell	Stromal	canonical	high	All tissues;Tumor	0.95	gold	CellMarker;PanglaoDB	30726726;32103181
+VWF	Endothelial cell	Stromal	canonical	high	All tissues;Tumor	0.95	gold	CellMarker;PanglaoDB	30726726;32103181
+VWF	Megakaryocyte	Hematopoietic	canonical	high	Blood;Bone marrow	0.95	gold	CellMarker;PanglaoDB	30726726
+CLDN5	Endothelial cell	Stromal	canonical	high	All tissues;Tumor	0.95	silver	CellMarker;PanglaoDB	30726726;32103181
+FLT1	Endothelial cell	Stromal	canonical	high	All tissues;Tumor	0.95	silver	CellMarker;PanglaoDB	30726726;32103181
+PLVAP	Endothelial cell	Stromal	supporting	high	All tissues;Tumor	0.7	silver	CellMarker;PanglaoDB	30726726;32103181
+MCAM	Endothelial cell	Stromal	supporting	high	All tissues;Tumor	0.7	silver	CellMarker;PanglaoDB	30726726;32103181
+MCAM	Pericyte	Stromal	supporting	medium	Brain;Tumor;Kidney	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+ENG	Endothelial cell	Stromal	supporting	high	All tissues;Tumor	0.7	silver	CellMarker;PanglaoDB	30726726;32103181
+ESAM	Endothelial cell	Stromal	supporting	high	All tissues;Tumor	0.7	silver	CellMarker;PanglaoDB	30726726;32103181
+TIE1	Endothelial cell	Stromal	supporting	high	All tissues;Tumor	0.7	silver	CellMarker;PanglaoDB	30726726;32103181
+PDGFRB	Pericyte	Stromal	canonical	medium	Brain;Tumor;Kidney	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+PDGFRB	Cancer-associated fibroblast	Tumor microenvironment	supporting	medium	Tumor	0.7	silver	CellMarker;PanglaoDB	32810438;33558698
+RGS5	Pericyte	Stromal	canonical	medium	Brain;Tumor;Kidney	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+NOTCH3	Pericyte	Stromal	canonical	medium	Brain;Tumor;Kidney	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+CSPG4	Pericyte	Stromal	canonical	medium	Brain;Tumor;Kidney	0.95	bronze	CellMarker;PanglaoDB	30726726;33558698
+CSPG4	Oligodendrocyte precursor cell	Neural	canonical	high	Brain	0.95	bronze	CellMarker;PanglaoDB	30726726;33558698
+ABCC9	Pericyte	Stromal	supporting	medium	Brain;Tumor;Kidney	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+KCNJ8	Pericyte	Stromal	supporting	medium	Brain;Tumor;Kidney	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+DES	Pericyte	Stromal	supporting	medium	Brain;Tumor;Kidney	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+DES	Smooth muscle cell	Stromal	canonical	medium	Vasculature;Gut;Bladder	0.95	silver	CellMarker;PanglaoDB	30726726;32103181
+MYH11	Smooth muscle cell	Stromal	canonical	medium	Vasculature;Gut;Bladder	0.95	silver	CellMarker;PanglaoDB	30726726;32103181
+TAGLN	Smooth muscle cell	Stromal	canonical	medium	Vasculature;Gut;Bladder	0.95	silver	CellMarker;PanglaoDB	30726726;32103181
+CNN1	Smooth muscle cell	Stromal	canonical	medium	Vasculature;Gut;Bladder	0.95	silver	CellMarker;PanglaoDB	30726726;32103181
+MYLK	Smooth muscle cell	Stromal	supporting	medium	Vasculature;Gut;Bladder	0.7	silver	CellMarker;PanglaoDB	30726726;32103181
+SMTN	Smooth muscle cell	Stromal	supporting	medium	Vasculature;Gut;Bladder	0.7	silver	CellMarker;PanglaoDB	30726726;32103181
+TPM2	Smooth muscle cell	Stromal	supporting	medium	Vasculature;Gut;Bladder	0.7	silver	CellMarker;PanglaoDB	30726726;32103181
+ACTG2	Smooth muscle cell	Stromal	supporting	medium	Vasculature;Gut;Bladder	0.7	silver	CellMarker;PanglaoDB	30726726;32103181
+ADIPOQ	Adipocyte	Stromal	canonical	high	Adipose;Breast	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+LEP	Adipocyte	Stromal	canonical	high	Adipose;Breast	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+PLIN1	Adipocyte	Stromal	canonical	high	Adipose;Breast	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+FABP4	Adipocyte	Stromal	canonical	high	Adipose;Breast	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+PPARG	Adipocyte	Stromal	canonical	high	Adipose;Breast	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+LPL	Adipocyte	Stromal	supporting	high	Adipose;Breast	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+CIDEC	Adipocyte	Stromal	supporting	high	Adipose;Breast	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+DGAT2	Adipocyte	Stromal	supporting	high	Adipose;Breast	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+FASN	Adipocyte	Stromal	supporting	high	Adipose;Breast	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+RBFOX3	Neuron	Neural	canonical	high	Brain;Spinal cord	0.95	gold	CellMarker;PanglaoDB	30726726;33558698
+SYP	Neuron	Neural	canonical	high	Brain;Spinal cord	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+SYT1	Neuron	Neural	canonical	high	Brain;Spinal cord	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+SNAP25	Neuron	Neural	canonical	high	Brain;Spinal cord	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+MAP2	Neuron	Neural	canonical	high	Brain;Spinal cord	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+NEFL	Neuron	Neural	supporting	high	Brain;Spinal cord	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+NEFM	Neuron	Neural	supporting	high	Brain;Spinal cord	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+STMN2	Neuron	Neural	supporting	high	Brain;Spinal cord	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+GAP43	Neuron	Neural	supporting	high	Brain;Spinal cord	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+DCX	Neuron	Neural	supporting	high	Brain;Spinal cord	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+GFAP	Astrocyte	Neural	canonical	high	Brain	0.95	gold	CellMarker;PanglaoDB	30726726;33558698
+AQP4	Astrocyte	Neural	canonical	high	Brain	0.95	gold	CellMarker;PanglaoDB	30726726;33558698
+S100B	Astrocyte	Neural	canonical	high	Brain	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+ALDH1L1	Astrocyte	Neural	canonical	high	Brain	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+SLC1A3	Astrocyte	Neural	canonical	high	Brain	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+VIM	Astrocyte	Neural	supporting	high	Brain	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+GLUL	Astrocyte	Neural	supporting	high	Brain	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+GJA1	Astrocyte	Neural	supporting	high	Brain	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+MBP	Oligodendrocyte	Neural	canonical	high	Brain;Spinal cord	0.95	gold	CellMarker;PanglaoDB	30726726;33558698
+MOG	Oligodendrocyte	Neural	canonical	high	Brain;Spinal cord	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+PLP1	Oligodendrocyte	Neural	canonical	high	Brain;Spinal cord	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+MAG	Oligodendrocyte	Neural	canonical	high	Brain;Spinal cord	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+CLDN11	Oligodendrocyte	Neural	canonical	high	Brain;Spinal cord	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+OLIG1	Oligodendrocyte	Neural	supporting	high	Brain;Spinal cord	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+OLIG2	Oligodendrocyte	Neural	supporting	high	Brain;Spinal cord	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+OLIG2	Oligodendrocyte precursor cell	Neural	canonical	high	Brain	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+CNP	Oligodendrocyte	Neural	supporting	high	Brain;Spinal cord	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+MOBP	Oligodendrocyte	Neural	supporting	high	Brain;Spinal cord	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+SOX10	Oligodendrocyte	Neural	supporting	high	Brain;Spinal cord	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+SOX10	Oligodendrocyte precursor cell	Neural	canonical	high	Brain	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+GPR17	Oligodendrocyte precursor cell	Neural	supporting	high	Brain	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+NEU4	Oligodendrocyte precursor cell	Neural	supporting	high	Brain	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+LHFPL3	Oligodendrocyte precursor cell	Neural	supporting	high	Brain	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+TNR	Oligodendrocyte precursor cell	Neural	supporting	high	Brain	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+CX3CR1	Microglia	Neural	canonical	high	Brain	0.95	silver	CellMarker;PanglaoDB	30726726;33558698;32810438
+P2RY12	Microglia	Neural	canonical	high	Brain	0.95	silver	CellMarker;PanglaoDB	30726726;33558698;32810438
+TMEM119	Microglia	Neural	canonical	high	Brain	0.95	silver	CellMarker;PanglaoDB	30726726;33558698;32810438
+HEXB	Microglia	Neural	canonical	high	Brain	0.95	silver	CellMarker;PanglaoDB	30726726;33558698;32810438
+SALL1	Microglia	Neural	supporting	high	Brain	0.7	silver	CellMarker;PanglaoDB	30726726;33558698;32810438
+FCRLS	Microglia	Neural	supporting	high	Brain	0.7	silver	CellMarker;PanglaoDB	30726726;33558698;32810438
+ITGAM	Microglia	Neural	supporting	high	Brain	0.7	silver	CellMarker;PanglaoDB	30726726;33558698;32810438
+IBA1	Microglia	Neural	supporting	high	Brain	0.7	silver	CellMarker;PanglaoDB	30726726;33558698;32810438
+LGR5	Intestinal stem cell	Stem/Progenitor	canonical	high	Small intestine;Colon	0.95	gold	CellMarker;PanglaoDB	30726726;33558698
+OLFM4	Intestinal stem cell	Stem/Progenitor	canonical	high	Small intestine;Colon	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+ASCL2	Intestinal stem cell	Stem/Progenitor	canonical	high	Small intestine;Colon	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+SMOC2	Intestinal stem cell	Stem/Progenitor	canonical	high	Small intestine;Colon	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+EPHB2	Intestinal stem cell	Stem/Progenitor	canonical	high	Small intestine;Colon	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+AXIN2	Intestinal stem cell	Stem/Progenitor	supporting	high	Small intestine;Colon	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+CD44	Intestinal stem cell	Stem/Progenitor	supporting	high	Small intestine;Colon	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+LRIG1	Intestinal stem cell	Stem/Progenitor	supporting	high	Small intestine;Colon	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+PROM1	Intestinal stem cell	Stem/Progenitor	supporting	high	Small intestine;Colon	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+PROM1	Hematopoietic stem cell	Stem/Progenitor	canonical	medium	Bone marrow;Cord blood	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+CD34	Hematopoietic stem cell	Stem/Progenitor	canonical	medium	Bone marrow;Cord blood	0.95	silver	CellMarker;PanglaoDB	30726726;33558698
+MLLT3	Hematopoietic stem cell	Stem/Progenitor	canonical	medium	Bone marrow;Cord blood	0.95	bronze	CellMarker;PanglaoDB	30726726;33558698
+SPINK2	Hematopoietic stem cell	Stem/Progenitor	canonical	medium	Bone marrow;Cord blood	0.95	bronze	CellMarker;PanglaoDB	30726726;33558698
+AVP	Hematopoietic stem cell	Stem/Progenitor	supporting	medium	Bone marrow;Cord blood	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+HLF	Hematopoietic stem cell	Stem/Progenitor	supporting	medium	Bone marrow;Cord blood	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+MECOM	Hematopoietic stem cell	Stem/Progenitor	supporting	medium	Bone marrow;Cord blood	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+CD38	Hematopoietic stem cell	Stem/Progenitor	supporting	medium	Bone marrow;Cord blood	0.7	silver	CellMarker;PanglaoDB	30726726;33558698
+MMP11	Cancer-associated fibroblast	Tumor microenvironment	canonical	medium	Tumor	0.95	silver	CellMarker;PanglaoDB	32810438;33558698
+COL11A1	Cancer-associated fibroblast	Tumor microenvironment	supporting	medium	Tumor	0.7	silver	CellMarker;PanglaoDB	32810438;33558698
+FN1	Cancer-associated fibroblast	Tumor microenvironment	supporting	medium	Tumor	0.7	silver	CellMarker;PanglaoDB	32810438;33558698
+S100A4	Cancer-associated fibroblast	Tumor microenvironment	supporting	medium	Tumor	0.7	silver	CellMarker;PanglaoDB	32810438;33558698
+IL10	Tumor-associated macrophage	Tumor microenvironment	supporting	medium	Tumor	0.7	silver	CellMarker;PanglaoDB	32810438;33558698;30726726
+VEGFA	Tumor-associated macrophage	Tumor microenvironment	supporting	medium	Tumor	0.7	silver	CellMarker;PanglaoDB	32810438;33558698;30726726
+PDCD1	Exhausted T cell	Tumor microenvironment	canonical	high	Tumor;Chronic infection	0.95	silver	CellMarker;PanglaoDB	33558698;32810438
+HAVCR2	Exhausted T cell	Tumor microenvironment	canonical	high	Tumor;Chronic infection	0.95	silver	CellMarker;PanglaoDB	33558698;32810438
+LAG3	Exhausted T cell	Tumor microenvironment	canonical	high	Tumor;Chronic infection	0.95	silver	CellMarker;PanglaoDB	33558698;32810438
+TOX	Exhausted T cell	Tumor microenvironment	supporting	high	Tumor;Chronic infection	0.7	silver	CellMarker;PanglaoDB	33558698;32810438
+NR4A1	Exhausted T cell	Tumor microenvironment	supporting	high	Tumor;Chronic infection	0.7	silver	CellMarker;PanglaoDB	33558698;32810438
+ENTPD1	Exhausted T cell	Tumor microenvironment	supporting	high	Tumor;Chronic infection	0.7	silver	CellMarker;PanglaoDB	33558698;32810438
+CXCL13	Exhausted T cell	Tumor microenvironment	supporting	high	Tumor;Chronic infection	0.7	silver	CellMarker;PanglaoDB	33558698;32810438
+VCAM1	Exhausted T cell	Tumor microenvironment	supporting	high	Tumor;Chronic infection	0.7	silver	CellMarker;PanglaoDB	33558698;32810438
+HBB	Erythrocyte	Hematopoietic	canonical	high	Blood;Bone marrow	0.95	gold	CellMarker;PanglaoDB	30726726
+HBA1	Erythrocyte	Hematopoietic	canonical	high	Blood;Bone marrow	0.95	gold	CellMarker;PanglaoDB	30726726
+HBA2	Erythrocyte	Hematopoietic	canonical	high	Blood;Bone marrow	0.95	silver	CellMarker;PanglaoDB	30726726
+GYPA	Erythrocyte	Hematopoietic	canonical	high	Blood;Bone marrow	0.95	silver	CellMarker;PanglaoDB	30726726
+ALAS2	Erythrocyte	Hematopoietic	canonical	high	Blood;Bone marrow	0.95	silver	CellMarker;PanglaoDB	30726726
+SLC4A1	Erythrocyte	Hematopoietic	supporting	high	Blood;Bone marrow	0.7	silver	CellMarker;PanglaoDB	30726726
+CA1	Erythrocyte	Hematopoietic	supporting	high	Blood;Bone marrow	0.7	silver	CellMarker;PanglaoDB	30726726
+CA2	Erythrocyte	Hematopoietic	supporting	high	Blood;Bone marrow	0.7	silver	CellMarker;PanglaoDB	30726726
+BNIP3L	Erythrocyte	Hematopoietic	supporting	high	Blood;Bone marrow	0.7	silver	CellMarker;PanglaoDB	30726726
+PF4	Megakaryocyte	Hematopoietic	canonical	high	Blood;Bone marrow	0.95	gold	CellMarker;PanglaoDB	30726726
+PPBP	Megakaryocyte	Hematopoietic	canonical	high	Blood;Bone marrow	0.95	silver	CellMarker;PanglaoDB	30726726
+GP1BA	Megakaryocyte	Hematopoietic	canonical	high	Blood;Bone marrow	0.95	silver	CellMarker;PanglaoDB	30726726
+ITGA2B	Megakaryocyte	Hematopoietic	canonical	high	Blood;Bone marrow	0.95	silver	CellMarker;PanglaoDB	30726726
+TUBB1	Megakaryocyte	Hematopoietic	supporting	high	Blood;Bone marrow	0.7	silver	CellMarker;PanglaoDB	30726726
+NRGN	Megakaryocyte	Hematopoietic	supporting	high	Blood;Bone marrow	0.7	silver	CellMarker;PanglaoDB	30726726
+CLEC1B	Megakaryocyte	Hematopoietic	supporting	high	Blood;Bone marrow	0.7	silver	CellMarker;PanglaoDB	30726726
+TREML1	Megakaryocyte	Hematopoietic	supporting	high	Blood;Bone marrow	0.7	silver	CellMarker;PanglaoDB	30726726
