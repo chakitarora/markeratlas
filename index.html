@@ -87,7 +87,7 @@ body{font-family:var(--sans);background:var(--canvas);color:var(--ink);min-heigh
 .ctbar{width:3px;height:26px;border-radius:1px;flex-shrink:0}
 .ctname{font-family:var(--sans);font-size:0.86rem;font-weight:600;flex:1}
 .ctcat{font-family:var(--mono);font-size:0.56rem;font-weight:600;padding:2px 5px;color:var(--canvas);letter-spacing:0.04em}
-.specbadge{font-family:var(--mono);font-size:0.58rem;padding:1px 5px;border:1px solid}
+.specbadge{font-family:var(--mono);font-size:0.58rem;padding:1px 5px;border:1px solid;cursor:help}
 .spech{border-color:var(--green);color:var(--green)}
 .specm{border-color:var(--ochre);color:var(--ochre)}
 .ctcard-b{padding:9px 12px}
@@ -731,7 +731,7 @@ function renderBrowse(){
     html += '<div class="ctcard" data-ct="'+esc(name)+'">'
       +'<div class="ctcard-h"><div class="ctbar" style="background:'+col+'"></div><div class="ctname">'+esc(name)+'</div>'
       +'<span class="ctcat" style="background:'+col+'">'+esc(ct.category)+'</span>'
-      +'<span class="specbadge spec'+(ct.specificity==='high'?'h':'m')+'">'+ct.specificity+'</span></div>'
+      +'<span class="specbadge spec'+(ct.specificity==='high'?'h':'m')+'" title="'+(ct.specificity==='high'?'High specificity — canonical markers reliably identify this cell type with minimal overlap with other types':'Medium specificity — markers are context-dependent or shared with related cell types')+'">'+ct.specificity+'</span></div>'
       +'<div class="ctcard-b"><div class="mtags">'+ctags+stags+ntags+'</div><div class="tpills">'+tps+'</div></div></div>';
   });
   grid.innerHTML = html;
@@ -1088,7 +1088,7 @@ function showDetail(ctName){
   document.getElementById('dname').textContent = ctName;
   document.getElementById('dbadges').innerHTML =
     '<span style="font-family:var(--mono);font-size:0.6rem;padding:2px 7px;background:'+col+';color:white">'+esc(ct.category)+'</span>'
-    +'<span style="font-family:var(--mono);font-size:0.6rem;padding:2px 7px;border:1px solid '+(ct.specificity==='high'?'var(--green)':'var(--ochre)')+';color:'+(ct.specificity==='high'?'var(--green)':'var(--ochre)')+'">'+ct.specificity+' specificity</span>'
+    +'<span style="font-family:var(--mono);font-size:0.6rem;padding:2px 7px;border:1px solid '+(ct.specificity==='high'?'var(--green)':'var(--ochre)')+';color:'+(ct.specificity==='high'?'var(--green)':'var(--ochre)') +'" title="'+(ct.specificity==='high'?'High specificity — canonical markers reliably identify this cell type with minimal overlap with other types':'Medium specificity — markers are context-dependent or shared with related cell types')+'">'+ct.specificity+' specificity</span>'
     +(ct.cl_id?'<a href="https://www.ebi.ac.uk/ols4/ontologies/cl/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252F'+ct.cl_id.replace(':','_')+'" target="_blank" style="font-family:var(--mono);font-size:0.6rem;padding:2px 7px;border:1px solid var(--faint2);color:var(--blue);text-decoration:none">'+esc(ct.cl_id)+' &#x2197;</a>':'');
   var canEl = document.getElementById('dcan'); canEl.innerHTML = '';
   ct.canonical_markers.forEach(function(g){
