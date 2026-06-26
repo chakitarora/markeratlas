@@ -87,7 +87,7 @@ body{font-family:var(--sans);background:var(--canvas);color:var(--ink);min-heigh
 .ctbar{width:3px;height:26px;border-radius:1px;flex-shrink:0}
 .ctname{font-family:var(--sans);font-size:0.86rem;font-weight:600;flex:1}
 .ctcat{font-family:var(--mono);font-size:0.56rem;font-weight:600;padding:2px 5px;color:var(--canvas);letter-spacing:0.04em}
-.specbadge{font-family:var(--mono);font-size:0.58rem;padding:1px 5px;border:1px solid;cursor:help}
+.specbadge{font-family:var(--mono);font-size:0.58rem;padding:1px 5px;border:1px solid}
 .spech{border-color:var(--green);color:var(--green)}
 .specm{border-color:var(--ochre);color:var(--ochre)}
 .ctcard-b{padding:9px 12px}
@@ -268,6 +268,29 @@ body{font-family:var(--sans);background:var(--canvas);color:var(--ink);min-heigh
 .pmida{font-family:var(--mono);font-size:0.67rem;color:var(--blue);text-decoration:none}
 .pmida:hover{text-decoration:underline}
 .srcbadge{font-family:var(--mono);font-size:0.58rem;padding:1px 6px;border:1px solid var(--faint2);color:var(--muted)}
+.mode-desc{font-family:var(--sans);font-size:0.8rem;color:var(--muted);line-height:1.65;margin-bottom:14px;padding:10px 14px;background:var(--canvas2);border-left:2px solid var(--blue)}
+.mode-desc strong{color:var(--ink3);font-weight:500}
+.mode-desc em{color:var(--blue)}
+.std-card{border:1px solid var(--faint)}
+.std-header{padding:10px 14px;background:var(--canvas2);border-bottom:1px solid var(--faint);display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.std-flags{padding:8px 14px;border-bottom:1px solid var(--faint)}
+.std-flag{font-family:var(--mono);font-size:0.68rem;line-height:1.7;padding:2px 0}
+.std-flag-warn{color:var(--terra)}.std-flag-info{color:var(--muted)}
+.std-tree{padding:12px 14px;border-top:1px solid var(--faint);display:flex;flex-wrap:wrap;gap:16px}
+.tree-group{min-width:180px}
+.tree-parent{font-family:var(--sans);font-size:0.62rem;font-weight:600;color:var(--muted);margin-bottom:4px;text-transform:uppercase;letter-spacing:0.06em}
+.tree-child{font-family:var(--mono);font-size:0.68rem;color:var(--ink3);padding:2px 0;padding-left:10px}
+.tree-child.tree-dupe{color:var(--ochre)}
+.tree-connector{color:var(--faint2)}
+.tree-ct{font-weight:500;color:var(--blue)}
+.tree-cl{color:var(--dim);font-size:0.6rem}
+.tree-orig{color:var(--muted);font-size:0.62rem}
+.tree-dupe-flag{color:var(--ochre);font-size:0.58rem;padding:1px 4px;border:1px solid rgba(200,146,42,0.3);margin-left:4px}
+.std-lang-row{display:flex;align-items:center;gap:10px;margin-bottom:10px;font-family:var(--mono);font-size:0.7rem}
+.std-lang-row label{display:flex;align-items:center;gap:4px;cursor:pointer;color:var(--muted)}
+.std-input-area{width:100%;height:110px;font-family:var(--mono);font-size:0.8rem;line-height:1.9;background:var(--canvas2);border:1px solid var(--faint);padding:9px 11px;color:var(--ink);outline:none;resize:vertical;margin-bottom:8px}
+.std-input-area:focus{border-color:var(--blue)}
+.std-input-area::placeholder{color:var(--dim);font-style:italic;font-size:0.74rem}
 .empty{text-align:center;padding:60px 28px}
 .empty-g{font-style:italic;font-size:5rem;color:var(--faint);margin-bottom:16px;line-height:1}
 .empty-t{font-family:var(--sans);font-size:1.05rem;font-weight:500;color:var(--muted);margin-bottom:8px}
@@ -328,6 +351,7 @@ body{font-family:var(--sans);background:var(--canvas);color:var(--ink);min-heigh
         <button class="mbtn" data-m="panel" onclick="setMode('panel',this)">Panel</button>
         <button class="mbtn" data-m="confuse" onclick="setMode('confuse',this)">Overlap</button>
         <button class="mbtn" data-m="dotplot" onclick="setMode('dotplot',this)">DotPlot</button>
+        <button class="mbtn" data-m="standardise" onclick="setMode('standardise',this)">Standardise</button>
       </div>
     </div>
     <div class="sb" id="catblock">
@@ -356,6 +380,7 @@ body{font-family:var(--sans);background:var(--canvas);color:var(--ink);min-heigh
 
     <!-- BROWSE -->
     <div id="browse-view" style="display:none">
+      <p class="mode-desc">Browse all <strong>36 cell types</strong> across 7 categories. Filter by category and tissue in the sidebar. <strong>Click any gene tag</strong> to look it up. <strong>Click a card</strong> to open the full detail panel with canonical markers, tissue confidence, and PubMed references.</p>
       <div class="sech"><div class="secht" id="btitle">All cell types</div><div class="sechs">Click a card &middot; click any gene tag to look it up</div><div class="sechc" id="bcount"></div></div>
       <div class="legend">
         <span>Markers:</span><span class="leg"><span class="legdot legc"></span>Canonical</span><span class="leg"><span class="legdot legs"></span>Supporting</span><span class="leg"><span class="legdot legn"></span>Negative</span>
@@ -369,6 +394,7 @@ body{font-family:var(--sans);background:var(--canvas);color:var(--ink);min-heigh
 
     <!-- GENE -->
     <div id="gene-view" style="display:none">
+      <p class="mode-desc">Type any <strong>gene symbol</strong> to see every cell type it marks, with role, tissue context, and evidence tier. <strong>Aliases work</strong> — CD45, PD-1, SMA, NeuN etc. Click any cell type in results to open its detail panel.</p>
       <div class="sech"><div class="secht" id="gtitle">Gene lookup</div><div class="sechs">Which cell types does this gene mark? Aliases resolved automatically (CD45, PD-1, SMA&hellip;)</div></div>
       <div class="exrow"><div class="exlabel">Example genes &amp; aliases</div><div class="exchips" id="gene-examples"></div></div>
       <div id="gresults"></div>
@@ -376,6 +402,7 @@ body{font-family:var(--sans);background:var(--canvas);color:var(--ink);min-heigh
 
     <!-- CLUSTER -->
     <div id="cluster-view" style="display:none">
+      <p class="mode-desc">Paste your <strong>top DE genes</strong> from one cluster. Select a tissue to improve accuracy. Results rank candidate cell types with matched markers, tissue-prior scoring, and <strong>negative marker checks</strong> — genes that should be absent. Export as a ready-to-use TSV row for your supplementary table.</p>
       <div class="sech"><div class="secht">Cluster annotation</div><div class="sechs">Paste top DE genes &mdash; tissue-aware scoring, negative marker checks, alias resolution</div></div>
       <div class="exrow"><div class="exlabel">Load example cluster</div><div class="exchips" id="cluster-examples"></div></div>
       <div class="tissue-sel-row"><label>Tissue:</label><select id="cluster-tissue-sel"></select></div>
@@ -391,6 +418,7 @@ body{font-family:var(--sans);background:var(--canvas);color:var(--ink);min-heigh
 
     <!-- BATCH -->
     <div id="batch-view" style="display:none">
+      <p class="mode-desc">Annotate <strong>all clusters at once</strong>. Format: <em>ClusterID TAB gene1,gene2,gene3</em> — one cluster per line. Or paste gene-list only rows (numbered automatically). Returns confidence-rated annotations with alternatives and a full downloadable TSV.</p>
       <div class="sech"><div class="secht">Batch cluster annotation</div><div class="sechs">Annotate all clusters at once &mdash; paste a table, get a full annotation summary</div></div>
       <div style="font-family:var(--mono);font-size:0.72rem;color:var(--muted);margin-bottom:10px;padding:8px 12px;background:var(--canvas2);border:1px solid var(--faint);line-height:1.8">
         <strong style="color:var(--ink3)">Format:</strong> one cluster per line.<br/>
@@ -405,6 +433,7 @@ body{font-family:var(--sans);background:var(--canvas);color:var(--ink);min-heigh
 
     <!-- CO-EXP -->
     <div id="coexp-view" style="display:none">
+      <p class="mode-desc">Enter <strong>2–6 gene symbols</strong> to find cell types where <em>all</em> are simultaneously present. Answers: <em>what co-expresses CD3E, CD8A, and GZMB together?</em> Full matches shown first; partial matches show which genes are missing.</p>
       <div class="sech"><div class="secht">Co-expression query</div><div class="sechs">Which cell types co-express all of these genes together?</div></div>
       <div class="exrow"><div class="exlabel">Example combinations</div><div class="exchips" id="coexp-examples"></div></div>
       <div style="display:flex;align-items:center;gap:0;margin-bottom:14px">
@@ -416,6 +445,7 @@ body{font-family:var(--sans);background:var(--canvas);color:var(--ink);min-heigh
 
     <!-- PANEL -->
     <div id="panel-view" style="display:none">
+      <p class="mode-desc">Select a cell type to get the <strong>smallest gene set that uniquely identifies it</strong>. Genes labelled <em>unique</em> (only in this type) or <em>semi-unique</em> (in ≤1 other). Includes key negatives to verify and disambiguation from the most easily confused neighbours. Useful for <strong>flow panel design</strong> and methods writing.</p>
       <div class="sech"><div class="secht">Minimal marker panel</div><div class="sechs">Smallest gene set to uniquely identify a cell type + disambiguation from similar types</div></div>
       <div class="panel-ct-row"><label>Cell type:</label><select id="panel-ct-sel"></select><button onclick="buildPanel()">Build panel</button></div>
       <div id="panel-result"></div>
@@ -423,11 +453,13 @@ body{font-family:var(--sans);background:var(--canvas);color:var(--ink);min-heigh
 
     <!-- OVERLAP -->
     <div id="confuse-view" style="display:none">
+      <p class="mode-desc">Shows the <strong>20 most ambiguous cell type pairs</strong> ranked by shared markers — so you know before annotating which calls will be hardest. Click any cell type name to open its detail panel; click any shared gene to run a gene lookup.</p>
       <div id="confuse-result"></div>
     </div>
 
     <!-- DOTPLOT -->
     <div id="dotplot-view" style="display:none">
+      <p class="mode-desc">After <strong>Cluster annotation</strong>, return here to generate ready-to-run <strong>Seurat (R)</strong> or <strong>Scanpy (Python)</strong> dot plot code. Includes cluster renaming and the full DotPlot call — paste directly into your notebook.</p>
       <div class="sech"><div class="secht">DotPlot code generator</div><div class="sechs">Ready-to-run Seurat / Scanpy code from your last cluster annotation</div></div>
       <div class="dotplot-annotation-info" id="dotplot-annotation-info">Run a cluster annotation first, then return here.</div>
       <div class="dotplot-controls">
@@ -448,6 +480,24 @@ body{font-family:var(--sans);background:var(--canvas);color:var(--ink);min-heigh
         <pre class="dotplot-pre" id="dotplot-output">// Generate code above to see output here.</pre>
         <button class="dotplot-copy-btn" id="dotplot-copy" onclick="copyDotplot()">Copy code</button>
       </div>
+    </div>
+
+    <!-- STANDARDISE -->
+    <div id="standardise-view" style="display:none">
+      <p class="mode-desc">Paste a list of cell type names — one per line — in any format: informal abbreviations, paper-style names, or your own labels. Bio.Sync maps each to the <strong>Cell Ontology standard name and CL ID</strong>, detects duplicates (e.g. <em>Mφ</em> and <em>tissue macrophage</em> → same CL term), flags inconsistent hierarchy depths, and generates <strong>ready-to-run renaming code</strong> for Seurat or Scanpy.</p>
+      <div class="exrow">
+        <div class="exlabel">Load example set</div>
+        <div class="exchips" id="std-examples"></div>
+      </div>
+      <div class="std-lang-row">
+        <span style="color:var(--muted);font-family:var(--mono);font-size:0.68rem">Export code as:</span>
+        <label><input type="radio" name="std-lang" value="seurat" checked/> Seurat (R)</label>
+        <label><input type="radio" name="std-lang" value="scanpy"/> Scanpy (Python)</label>
+      </div>
+      <textarea class="std-input-area" id="std-input"
+        placeholder="One cell type name per line:&#10;Mφ&#10;tissue macrophage&#10;NK cell&#10;CD56+ lymphocyte&#10;TAM&#10;CD8 T cell&#10;Treg&#10;activated B&#10;&#10;Any format — abbreviations, informal names, paper-style labels all work."></textarea>
+      <button class="clbtn" onclick="runStandardise()">&#9658; Standardise cell types</button>
+      <div id="std-result" style="margin-top:14px"></div>
     </div>
 
   </main>
@@ -538,6 +588,25 @@ function init(){
     b.onclick = (function(k){ return function(){ clex(k); }; })(pair[0]);
     ce.appendChild(b);
   });
+  // Standardise example chips
+  var stdEx = document.getElementById('std-examples');
+  if(stdEx){
+    var stdSets=[
+      ['Heterogeneous PBMC','Mφ\nNK cell\nCD8 T cell\nTreg\nCD56+ lymphocyte\ntissue macrophage\nactivated B'],
+      ['Tumor microenvironment','TAM\nCAF\nexhausted T\nM2 macrophage\npDC\nMDSC\nNK cell'],
+      ['Brain atlas','astrocyte\noligo\nOPC\nmicroglia\nneuron\ndam\nreactive astrocyte'],
+      ['Lung atlas','AT2\nAT1\nclub cell\nmacrophage\nNK cell\nfibroblast\nendothelium'],
+    ];
+    stdSets.forEach(function(set){
+      var b=document.createElement('button'); b.className='ex';
+      b.textContent=set[0];
+      b.onclick=(function(s){return function(){
+        document.getElementById('std-input').value=s;
+        runStandardise();
+      };})(set[1]);
+      stdEx.appendChild(b);
+    });
+  }
   // Co-expression example chips
   var coexpEx = [
     ['CD3E, CD8A', 'CD8+ T cell'],
@@ -673,14 +742,15 @@ function onSearch(){
 function setMode(m, btn){
   mode = m;
   document.querySelectorAll('.mbtn').forEach(function(b){ b.classList.toggle('on', b.dataset.m===m); });
-  document.getElementById('browse-view').style.display  = m==='browse'  ? 'block' : 'none';
-  document.getElementById('gene-view').style.display    = m==='gene'    ? 'block' : 'none';
-  document.getElementById('cluster-view').style.display = m==='cluster' ? 'block' : 'none';
-  document.getElementById('batch-view').style.display   = m==='batch'   ? 'block' : 'none';
-  document.getElementById('panel-view').style.display   = m==='panel'   ? 'block' : 'none';
-  document.getElementById('confuse-view').style.display = m==='confuse' ? 'block' : 'none';
-  document.getElementById('coexp-view').style.display   = m==='coexp'   ? 'block' : 'none';
-  document.getElementById('dotplot-view').style.display = m==='dotplot' ? 'block' : 'none';
+  document.getElementById('browse-view').style.display       = m==='browse'      ? 'block' : 'none';
+  document.getElementById('gene-view').style.display         = m==='gene'        ? 'block' : 'none';
+  document.getElementById('cluster-view').style.display      = m==='cluster'     ? 'block' : 'none';
+  document.getElementById('batch-view').style.display        = m==='batch'       ? 'block' : 'none';
+  document.getElementById('panel-view').style.display        = m==='panel'       ? 'block' : 'none';
+  document.getElementById('confuse-view').style.display      = m==='confuse'     ? 'block' : 'none';
+  document.getElementById('coexp-view').style.display        = m==='coexp'       ? 'block' : 'none';
+  document.getElementById('dotplot-view').style.display      = m==='dotplot'     ? 'block' : 'none';
+  document.getElementById('standardise-view').style.display  = m==='standardise' ? 'block' : 'none';
   document.getElementById('catblock').style.display    = m==='browse' ? 'block' : 'none';
   document.getElementById('tissueblock').style.display = m==='browse' ? 'block' : 'none';
   var ph = {'browse':'Filter cell types\u2026','gene':'Gene, CD45, PD-1, cell type\u2026','cluster':'Use the panel \u2192','batch':'Use the panel \u2192','panel':'Use the panel \u2192','confuse':'Use the panel \u2192','coexp':'Genes (e.g. CD3E, CD8A)\u2026','dotplot':'Run cluster annotation first\u2026'};
@@ -718,20 +788,14 @@ function renderBrowse(){
     var name = entry[0], ct = entry[1];
     var col = cc(ct.category);
     var top = Object.entries(ct.tissue_context).sort(function(a,b){return b[1]-a[1];}).slice(0,3);
-    var ctags = ct.canonical_markers.slice(0,5).map(function(g){
-      var hits = DB.gene_index[g]; var t = hits && hits[0] && hits[0].tier ? hits[0].tier : 'silver';
-      return '<span class="mt mtc" data-gene="'+esc(g)+'">'+esc(g)+'<span class="tier-badge tier-'+t+'">'+t[0].toUpperCase()+'</span></span>';
-    }).join('');
-    var stags = ct.supporting_markers.slice(0,3).map(function(g){
-      var hits = DB.gene_index[g]; var t = hits && hits[0] && hits[0].tier ? hits[0].tier : 'silver';
-      return '<span class="mt mts" data-gene="'+esc(g)+'">'+esc(g)+'<span class="tier-badge tier-'+t+'">'+t[0].toUpperCase()+'</span></span>';
-    }).join('');
+    var ctags = ct.canonical_markers.slice(0,5).map(function(g){ return '<span class="mt mtc" data-gene="'+esc(g)+'">'+esc(g)+'</span>'; }).join('');
+    var stags = ct.supporting_markers.slice(0,3).map(function(g){ return '<span class="mt mts" data-gene="'+esc(g)+'">'+esc(g)+'</span>'; }).join('');
     var ntags = ct.negative_markers.slice(0,2).map(function(g){ return '<span class="mt mtn">'+esc(g)+'</span>'; }).join('');
     var tps = top.map(function(e){ return '<span class="tpill">'+esc(e[0])+' '+Math.round(e[1]*100)+'%</span>'; }).join('');
     html += '<div class="ctcard" data-ct="'+esc(name)+'">'
       +'<div class="ctcard-h"><div class="ctbar" style="background:'+col+'"></div><div class="ctname">'+esc(name)+'</div>'
       +'<span class="ctcat" style="background:'+col+'">'+esc(ct.category)+'</span>'
-      +'<span class="specbadge spec'+(ct.specificity==='high'?'h':'m')+'" title="'+(ct.specificity==='high'?'High specificity — canonical markers reliably identify this cell type with minimal overlap with other types':'Medium specificity — markers are context-dependent or shared with related cell types')+'">'+ct.specificity+'</span></div>'
+      +'<span class="specbadge spec'+(ct.specificity==='high'?'h':'m')+'">'+ct.specificity+'</span></div>'
       +'<div class="ctcard-b"><div class="mtags">'+ctags+stags+ntags+'</div><div class="tpills">'+tps+'</div></div></div>';
   });
   grid.innerHTML = html;
@@ -784,12 +848,9 @@ function buildGeneCard(gene, hits){
   hits.slice().sort(function(a,b){return b.confidence-a.confidence;}).forEach(function(h){
     var col = cc(h.category);
     var ts = Object.entries(h.tissue_context).sort(function(a,b){return b[1]-a[1];}).slice(0,3).map(function(e){ return '<span class="gtchip">'+esc(e[0])+'</span>'; }).join('');
-    var tier = h.tier || 'silver';
-    var tb = '<span class="tier-badge tier-'+tier+'">'+tier[0].toUpperCase()+'</span>';
     rows += '<div class="grow"><div class="growbar" style="background:'+col+'"></div>'
       +'<div class="growname" data-ct="'+esc(h.celltype)+'">'+esc(h.celltype)+'</div>'
       +'<span class="grole '+(h.role==='canonical'?'rc':'rs')+'">'+h.role+'</span>'
-      +tb
       +'<div class="growtissues">'+ts+'</div></div>';
   });
   return '<div class="gcard"><div class="gcard-h"><div class="gsym">'+esc(gene)+'</div><div class="gdesc">'+hits.length+' cell type association'+(hits.length!==1?'s':'')+'</div></div><div class="gcard-b">'+rows+'</div></div>';
@@ -1088,22 +1149,16 @@ function showDetail(ctName){
   document.getElementById('dname').textContent = ctName;
   document.getElementById('dbadges').innerHTML =
     '<span style="font-family:var(--mono);font-size:0.6rem;padding:2px 7px;background:'+col+';color:white">'+esc(ct.category)+'</span>'
-    +'<span style="font-family:var(--mono);font-size:0.6rem;padding:2px 7px;border:1px solid '+(ct.specificity==='high'?'var(--green)':'var(--ochre)')+';color:'+(ct.specificity==='high'?'var(--green)':'var(--ochre)') +'" title="'+(ct.specificity==='high'?'High specificity — canonical markers reliably identify this cell type with minimal overlap with other types':'Medium specificity — markers are context-dependent or shared with related cell types')+'">'+ct.specificity+' specificity</span>'
+    +'<span style="font-family:var(--mono);font-size:0.6rem;padding:2px 7px;border:1px solid '+(ct.specificity==='high'?'var(--green)':'var(--ochre)')+';color:'+(ct.specificity==='high'?'var(--green)':'var(--ochre)')+'">'+ct.specificity+' specificity</span>'
     +(ct.cl_id?'<a href="https://www.ebi.ac.uk/ols4/ontologies/cl/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252F'+ct.cl_id.replace(':','_')+'" target="_blank" style="font-family:var(--mono);font-size:0.6rem;padding:2px 7px;border:1px solid var(--faint2);color:var(--blue);text-decoration:none">'+esc(ct.cl_id)+' &#x2197;</a>':'');
   var canEl = document.getElementById('dcan'); canEl.innerHTML = '';
   ct.canonical_markers.forEach(function(g){
     var s = document.createElement('span'); s.className = 'dm dmc'; s.textContent = g;
-    var hits = DB.gene_index[g]; var t = hits && hits[0] && hits[0].tier ? hits[0].tier : 'silver';
-    var tb = document.createElement('span'); tb.className = 'tier-badge tier-'+t; tb.textContent = t[0].toUpperCase();
-    s.appendChild(tb);
     s.onclick = function(){ geneClick(g); closeDetail(); }; canEl.appendChild(s);
   });
   var supEl = document.getElementById('dsup'); supEl.innerHTML = '';
   ct.supporting_markers.forEach(function(g){
     var s = document.createElement('span'); s.className = 'dm dms'; s.textContent = g;
-    var hits = DB.gene_index[g]; var t = hits && hits[0] && hits[0].tier ? hits[0].tier : 'silver';
-    var tb = document.createElement('span'); tb.className = 'tier-badge tier-'+t; tb.textContent = t[0].toUpperCase();
-    s.appendChild(tb);
     s.onclick = function(){ geneClick(g); closeDetail(); }; supEl.appendChild(s);
   });
   document.getElementById('dneg').innerHTML = ct.negative_markers.map(function(g){ return '<span class="dm dmn">'+esc(g)+'</span>'; }).join('');
@@ -1141,6 +1196,369 @@ function initDotplotView(){
     info.textContent = 'No annotation yet — run Cluster annotation first, then return here.';
     info.style.color = 'var(--terra)';
   }
+}
+
+
+var CL_DB = {"cell_types":{"CD4+ T cell":{"cl_id":"CL:0000492","standard":"CD4-positive T cell","parent":"T cell","parent_cl":"CL:0000084","synonyms":["cd4 t cell","cd4+ t cell","cd4 t","cd4+ t","helper t cell","th cell","t helper","t helper cell","cd4 lymphocyte","cd4+ lymphocyte","th","thelper","cd4pos t cell","cd4 positive t cell","conventional cd4 t"]},"CD8+ T cell":{"cl_id":"CL:0000625","standard":"CD8-positive T cell","parent":"T cell","parent_cl":"CL:0000084","synonyms":["cd8 t cell","cd8+ t cell","cd8 t","cd8+ t","cytotoxic t cell","cytotoxic t lymphocyte","ctl","cd8 lymphocyte","cd8+ lymphocyte","cd8pos t cell","cd8 positive t cell","cytotoxic t","killer t cell","tc cell"]},"Regulatory T cell":{"cl_id":"CL:0000815","standard":"Regulatory T cell","parent":"CD4-positive T cell","parent_cl":"CL:0000492","synonyms":["treg","t reg","tregs","t regulatory cell","regulatory t","foxp3+ t cell","foxp3 t cell","cd4+foxp3+ t","suppressor t cell","cd25+foxp3+ t","regulatory t lymphocyte","t regulatory","cd4+cd25+foxp3+","treg cell"]},"NK cell":{"cl_id":"CL:0000623","standard":"Natural killer cell","parent":"Lymphocyte","parent_cl":"CL:0000542","synonyms":["nk cell","natural killer cell","nk","nk lymphocyte","cd56+ lymphocyte","cd56+ cell","cd56+cd3- cell","natural killer lymphocyte","nk cells","killer cell","innate lymphocyte","cd56+nkp46+","nkp46+ cell"]},"Exhausted T cell":{"cl_id":"CL:0001087","standard":"Exhausted T cell","parent":"CD8-positive T cell","parent_cl":"CL:0000625","synonyms":["exhausted t","tex","exhausted cd8","tex cell","pd1+ t cell","pd-1+ t cell","tim3+ t cell","dysfunctional t cell","terminally exhausted t","exhausted t lymphocyte","t cell exhaustion"]},"B cell":{"cl_id":"CL:0000236","standard":"B cell","parent":"Lymphocyte","parent_cl":"CL:0000542","synonyms":["b cell","b lymphocyte","b cells","cd19+ cell","cd19+ b cell","cd20+ cell","cd20+ b cell","b-cell","blymphocyte","naive b cell","memory b cell","b lymph"]},"Plasma cell":{"cl_id":"CL:0000786","standard":"Plasma cell","parent":"B cell","parent_cl":"CL:0000236","synonyms":["plasma cell","plasmocyte","antibody secreting cell","asc","plasma b cell","prdm1+ b","blimp1+ cell","igh+ cell","plasmablast","ig-secreting cell","immunoglobulin secreting cell"]},"Monocyte":{"cl_id":"CL:0000576","standard":"Monocyte","parent":"Mononuclear phagocyte","parent_cl":"CL:0000113","synonyms":["monocyte","classical monocyte","nonclassical monocyte","non-classical monocyte","cd14+ monocyte","cd14+ cell","inflammatory monocyte","patrolling monocyte","mono","cd14+cd16-","cd14+cd16+","ly6c+ monocyte"]},"Macrophage":{"cl_id":"CL:0000235","standard":"Macrophage","parent":"Mononuclear phagocyte","parent_cl":"CL:0000113","synonyms":["macrophage","macrophages","mph","m\u03c6","mf","mac","tissue macrophage","interstitial macrophage","m1 macrophage","m2 macrophage","m1","m2","alveolar macrophage","peritoneal macrophage","resident macrophage","macrophage cell"]},"Tumor-associated macrophage":{"cl_id":"CL:0001056","standard":"Tumor-associated macrophage","parent":"Macrophage","parent_cl":"CL:0000235","synonyms":["tumor associated macrophage","tumor-associated macrophage","tam","tam cell","tams","tumour associated macrophage","spp1+ macrophage","trem2+ macrophage","dam","disease associated macrophage","pro-tumor macrophage","immunosuppressive macrophage","m2-like macrophage"]},"Dendritic cell":{"cl_id":"CL:0000451","standard":"Dendritic cell","parent":"Mononuclear phagocyte","parent_cl":"CL:0000113","synonyms":["dendritic cell","dc","dcs","conventional dc","cdc","cdc1","cdc2","plasmacytoid dc","pdc","pDC","myeloid dc","mdc","cross-presenting dc","xcr1+ dc","clec9a+ dc","cd1c+ dc","sirpa+ dc"]},"Mast cell":{"cl_id":"CL:0000097","standard":"Mast cell","parent":"Leukocyte","parent_cl":"CL:0000738","synonyms":["mast cell","mastocyte","mast cells","tissue mast cell","mucosal mast cell","connective tissue mast cell","tryptase+ cell","kit+ mast cell","fceri+ cell"]},"Neutrophil":{"cl_id":"CL:0000775","standard":"Neutrophil","parent":"Granulocyte","parent_cl":"CL:0000094","synonyms":["neutrophil","neutrophils","pmn","polymorphonuclear cell","segmented neutrophil","granulocyte","s100a8+ cell","fcgr3b+ cell","cd66b+ cell","cd16b+ cell"]},"Fibroblast":{"cl_id":"CL:0000057","standard":"Fibroblast","parent":"Stromal cell","parent_cl":"CL:0000499","synonyms":["fibroblast","fibroblasts","fb","fib","stromal fibroblast","interstitial fibroblast","col1a1+ cell","col1a1+ fibroblast","connective tissue cell","mesenchymal cell"]},"Cancer-associated fibroblast":{"cl_id":"CL:0001087","standard":"Cancer-associated fibroblast","parent":"Fibroblast","parent_cl":"CL:0000057","synonyms":["cancer associated fibroblast","caf","cafs","tumor associated fibroblast","taf","myofibroblast","fap+ fibroblast","alpha-sma+ fibroblast","activated fibroblast","reactive fibroblast","cancer stroma fibroblast"]},"Endothelial cell":{"cl_id":"CL:0000115","standard":"Endothelial cell","parent":"Somatic cell","parent_cl":"CL:0002371","synonyms":["endothelial cell","endothelium","ec","ecs","vascular endothelial cell","blood vessel endothelial","pecam1+ cell","cd31+ cell","vegfr+ cell","ve-cadherin+ cell","tip cell","stalk cell","lymphatic endothelial"]},"Pericyte":{"cl_id":"CL:0000669","standard":"Pericyte","parent":"Stromal cell","parent_cl":"CL:0000499","synonyms":["pericyte","pericytes","mural cell","rgs5+ cell","pdgfrb+ cell","ng2+ cell","perivascular cell","vascular smooth muscle","desmin+ perivascular"]},"Smooth muscle cell":{"cl_id":"CL:0000192","standard":"Smooth muscle cell","parent":"Muscle cell","parent_cl":"CL:0000187","synonyms":["smooth muscle cell","smc","vascular smooth muscle cell","vsmc","acta2+ cell","myh11+ cell","smooth muscle","vascular smooth muscle","airway smooth muscle cell"]},"Epithelial cell":{"cl_id":"CL:0000066","standard":"Epithelial cell","parent":"Somatic cell","parent_cl":"CL:0002371","synonyms":["epithelial cell","epithelium","epcam+ cell","ck+ cell","keratin+ cell","krt+ cell","epi cell","simple epithelial cell","columnar epithelial"]},"Alveolar type II cell":{"cl_id":"CL:0002063","standard":"Alveolar type II cell","parent":"Epithelial cell","parent_cl":"CL:0000066","synonyms":["alveolar type ii cell","at2","at2 cell","type ii pneumocyte","type 2 alveolar cell","sftpc+ cell","surfactant+ cell","at2 pneumocyte","alveolar epithelial type 2"]},"Alveolar type I cell":{"cl_id":"CL:0002062","standard":"Alveolar type I cell","parent":"Epithelial cell","parent_cl":"CL:0000066","synonyms":["alveolar type i cell","at1","at1 cell","type i pneumocyte","type 1 alveolar cell","ager+ cell","pdpn+ cell","squamous alveolar cell","at1 pneumocyte"]},"Hepatocyte":{"cl_id":"CL:0000182","standard":"Hepatocyte","parent":"Epithelial cell","parent_cl":"CL:0000066","synonyms":["hepatocyte","hepatocytes","liver parenchymal cell","liver cell","alb+ cell","hnf4a+ cell","afp+ cell","hepatic cell","pericentral hepatocyte","periportal hepatocyte"]},"Cholangiocyte":{"cl_id":"CL:1000488","standard":"Cholangiocyte","parent":"Epithelial cell","parent_cl":"CL:0000066","synonyms":["cholangiocyte","bile duct cell","biliary epithelial cell","intrahepatic biliary cell","krt19+ hepatic","krt7+ bile duct","biliary cell","bile duct epithelium"]},"Enterocyte":{"cl_id":"CL:0000584","standard":"Enterocyte","parent":"Epithelial cell","parent_cl":"CL:0000066","synonyms":["enterocyte","intestinal epithelial cell","absorptive cell","colonocyte","fabp1+ cell","villin+ cell","intestinal absorptive cell","gut epithelial cell"]},"Goblet cell":{"cl_id":"CL:0000160","standard":"Goblet cell","parent":"Epithelial cell","parent_cl":"CL:0000066","synonyms":["goblet cell","mucus-secreting cell","muc2+ cell","muc5ac+ cell","secretory cell","intestinal goblet","airway goblet cell","tff3+ cell"]},"Club cell":{"cl_id":"CL:0000158","standard":"Club cell","parent":"Epithelial cell","parent_cl":"CL:0000066","synonyms":["club cell","clara cell","scgb1a1+ cell","secretoglobin+ cell","airway secretory cell","bronchiolar cell"]},"Neuron":{"cl_id":"CL:0000540","standard":"Neuron","parent":"Neural cell","parent_cl":"CL:0002319","synonyms":["neuron","neurons","nerve cell","neuronal cell","neun+ cell","rbfox3+ cell","excitatory neuron","inhibitory neuron","glutamatergic neuron","gabaergic neuron","pyramidal neuron","interneuron"]},"Astrocyte":{"cl_id":"CL:0000127","standard":"Astrocyte","parent":"Glial cell","parent_cl":"CL:0000125","synonyms":["astrocyte","astrocytes","gfap+ cell","s100b+ cell","aqp4+ cell","reactive astrocyte","fibrous astrocyte","protoplasmic astrocyte","astroglia"]},"Oligodendrocyte":{"cl_id":"CL:0000128","standard":"Oligodendrocyte","parent":"Glial cell","parent_cl":"CL:0000125","synonyms":["oligodendrocyte","oligo","mbp+ cell","mog+ cell","myelin-forming cell","mature oligodendrocyte","oligodendroglia","plp1+ cell"]},"Oligodendrocyte precursor cell":{"cl_id":"CL:0002453","standard":"Oligodendrocyte precursor cell","parent":"Glial cell","parent_cl":"CL:0000125","synonyms":["oligodendrocyte precursor cell","opc","opcs","ng2+ cell","pdgfra+ opc","cspg4+ cell","oligodendrocyte progenitor","opc cell"]},"Microglia":{"cl_id":"CL:0000129","standard":"Microglia","parent":"Macrophage","parent_cl":"CL:0000235","synonyms":["microglia","microglial cell","brain macrophage","cx3cr1+ cell","p2ry12+ cell","iba1+ cell","tmem119+ cell","homeostatic microglia","disease-associated microglia","dam","reactive microglia"]},"Intestinal stem cell":{"cl_id":"CL:0002563","standard":"Intestinal stem cell","parent":"Stem cell","parent_cl":"CL:0000034","synonyms":["intestinal stem cell","isc","lgr5+ cell","lgr5+ stem cell","crypt base columnar cell","cbc","olfm4+ cell","intestinal crypt cell","gut stem cell"]},"Hematopoietic stem cell":{"cl_id":"CL:0000037","standard":"Hematopoietic stem cell","parent":"Stem cell","parent_cl":"CL:0000034","synonyms":["hematopoietic stem cell","hsc","hspc","cd34+ cell","lin-sca1+ckit+","lsk cell","stem cell","bone marrow stem cell","hematopoietic progenitor"]},"Erythrocyte":{"cl_id":"CL:0000232","standard":"Erythrocyte","parent":"Blood cell","parent_cl":"CL:0000081","synonyms":["erythrocyte","red blood cell","rbc","hbb+ cell","hba+ cell","hemoglobin+ cell","erythroid cell","mature rbc"]},"Megakaryocyte":{"cl_id":"CL:0000556","standard":"Megakaryocyte","parent":"Blood cell","parent_cl":"CL:0000081","synonyms":["megakaryocyte","megakaryocytes","mk","platelet precursor","pf4+ cell","vwf+ megakaryocyte","proplatelet-forming cell"]},"Adipocyte":{"cl_id":"CL:0000136","standard":"Adipocyte","parent":"Stromal cell","parent_cl":"CL:0000499","synonyms":["adipocyte","fat cell","adipocytes","adipoq+ cell","white adipocyte","brown adipocyte","beige adipocyte","lipid-storing cell","adipogenic cell"]}},"ambiguous":{"activated t cell":"Activation state \u2014 not a distinct lineage. Specify: activated CD4+, activated CD8+, or activated Treg.","activated b cell":"Activation state \u2014 specify naive vs memory vs germinal center B cell.","polarized macrophage":"Polarization state \u2014 specify M1 (inflammatory) or M2 (anti-inflammatory), or use Macrophage.","m1":"Activation state \u2014 use Macrophage and note M1 polarization separately.","m2":"Activation state \u2014 use Macrophage and note M2 polarization separately.","mesenchymal stem cell":"MSC is not a well-defined CL term \u2014 consider Fibroblast (CL:0000057) or Stromal cell.","progenitor":"Too broad \u2014 specify progenitor type.","stem cell":"Too broad \u2014 specify: Hematopoietic stem cell, Intestinal stem cell, etc.","immune cell":"Too broad \u2014 specify lineage.","stroma":"Too broad \u2014 specify: Fibroblast, Endothelial cell, Pericyte, etc.","tumor cell":"Not a CL term \u2014 cancer cells are disease entities. Use cell of origin (e.g. Epithelial cell).","cancer cell":"Not a CL term \u2014 use cell of origin type."},"total_synonyms":376};
+
+// ═══════════════════════════════════════════════════════
+// CELL TYPE STANDARDISATION MODE
+// ═══════════════════════════════════════════════════════
+
+// ── CL synonym lookup (embedded, no fetch required) ──
+var CL_LOOKUP = null; // populated from embedded JSON below
+
+function initStandardise() {
+  if (CL_LOOKUP) return;
+  // Build lookup from embedded data
+  CL_LOOKUP = {
+    synonymMap: {},   // normalised string -> standard name
+    cellTypes: {},    // standard name -> {cl_id, parent, parent_cl, synonyms}
+    ambiguous: {},    // normalised string -> warning message
+  };
+  Object.entries(CL_DB.cell_types).forEach(function(entry) {
+    var stdName = entry[0], data = entry[1];
+    CL_LOOKUP.cellTypes[stdName] = data;
+    // Add all synonyms
+    data.synonyms.forEach(function(s) {
+      CL_LOOKUP.synonymMap[s.toLowerCase().trim()] = stdName;
+    });
+    // Add the standard name and CL standard name itself
+    CL_LOOKUP.synonymMap[stdName.toLowerCase()] = stdName;
+    CL_LOOKUP.synonymMap[data.standard.toLowerCase()] = stdName;
+  });
+  Object.entries(CL_DB.ambiguous).forEach(function(entry) {
+    CL_LOOKUP.ambiguous[entry[0].toLowerCase().trim()] = entry[1];
+  });
+}
+
+function matchCellType(input) {
+  initStandardise();
+  var norm = input.toLowerCase().trim()
+    .replace(/[^a-z0-9\s\+\-]/g, ' ')
+    .replace(/\s+/g, ' ').trim();
+
+  // 1. Exact synonym match
+  if (CL_LOOKUP.synonymMap[norm]) {
+    return { match: CL_LOOKUP.synonymMap[norm], confidence: 'high', method: 'exact' };
+  }
+
+  // 2. Ambiguous warning
+  if (CL_LOOKUP.ambiguous[norm]) {
+    return { match: null, confidence: 'low', method: 'ambiguous', warning: CL_LOOKUP.ambiguous[norm] };
+  }
+
+  // 3. Partial / fuzzy match — check if input is a substring of any synonym or vice versa
+  var partialMatches = [];
+  Object.entries(CL_LOOKUP.synonymMap).forEach(function(e) {
+    var syn = e[0], stdName = e[1];
+    if (syn.includes(norm) || norm.includes(syn)) {
+      if (syn.length > 3 && norm.length > 3) {
+        partialMatches.push({ name: stdName, syn: syn, score: Math.min(syn.length, norm.length) / Math.max(syn.length, norm.length) });
+      }
+    }
+  });
+  if (partialMatches.length) {
+    partialMatches.sort(function(a, b) { return b.score - a.score; });
+    var best = partialMatches[0];
+    if (best.score > 0.7) return { match: best.name, confidence: 'medium', method: 'partial' };
+    if (best.score > 0.4) return { match: best.name, confidence: 'low', method: 'partial' };
+  }
+
+  // 4. Token overlap — split into words and find best matching cell type
+  var tokens = norm.split(/\s+/).filter(function(t) { return t.length > 2; });
+  var tokenMatches = {};
+  tokens.forEach(function(token) {
+    Object.entries(CL_LOOKUP.synonymMap).forEach(function(e) {
+      if (e[0].includes(token)) {
+        tokenMatches[e[1]] = (tokenMatches[e[1]] || 0) + 1;
+      }
+    });
+  });
+  var sorted = Object.entries(tokenMatches).sort(function(a, b) { return b[1] - a[1]; });
+  if (sorted.length && sorted[0][1] >= 2) {
+    return { match: sorted[0][0], confidence: 'low', method: 'token' };
+  }
+
+  return { match: null, confidence: 'none', method: 'none' };
+}
+
+function runStandardise() {
+  var raw = document.getElementById('std-input').value.trim();
+  if (!raw) { alert('Paste cell type names first.'); return; }
+  var lang = document.querySelector('input[name="std-lang"]:checked');
+  var langVal = lang ? lang.value : 'seurat';
+
+  var names = raw.split(/[\n]+/).map(function(s) { return s.trim(); }).filter(Boolean);
+  var results = names.map(function(name) {
+    var m = matchCellType(name);
+    var ctData = m.match ? CL_LOOKUP.cellTypes[m.match] : null;
+    return {
+      input: name,
+      match: m.match,
+      standard: ctData ? ctData.standard : null,
+      cl_id: ctData ? ctData.cl_id : null,
+      parent: ctData ? ctData.parent : null,
+      parent_cl: ctData ? ctData.parent_cl : null,
+      confidence: m.confidence,
+      method: m.method,
+      warning: m.warning || null,
+    };
+  });
+
+  renderStandardiseResults(results, langVal);
+}
+
+function renderStandardiseResults(results, lang) {
+  var res = document.getElementById('std-result');
+  var matched   = results.filter(function(r) { return r.match && r.confidence !== 'none'; });
+  var unmatched = results.filter(function(r) { return !r.match; });
+  var dupes = findDuplicates(results);
+  var inconsistent = findInconsistentDepth(results);
+
+  // ── Stats ──
+  var html = '<div class="std-card">';
+  html += '<div class="std-header">'
+    + '<div class="rr-stat"><span class="rrs-n" style="color:var(--green)">' + matched.length + '</span><span class="rrs-label">Matched</span></div>'
+    + '<div class="rr-stat"><span class="rrs-n" style="color:var(--terra)">' + unmatched.length + '</span><span class="rrs-label">Unmatched</span></div>'
+    + '<div class="rr-stat"><span class="rrs-n" style="color:var(--amber)">' + dupes.length + '</span><span class="rrs-label">Duplicates</span></div>'
+    + '<div style="margin-left:auto;display:flex;gap:4px;flex-wrap:wrap">'
+    + '<button class="expbtn" id="std-exp-tsv">&#8595; Export TSV</button>'
+    + '<button class="expbtn" id="std-exp-code">&#8595; Export ' + (lang === 'seurat' ? 'R' : 'Python') + ' code</button>'
+    + '</div>'
+    + '</div>';
+
+  // ── Flags ──
+  var flags = [];
+  if (dupes.length) {
+    dupes.forEach(function(d) {
+      flags.push({ type: 'warn', msg: '"' + d.inputs.join('" and "') + '" both resolve to ' + d.standard + ' (' + d.cl_id + ') — duplicate annotation' });
+    });
+  }
+  if (inconsistent.length) {
+    inconsistent.forEach(function(i) {
+      flags.push({ type: 'info', msg: i });
+    });
+  }
+  results.forEach(function(r) {
+    if (r.warning) flags.push({ type: 'warn', msg: '"' + r.input + '": ' + r.warning });
+  });
+  if (unmatched.length) {
+    flags.push({ type: 'info', msg: unmatched.length + ' input' + (unmatched.length > 1 ? 's' : '') + ' had no CL match: ' + unmatched.map(function(r) { return '"' + r.input + '"'; }).join(', ') });
+  }
+
+  if (flags.length) {
+    html += '<div class="std-flags">';
+    flags.forEach(function(f) {
+      html += '<div class="std-flag std-flag-' + f.type + '">'
+        + (f.type === 'warn' ? '&#x26A0; ' : '&#x2139; ')
+        + esc(f.msg) + '</div>';
+    });
+    html += '</div>';
+  }
+
+  // ── Standardisation table ──
+  html += '<div class="rc-sec-head">Standardisation table</div>';
+  html += '<table class="bt-tbl"><thead><tr>'
+    + '<th>Input</th><th>Standard CL name</th><th>CL ID</th>'
+    + '<th>Confidence</th><th>Parent</th>'
+    + '</tr></thead><tbody>';
+
+  results.forEach(function(r) {
+    var confCol = { high:'var(--green)', medium:'var(--amber)', low:'var(--muted)', none:'var(--terra)' }[r.confidence] || 'var(--muted)';
+    var isDupe = dupes.some(function(d) { return d.inputs.length > 1 && d.inputs.indexOf(r.input) >= 0; });
+    var clLink = r.cl_id ? '<a href="https://www.ebi.ac.uk/ols4/ontologies/cl/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252F' + r.cl_id.replace(':','_') + '" target="_blank" class="map-id-link">' + esc(r.cl_id) + ' &nearr;</a>' : '—';
+    html += '<tr' + (isDupe ? ' style="background:rgba(240,168,74,0.05)"' : '') + '>'
+      + '<td class="bt-input-id">' + esc(r.input) + '</td>'
+      + '<td style="font-weight:500;color:var(--navy)">' + (r.standard ? esc(r.standard) : '<span style="color:var(--terra)">No match</span>') + '</td>'
+      + '<td class="bt-map-cell">' + clLink + '</td>'
+      + '<td style="font-family:var(--mono);font-size:0.68rem;font-weight:600;color:' + confCol + '">' + esc(r.confidence) + '</td>'
+      + '<td class="bt-type-cell">' + (r.parent ? esc(r.parent) : '—') + '</td>'
+      + '</tr>';
+  });
+  html += '</tbody></table>';
+
+  // ── Hierarchy tree ──
+  var treeHtml = buildHierarchyTree(results);
+  if (treeHtml) {
+    html += '<div class="rc-sec-head" style="margin-top:0">Hierarchy</div>';
+    html += '<div class="std-tree">' + treeHtml + '</div>';
+  }
+
+  html += '</div>';
+  res.innerHTML = html;
+
+  // Wire export buttons
+  var expTsv = document.getElementById('std-exp-tsv');
+  if (expTsv) expTsv.addEventListener('click', function() { exportStdTSV(results); });
+  var expCode = document.getElementById('std-exp-code');
+  if (expCode) expCode.addEventListener('click', function() { exportStdCode(results, lang); });
+
+  // Store for export
+  window._stdResults = { results: results, lang: lang };
+}
+
+function findDuplicates(results) {
+  var byStandard = {};
+  results.forEach(function(r) {
+    if (!r.match) return;
+    if (!byStandard[r.match]) byStandard[r.match] = [];
+    byStandard[r.match].push(r.input);
+  });
+  return Object.entries(byStandard)
+    .filter(function(e) { return e[1].length > 1; })
+    .map(function(e) {
+      var ct = CL_LOOKUP.cellTypes[e[0]] || {};
+      return { standard: e[0], cl_id: ct.cl_id || '', inputs: e[1] };
+    });
+}
+
+// Hierarchy depth table (approximate)
+var CL_DEPTH = {
+  'CL:0000738': 1, // Leukocyte
+  'CL:0000542': 2, // Lymphocyte
+  'CL:0000113': 2, // Mononuclear phagocyte
+  'CL:0000094': 2, // Granulocyte
+  'CL:0000081': 2, // Blood cell
+  'CL:0000499': 2, // Stromal cell
+  'CL:0002319': 2, // Neural cell
+  'CL:0000125': 3, // Glial cell
+  'CL:0000034': 2, // Stem cell
+  'CL:0002371': 1, // Somatic cell
+  'CL:0000187': 2, // Muscle cell
+  'CL:0000084': 3, // T cell
+  'CL:0000492': 4, // CD4+ T cell
+  'CL:0000625': 4, // CD8+ T cell
+  'CL:0000815': 5, // Treg
+  'CL:0001087': 5, // Exhausted T / CAF
+  'CL:0000623': 3, // NK cell
+  'CL:0000236': 3, // B cell
+  'CL:0000786': 4, // Plasma cell
+  'CL:0000576': 3, // Monocyte
+  'CL:0000235': 3, // Macrophage
+  'CL:0001056': 4, // TAM
+  'CL:0000129': 4, // Microglia
+  'CL:0000451': 3, // DC
+  'CL:0000097': 3, // Mast cell
+  'CL:0000775': 3, // Neutrophil
+  'CL:0000057': 3, // Fibroblast
+  'CL:0000115': 3, // Endothelial
+  'CL:0000669': 3, // Pericyte
+  'CL:0000192': 3, // SMC
+  'CL:0000066': 3, // Epithelial
+  'CL:0002063': 4, // AT2
+  'CL:0002062': 4, // AT1
+  'CL:0000182': 4, // Hepatocyte
+  'CL:1000488': 4, // Cholangiocyte
+  'CL:0000584': 4, // Enterocyte
+  'CL:0000160': 4, // Goblet
+  'CL:0000158': 4, // Club
+  'CL:0000540': 3, // Neuron
+  'CL:0000127': 4, // Astrocyte
+  'CL:0000128': 4, // Oligodendrocyte
+  'CL:0002453': 4, // OPC
+  'CL:0002563': 3, // Intestinal SC
+  'CL:0000037': 3, // HSC
+  'CL:0000232': 3, // Erythrocyte
+  'CL:0000556': 3, // Megakaryocyte
+  'CL:0000136': 3, // Adipocyte
+};
+
+function findInconsistentDepth(results) {
+  var matched = results.filter(function(r) { return r.cl_id && CL_DEPTH[r.cl_id]; });
+  if (matched.length < 2) return [];
+  var depths = matched.map(function(r) { return CL_DEPTH[r.cl_id]; });
+  var minD = Math.min.apply(null, depths);
+  var maxD = Math.max.apply(null, depths);
+  var warnings = [];
+  if (maxD - minD >= 2) {
+    var shallow = matched.filter(function(r) { return CL_DEPTH[r.cl_id] <= minD + 0; });
+    var deep = matched.filter(function(r) { return CL_DEPTH[r.cl_id] >= maxD; });
+    if (shallow.length && deep.length) {
+      warnings.push(
+        'Annotations span ' + (maxD - minD) + ' hierarchy levels: '
+        + '"' + shallow[0].standard + '" (depth ' + CL_DEPTH[shallow[0].cl_id] + ') vs '
+        + '"' + deep[0].standard + '" (depth ' + CL_DEPTH[deep[0].cl_id] + ') — consider annotating all clusters at a consistent level'
+      );
+    }
+  }
+  return warnings;
+}
+
+function buildHierarchyTree(results) {
+  var matched = results.filter(function(r) { return r.match && r.cl_id; });
+  if (!matched.length) return '';
+  // Group by parent
+  var byParent = {};
+  matched.forEach(function(r) {
+    var parent = r.parent || 'Other';
+    if (!byParent[parent]) byParent[parent] = [];
+    byParent[parent].push(r);
+  });
+  var html = '';
+  Object.entries(byParent).sort(function(a, b) { return a[0].localeCompare(b[0]); }).forEach(function(entry) {
+    var parent = entry[0], children = entry[1];
+    html += '<div class="tree-group">';
+    html += '<div class="tree-parent">' + esc(parent) + '</div>';
+    children.forEach(function(r) {
+      var isDupe = findDuplicates(results).some(function(d) { return d.inputs.length > 1 && d.standard === r.match; });
+      html += '<div class="tree-child' + (isDupe ? ' tree-dupe' : '') + '">'
+        + '<span class="tree-connector">&#x2514; </span>'
+        + '<span class="tree-ct">' + esc(r.standard || r.match) + '</span>'
+        + ' <span class="tree-cl">' + esc(r.cl_id || '') + '</span>'
+        + ' <span class="tree-orig">&#x2190; ' + esc(r.input) + '</span>'
+        + (isDupe ? ' <span class="tree-dupe-flag">duplicate</span>' : '')
+        + '</div>';
+    });
+    html += '</div>';
+  });
+  return html;
+}
+
+function exportStdTSV(results) {
+  var rows = ['Input\tStandard CL name\tCL ID\tParent\tParent CL ID\tConfidence'];
+  results.forEach(function(r) {
+    rows.push([r.input, r.standard||'', r.cl_id||'', r.parent||'', r.parent_cl||'', r.confidence].join('\t'));
+  });
+  rows.push('', '# Generated by MarkerAtlas | Cell Ontology standardisation');
+  dl(new Blob([rows.join('\n')], {type:'text/plain'}), 'markeratlas_standardised_celltypes.tsv');
+}
+
+function exportStdCode(results, lang) {
+  var mapped = results.filter(function(r) { return r.standard && r.input !== r.standard; });
+  if (!mapped.length) { alert('All inputs already match standard names — no renaming needed.'); return; }
+  var lines = [];
+  if (lang === 'seurat') {
+    lines.push('# Cell type standardisation — generated by MarkerAtlas');
+    lines.push('# Maps informal names to Cell Ontology standard names');
+    lines.push('cell_type_map <- c(');
+    mapped.forEach(function(r, i) {
+      lines.push('  "' + r.input + '" = "' + r.standard + '"' + (i < mapped.length-1 ? ',' : ''));
+    });
+    lines.push(')');
+    lines.push('seurat_obj$cell_type_standard <- dplyr::recode(seurat_obj$cell_type, !!!cell_type_map)');
+    lines.push('');
+    lines.push('# Optionally add CL IDs as metadata');
+    lines.push('cl_id_map <- c(');
+    mapped.forEach(function(r, i) {
+      if (r.cl_id) lines.push('  "' + r.standard + '" = "' + r.cl_id + '"' + (i < mapped.length-1 ? ',' : ''));
+    });
+    lines.push(')');
+    lines.push('seurat_obj$cell_type_cl_id <- dplyr::recode(seurat_obj$cell_type_standard, !!!cl_id_map)');
+  } else {
+    lines.push('# Cell type standardisation — generated by MarkerAtlas');
+    lines.push('cell_type_map = {');
+    mapped.forEach(function(r) { lines.push('    "' + r.input + '": "' + r.standard + '",'); });
+    lines.push('}');
+    lines.push('adata.obs["cell_type_standard"] = adata.obs["cell_type"].map(cell_type_map).fillna(adata.obs["cell_type"])');
+    lines.push('');
+    lines.push('# Add CL IDs as metadata');
+    lines.push('cl_id_map = {');
+    mapped.forEach(function(r) { if (r.cl_id) lines.push('    "' + r.standard + '": "' + r.cl_id + '",'); });
+    lines.push('}');
+    lines.push('adata.obs["cell_type_cl_id"] = adata.obs["cell_type_standard"].map(cl_id_map)');
+  }
+  dl(new Blob([lines.join('\n')], {type:'text/plain'}), 'markeratlas_standardise.' + (lang === 'seurat' ? 'R' : 'py'));
 }
 
 
@@ -1795,5 +2213,6 @@ function copyDotplot(){
   });
 }
 </script>
+<div id="pmid-tooltip" style="display:none;position:fixed;background:#111;color:#f4f0e8;font-family:monospace;font-size:0.68rem;padding:4px 9px;pointer-events:none;z-index:9999;max-width:260px;line-height:1.5"></div>
 </body>
 </html>
